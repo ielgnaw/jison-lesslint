@@ -1,0 +1,26 @@
+{
+  "name": "jison-lesslint",
+  "version": "0.0.1-beta.1",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "jison lib/parser/index.y lib/parser/index.l -o lib/parser/index.js && node lib/index.js",
+    "debug": "jison lib/parser/index.y lib/parser/index.l -o lib/parser/index.js && node --debug-brk lib/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ielgnaw/jison-lesslint.git"
+  },
+  "author": "ielgnaw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ielgnaw/jison-lesslint/issues"
+  },
+  "homepage": "https://github.com/ielgnaw/jison-lesslint#readme",
+  "devDependencies": {
+    "chalk": "^1.1.1",
+    "jison": "^0.4.15",
+    "json-stringify-safe": "^5.0.1",
+    "less": "^1.7.5"
+  }
+}

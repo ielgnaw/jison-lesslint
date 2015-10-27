@@ -1,0 +1,65 @@
+{
+    "root": {
+        "variables": [],
+        "selectors": [],
+        "charsets": [
+            {
+                "type": "charset",
+                "content": "\"UTF//-;8\"",
+                "quote": "\"",
+                "before": "    ",
+                "after": "  ",
+                "loc": {
+                    "firstLine": 1,
+                    "lastLine": 1,
+                    "firstCol": 5,
+                    "lastCol": 36,
+                    "originContent": "@charset            \"UTF//-;8\";"
+                }
+            },
+            {
+                "type": "charset",
+                "content": "\"asdasda//asdqwew'''qwewqeqw\"",
+                "quote": "\"",
+                "before": "",
+                "after": "\n ",
+                "loc": {
+                    "firstLine": 1,
+                    "lastLine": 1,
+                    "firstCol": 38,
+                    "lastCol": 80,
+                    "originContent": "@charset    \"asdasda//asdqwew'''qwewqeqw\";"
+                }
+            },
+            {
+                "type": "charset",
+                "content": "\"utf8\"",
+                "quote": "\"",
+                "before": "",
+                "after": "\n",
+                "loc": {
+                    "firstLine": 2,
+                    "lastLine": 2,
+                    "firstCol": 2,
+                    "lastCol": 17,
+                    "originContent": "@charset\"utf8\";"
+                }
+            },
+            {
+                "type": "charset",
+                "content": "'gbk'",
+                "quote": "'",
+                "before": "",
+                "after": "\n",
+                "loc": {
+                    "firstLine": 3,
+                    "lastLine": 3,
+                    "firstCol": 1,
+                    "lastCol": 16,
+                    "originContent": "@charset 'gbk';"
+                }
+            }
+        ],
+        "sComments": []
+    }
+}
