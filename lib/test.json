@@ -5,16 +5,16 @@
         "charsets": [
             {
                 "type": "charset",
-                "content": "\"UTF//-;8\"",
+                "content": "\"UTF  //-;8\"",
                 "quote": "\"",
                 "before": "    ",
-                "after": "  ",
+                "after": "\n    ",
                 "loc": {
                     "firstLine": 1,
                     "lastLine": 1,
                     "firstCol": 5,
-                    "lastCol": 36,
-                    "originContent": "@charset            \"UTF//-;8\";"
+                    "lastCol": 38,
+                    "originContent": "@charset            \"UTF  //-;8\";"
                 }
             },
             {
@@ -24,10 +24,10 @@
                 "before": "",
                 "after": "\n ",
                 "loc": {
-                    "firstLine": 1,
-                    "lastLine": 1,
-                    "firstCol": 38,
-                    "lastCol": 80,
+                    "firstLine": 2,
+                    "lastLine": 2,
+                    "firstCol": 5,
+                    "lastCol": 47,
                     "originContent": "@charset    \"asdasda//asdqwew'''qwewqeqw\";"
                 }
             },
@@ -38,8 +38,8 @@
                 "before": "",
                 "after": "\n",
                 "loc": {
-                    "firstLine": 2,
-                    "lastLine": 2,
+                    "firstLine": 3,
+                    "lastLine": 3,
                     "firstCol": 2,
                     "lastCol": 17,
                     "originContent": "@charset\"utf8\";"
@@ -50,16 +50,56 @@
                 "content": "'gbk'",
                 "quote": "'",
                 "before": "",
-                "after": "\n",
+                "after": "",
                 "loc": {
-                    "firstLine": 3,
-                    "lastLine": 3,
+                    "firstLine": 4,
+                    "lastLine": 4,
                     "firstCol": 1,
                     "lastCol": 16,
                     "originContent": "@charset 'gbk';"
                 }
             }
         ],
-        "sComments": []
+        "sComments": [
+            {
+                "type": "sComment",
+                "content": "// sadasddddd",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 4,
+                    "lastLine": 4,
+                    "firstCol": 16,
+                    "lastCol": 29,
+                    "originContent": "// sadasddddd"
+                }
+            },
+            {
+                "type": "sComment",
+                "content": "// asdasd",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 6,
+                    "lastLine": 6,
+                    "firstCol": 1,
+                    "lastCol": 10,
+                    "originContent": "// asdasd"
+                }
+            },
+            {
+                "type": "sComment",
+                "content": "// 222",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 7,
+                    "lastLine": 7,
+                    "firstCol": 1,
+                    "lastCol": 7,
+                    "originContent": "// 222"
+                }
+            }
+        ]
     }
 }

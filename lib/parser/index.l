@@ -6,17 +6,7 @@
 
     // console.log("lexer action: ", yy, yy_, this, yytext, YY_START, $avoiding_name_collisions);
     var parser = yy.parser;
-    // console.warn(YY_START);
-
-    /**
-     * 跳出字符串状态
-     * 由于字符串的正则不好捕捉到字符串结束的状态，因此在每个 lex 的模式匹配里都把 'str' 的状态出栈
-     */
-    function popStrState() {
-        if (this.topState() === 'str') {
-            this.popState();
-        }
-    }
+    console.warn(YY_START);
 %}
 
 n                           \n+
@@ -52,58 +42,52 @@ quote                       ['"]
 // p 进入属性的状态，这个状态用来帮助找到属性的值
 // im 进入 @import 语句后的状态
 // ch 进入 @charset 语句后的状态
-// str 字符串的状态，在字符串里面（引号包围），注释等等一些是不生效的
-%x s sc mc b sb p im ch str
+%x s sc mc b sb p im ch
 
 %%
 
-<s,str>{space} {
-    popStrState.call(this);
+<s>{space} {
     return 'SPACE';
 };
 
-<s,str>{n} {
-    popStrState.call(this);
+<s>{n} {
     return 'N';
 };
 
-<s,str>{semicolon} {
-    popStrState.call(this);
-    return 'SEMICOLON';
-};
-
-<s>{string} {
-    this.begin('str');
-    return 'STRING';
-};
-
 <s>{charset} {
-    // this.begin('ch');
+    this.begin('ch');
     return 'CHARSET';
 };
 
-// <ch>[^@charset]*/{charset} {
-//     console.warn(this.topState(), 'sdsdsd');
-//     this.popState();
-// }
+// 正常状态下遇到 `//`
+<s>{singlecomment} {
+    this.begin('sc');
+    return 'SC';
+};
 
-// <s>{singlecomment} {
-//     this.begin('sc');
-//     return 'SC';
-// };
+<sc>{n} {
+    this.popState();
+};
 
-// <sc>{n} {
-//     this.popState();
-// };
+<ch>{space} {
+    return 'SPACE';
+};
+
+<ch>{string} {
+    return 'CH_STRING';
+};
+
+<ch>{semicolon} {
+    this.popState();
+    return 'CH_SEMICOLON';
+};
 
 <INITIAL> {
     this.begin('s');
 };
 
-<INITIAL,s><<EOF>> {
-    if (this.topState() === 's') {
-        this.popState();
-    }
+<INITIAL,s,sc><<EOF>> {
+    this.popState();
     return 'EOF';
 };
 

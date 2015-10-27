@@ -1,8 +1,91 @@
+%lex
+
+n                           \n+
+space                       [ \t\s]+
+semicolon                   \;+
+string1                     \"([^\n\r\f\\"])*\"
+string2                     \'([^\n\r\f\\'])*\'
+string                      {string1}|{string2}
+charset                     '@charset'
+
+
+import                      \s*'@import'
+singlecomment               \/\/.*
+// singlecomment               (['"]).*\1.*(\/\/.*)
+
+quote                       ['"]
+
+/*"'*/ // 这个注释是为了把 quote 的正则所带来的高亮影响给去掉
+
 %{
 
-    var chalk = require('chalk');
-    var safeStringify = require('json-stringify-safe');
+    yy.a = 'aaa';
+    var s, s2, s3;
+    var rv, rv2, e_offset, col, row, len, value;
+    var match, match2;
 
+    // console.log("lexer action: ", yy, yy_, this, yytext, YY_START, $avoiding_name_collisions);
+    var parser = yy.parser;
+    console.warn(YY_START);
+
+%}
+
+
+%options backtrack_lexer
+
+%x s sc mc b sb p im ch str
+%%
+
+<s>{space} {
+    return 'SPACE';
+};
+
+<s>{n} {
+    return 'N';
+};
+
+<s>{charset} {
+    this.begin('ch');
+    return 'CHARSET';
+};
+
+// 正常状态下遇到 `//`
+<s>{singlecomment} {
+    this.begin('sc');
+    return 'SC';
+};
+
+<sc>{n} {
+    this.popState();
+};
+
+<ch>{space} {
+    return 'SPACE';
+};
+
+<ch>{string} {
+    return 'CH_STRING';
+};
+
+<ch>{semicolon} {
+    this.popState();
+    return 'CH_SEMICOLON';
+};
+
+<INITIAL> {
+    this.begin('s');
+};
+
+<INITIAL,s><<EOF>> {
+    if (this.topState() === 's') {
+        this.popState();
+    }
+    return 'EOF';
+};
+
+/lex
+
+%{
     var variables = [];
     var ast = {
         variables: [],
@@ -11,38 +94,13 @@
         charsets: [],
         sComments: []
     };
-
-    var curSelector = null;
-
-    var isDebug = true;
-    function debug() {
-        if (isDebug) {
-            var args = [].slice.call(arguments);
-            var len = args.length;
-            if (len === 1) {
-                console.warn(args[0]);
-            }
-            else {
-                var msg = [];
-                while (len) {
-                    msg.push(args[args.length - len--]);
-                }
-
-                var first = msg.splice(0, 1);
-                console.warn(chalk.yellow(first) + ': ' + chalk.cyan(msg.join(' ')));
-                console.warn();
-            }
-        }
-    }
 %}
 
 %nonassoc charset_stmt single_comment
 %nonassoc SPACE N
 
 %start root
-/* enable EBNF grammar syntax */
 %ebnf
-
 %%
 
 root
