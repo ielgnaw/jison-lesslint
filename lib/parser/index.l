@@ -19,10 +19,13 @@ charset                     '@charset'
 singlecomment               \/\/.*
 // singlecomment               (['"]).*\1.*(\/\/.*)
 
+multicomment                 \/\*[^*]*\*+([^/*][^*]*\*+)*\/
+
 // multicomment                ^\/\*[^*]*\*+([^\][^*]*\*+)*\/
 // multicommentstart           ^(\/\*[\s\S]+)
-multicommentstart           \/\*
-multicommentend             ([^\][^*]*\*+)*\/\n*
+// multicommentstart           \/\*
+// multicommentend             ([^\][^*]*\*+)*\/\n*
+// multicommentend             ([^\][^*]*\*+)*\/
 
 import                      \s*'@import'
 
@@ -63,15 +66,29 @@ quote                       ['"]
     return 'CHARSET';
 };
 
-<s>{multicommentstart} {
+<s>{multicomment} {
     this.begin('mc');
-    return 'MC_START';
+    return 'MC';
 };
 
-<mc>{multicommentend} {
+<mc>{n} {
     this.popState();
-    return 'MC_END';
 };
+
+// <s>{multicommentstart} {
+//     this.begin('mc');
+//     return 'MC_START';
+// };
+
+// <mc>{multicommentend} {
+//     return 'MC_END';
+// };
+
+// <mc>{multicommentend}/{n} {
+//     console.warn('pop');
+//     this.popState();
+// };
+
 
 <s>{singlecomment} {
     this.begin('sc');
@@ -99,7 +116,7 @@ quote                       ['"]
     this.begin('s');
 };
 
-<INITIAL,s,sc><<EOF>> {
+<INITIAL,s,sc,mc><<EOF>> {
     this.popState();
     return 'EOF';
 };

@@ -9,7 +9,8 @@
         imports: [],
         selectors: [],
         charsets: [],
-        sComments: []
+        sComments: [],
+        mComments: []
     };
 
     var curSelector = null;
@@ -36,7 +37,7 @@
     }
 %}
 
-%nonassoc charset_stmt single_comment
+%nonassoc charset_stmt single_comment mulit_comment
 %nonassoc SPACE N
 
 %start root
@@ -67,16 +68,45 @@ blocks
     | single_comment
     | blocks single_comment
     | mulit_comment
-    // | blocks single_comment
+    | blocks mulit_comment
 ;
 
 mulit_comment
-    : MC_START MC_END {
-        console.warn($1, '111');
-        console.warn($2, '222');
-        // console.warn($3, '222');
+    : MC {
+        ast.mComments.push({
+            type: 'mComment',
+            content: $1,
+            before: '',
+            after: '',
+            loc: {
+                firstLine: @1.first_line,
+                lastLine: @1.last_line,
+                firstCol: @1.first_column + 1,
+                lastCol: @1.last_column + 1,
+                originContent: $1
+            }
+        });
+    }
+    | SPACE MC {
+        ast.mComments.push({
+            type: 'mComment',
+            content: $2,
+            before: $1,
+            after: '',
+            loc: {
+                firstLine: @1.first_line,
+                lastLine: @2.last_line,
+                firstCol: @1.first_column + 1 + $1.length,
+                lastCol: @2.last_column + 1,
+                originContent: $1 + $2
+            }
+        });
+    }
+    | mulit_comment (SPACE|N) {
+        $$ = $1;
     }
 ;
+
 
 single_comment
     : SC {

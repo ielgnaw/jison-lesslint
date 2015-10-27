@@ -3,6 +3,74 @@
         "variables": [],
         "selectors": [],
         "charsets": [],
-        "sComments": []
+        "sComments": [
+            {
+                "type": "sComment",
+                "content": "// asdads",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 2,
+                    "lastLine": 2,
+                    "firstCol": 1,
+                    "lastCol": 10,
+                    "originContent": "// asdads"
+                }
+            },
+            {
+                "type": "sComment",
+                "content": "//   asdasd",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 5,
+                    "lastLine": 5,
+                    "firstCol": 1,
+                    "lastCol": 12,
+                    "originContent": "//   asdasd"
+                }
+            }
+        ],
+        "mComments": [
+            {
+                "type": "mComment",
+                "content": "/*sads/*s123123/@charset 'utf8'; /d*/",
+                "before": "    ",
+                "after": "",
+                "loc": {
+                    "firstLine": 1,
+                    "lastLine": 1,
+                    "firstCol": 5,
+                    "lastCol": 42,
+                    "originContent": "    /*sads/*s123123/@charset 'utf8'; /d*/"
+                }
+            },
+            {
+                "type": "mComment",
+                "content": "/*123123*/",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 3,
+                    "lastLine": 3,
+                    "firstCol": 1,
+                    "lastCol": 11,
+                    "originContent": "/*123123*/"
+                }
+            },
+            {
+                "type": "mComment",
+                "content": "/*4545*/",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 4,
+                    "lastLine": 4,
+                    "firstCol": 1,
+                    "lastCol": 9,
+                    "originContent": "/*4545*/"
+                }
+            }
+        ]
     }
 }
