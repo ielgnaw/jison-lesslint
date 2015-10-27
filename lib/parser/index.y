@@ -40,6 +40,7 @@
 %nonassoc SPACE N
 
 %start root
+
 /* enable EBNF grammar syntax */
 %ebnf
 
@@ -65,6 +66,16 @@ blocks
     | blocks charset_stmt
     | single_comment
     | blocks single_comment
+    | mulit_comment
+    // | blocks single_comment
+;
+
+mulit_comment
+    : MC_START MC_END {
+        console.warn($1, '111');
+        console.warn($2, '222');
+        // console.warn($3, '222');
+    }
 ;
 
 single_comment

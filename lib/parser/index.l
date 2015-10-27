@@ -16,11 +16,15 @@ string1                     \"([^\n\r\f\\"])*\"
 string2                     \'([^\n\r\f\\'])*\'
 string                      {string1}|{string2}
 charset                     '@charset'
-
-
-import                      \s*'@import'
 singlecomment               \/\/.*
 // singlecomment               (['"]).*\1.*(\/\/.*)
+
+// multicomment                ^\/\*[^*]*\*+([^\][^*]*\*+)*\/
+// multicommentstart           ^(\/\*[\s\S]+)
+multicommentstart           \/\*
+multicommentend             ([^\][^*]*\*+)*\/\n*
+
+import                      \s*'@import'
 
 quote                       ['"]
 
@@ -59,7 +63,16 @@ quote                       ['"]
     return 'CHARSET';
 };
 
-// 正常状态下遇到 `//`
+<s>{multicommentstart} {
+    this.begin('mc');
+    return 'MC_START';
+};
+
+<mc>{multicommentend} {
+    this.popState();
+    return 'MC_END';
+};
+
 <s>{singlecomment} {
     this.begin('sc');
     return 'SC';
