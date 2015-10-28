@@ -37,7 +37,7 @@
     }
 %}
 
-%nonassoc charset_stmt single_comment mulit_comment
+%nonassoc charset_stmt import_stmt single_comment mulit_comment
 %nonassoc SPACE N
 
 %start root
@@ -49,13 +49,13 @@
 
 root
     : blocks EOF {
-        ast.imports = yy.imports;
+        // ast.imports = yy.imports;
         return {
             root: ast
         };
     }
     | EOF {
-        ast.imports = yy.imports || [];
+        // ast.imports = yy.imports || [];
         return {
             root: ast
         };
@@ -65,6 +65,8 @@ root
 blocks
     : charset_stmt
     | blocks charset_stmt
+    // | import_stmt
+    // | blocks import_stmt
     | single_comment
     | blocks single_comment
     | mulit_comment
@@ -107,7 +109,6 @@ mulit_comment
     }
 ;
 
-
 single_comment
     : SC {
         ast.sComments.push({
@@ -146,10 +147,15 @@ single_comment
 
 charset_stmt
     : charset_stmt_start CH_STRING CH_SEMICOLON {
+        var quote = '';
+        var match;
+        if (match = $2.match(/^(['"]).*\1/)) {
+            quote = match[1];
+        }
         $$ = {
             type: 'charset',
             content: $2,
-            quote: $2.slice(0, 1),
+            quote: quote,
             before: $1.before,
             after: '',
             loc: {
@@ -182,6 +188,50 @@ charset_stmt_start
         }
     }
     | (SPACE|N) charset_stmt_start {
+        $$ = {
+            before: $1,
+            content: $2.content
+        }
+    }
+;
+
+import_stmt
+    : import_stmt_start IM_STRING IM_SEMICOLON {
+        // $$ = {
+        //     type: 'import',
+        //     content: $2,
+        //     quote: $2.slice(0, 1),
+        //     before: $1.before,
+        //     after: '',
+        //     loc: {
+        //         firstLine: @1.first_line,
+        //         lastLine: @2.last_line,
+        //         firstCol: @1.first_column + 1 + $1.before.length,
+        //         lastCol: @3.last_column + 1,
+        //         originContent: $1.content + $2 + $3
+        //     }
+        // };
+        // ast.imports.push($$);
+    }
+    | import_stmt (SPACE|N) {
+        $1.after = $2 || '';
+    }
+;
+
+import_stmt_start
+    : IMPORT {
+        $$ = {
+            before: '',
+            content: $1
+        }
+    }
+    | IMPORT (SPACE|N) {
+        $$ = {
+            before: '',
+            content: $1 + $2
+        }
+    }
+    | (SPACE|N) import_stmt_start {
         $$ = {
             before: $1,
             content: $2.content

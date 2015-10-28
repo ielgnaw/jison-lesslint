@@ -16,18 +16,12 @@ string1                     \"([^\n\r\f\\"])*\"
 string2                     \'([^\n\r\f\\'])*\'
 string                      {string1}|{string2}
 charset                     '@charset'
+import                      '@import'
 singlecomment               \/\/.*
 // singlecomment               (['"]).*\1.*(\/\/.*)
-
 multicomment                 \/\*[^*]*\*+([^/*][^*]*\*+)*\/
 
-// multicomment                ^\/\*[^*]*\*+([^\][^*]*\*+)*\/
-// multicommentstart           ^(\/\*[\s\S]+)
-// multicommentstart           \/\*
-// multicommentend             ([^\][^*]*\*+)*\/\n*
-// multicommentend             ([^\][^*]*\*+)*\/
-
-import                      \s*'@import'
+/**/ // 这个注释是为了把 multicomment 的正则所带来的高亮影响给去掉
 
 quote                       ['"]
 
@@ -61,11 +55,9 @@ quote                       ['"]
     return 'N';
 };
 
-<s>{charset} {
-    this.begin('ch');
-    return 'CHARSET';
-};
-
+/**
+ * mc
+ */
 <s>{multicomment} {
     this.begin('mc');
     return 'MC';
@@ -75,21 +67,9 @@ quote                       ['"]
     this.popState();
 };
 
-// <s>{multicommentstart} {
-//     this.begin('mc');
-//     return 'MC_START';
-// };
-
-// <mc>{multicommentend} {
-//     return 'MC_END';
-// };
-
-// <mc>{multicommentend}/{n} {
-//     console.warn('pop');
-//     this.popState();
-// };
-
-
+/**
+ * sc
+ */
 <s>{singlecomment} {
     this.begin('sc');
     return 'SC';
@@ -97,6 +77,14 @@ quote                       ['"]
 
 <sc>{n} {
     this.popState();
+};
+
+/**
+ * ch
+ */
+<s>{charset} {
+    this.begin('ch');
+    return 'CHARSET';
 };
 
 <ch>{space} {
@@ -107,10 +95,37 @@ quote                       ['"]
     return 'CH_STRING';
 };
 
+<ch>([^\n\r\f;])+ {
+    return 'CH_STRING';
+};
+
 <ch>{semicolon} {
     this.popState();
     return 'CH_SEMICOLON';
 };
+
+/**
+ * im
+ */
+<s>{import} {
+    this.begin('im');
+    return 'IMPORT';
+};
+
+<im>{space} {
+    return 'SPACE';
+};
+
+<im>{string} {
+    return 'IM_STRING';
+};
+
+<im>{semicolon} {
+    this.popState();
+    return 'IM_SEMICOLON';
+};
+
+
 
 <INITIAL> {
     this.begin('s');
