@@ -98,7 +98,7 @@ mulit_comment
                 lastLine: @2.last_line,
                 firstCol: @1.first_column + 1 + $1.length,
                 lastCol: @2.last_column + 1,
-                originContent: $1 + $2
+                originContent: $2
             }
         });
     }
@@ -134,8 +134,8 @@ single_comment
                 firstLine: @1.first_line,
                 lastLine: @2.last_line,
                 firstCol: @1.first_column + 1 + $1.length,
-                lastCol: @2.last_column + 1,
-                originContent: $1 + $2
+                lastCol: @2.last_column= + 1,
+                originContent: $2
             }
         });
     }
