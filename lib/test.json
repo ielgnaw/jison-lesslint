@@ -79,13 +79,27 @@
                 "content": "zcxczcx",
                 "quote": "",
                 "before": "",
-                "after": "\n",
+                "after": "\n\n",
                 "loc": {
                     "firstLine": 8,
                     "lastLine": 8,
                     "firstCol": 1,
                     "lastCol": 18,
                     "originContent": "@charset zcxczcx;"
+                }
+            },
+            {
+                "type": "charset",
+                "content": "asdasdassad/",
+                "quote": "",
+                "before": "",
+                "after": "\n",
+                "loc": {
+                    "firstLine": 10,
+                    "lastLine": 10,
+                    "firstCol": 1,
+                    "lastCol": 30,
+                    "originContent": "@charset        asdasdassad/;"
                 }
             }
         ],
