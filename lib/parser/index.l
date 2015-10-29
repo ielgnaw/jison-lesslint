@@ -1,13 +1,3 @@
-%{
-    yy.a = 'aaa';
-    var s, s2, s3;
-    var rv, rv2, e_offset, col, row, len, value;
-    var match, match2;
-
-    // console.log("lexer action: ", yy, yy_, this, yytext, YY_START, $avoiding_name_collisions);
-    var parser = yy.parser;
-    console.warn(YY_START);
-%}
 
 n                           \n+
 space                       [ \t\s]+
@@ -26,6 +16,17 @@ multicomment                 \/\*[^*]*\*+([^/*][^*]*\*+)*\/
 quote                       ['"]
 
 /*"'*/ // 这个注释是为了把 quote 的正则所带来的高亮影响给去掉
+
+%{
+    yy.a = 'aaa';
+    var s, s2, s3;
+    var rv, rv2, e_offset, col, row, len, value;
+    var match, match2;
+
+    // console.log("lexer action: ", yy, yy_, this, yytext, YY_START, $avoiding_name_collisions);
+    var parser = yy.parser;
+    console.warn(YY_START);
+%}
 
 
 // %options flex case-insensitive
@@ -135,5 +136,3 @@ quote                       ['"]
     this.popState();
     return 'EOF';
 };
-
-%%

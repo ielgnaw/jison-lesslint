@@ -238,5 +238,3 @@ import_stmt_start
         }
     }
 ;
-
-%%
