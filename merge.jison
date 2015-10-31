@@ -141,7 +141,7 @@ quote                       ['"]
 /lex
 %{
 
-    
+
 
     var isDebug = true;
     function debug() {

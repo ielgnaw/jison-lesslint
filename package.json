@@ -5,7 +5,8 @@
   "main": "lib/index.js",
   "scripts": {
     "start": "jison lib/parser/index.y lib/parser/index.l -o lib/parser/index.js && node lib/index.js",
-    "debug": "jison lib/parser/index.y lib/parser/index.l -o lib/parser/index.js && node --debug-brk lib/index.js"
+    "debug": "jison lib/parser/index.y lib/parser/index.l -o lib/parser/index.js && node --debug-brk lib/index.js",
+    "merge": "node tool/merge.js"
   },
   "repository": {
     "type": "git",

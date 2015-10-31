@@ -1,19 +1,6 @@
 %{
 
     var chalk = require('chalk');
-    var safeStringify = require('json-stringify-safe');
-
-    var variables = [];
-    var ast = {
-        variables: [],
-        imports: [],
-        selectors: [],
-        charsets: [],
-        sComments: [],
-        mComments: []
-    };
-
-    var curSelector = null;
 
     var isDebug = true;
     function debug() {
@@ -35,6 +22,15 @@
             }
         }
     }
+
+    var ast = {
+        variables: [],
+        imports: [],
+        selectors: [],
+        charsets: [],
+        sComments: [],
+        mComments: []
+    };
 %}
 
 %nonassoc charset_stmt import_stmt single_comment mulit_comment
