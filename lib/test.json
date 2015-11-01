@@ -1,7 +1,22 @@
 {
     "root": {
         "variables": [],
-        "imports": [],
+        "imports": [
+            {
+                "type": "import",
+                "content": "\"./aaa.less\"",
+                "quote": "\"",
+                "before": "",
+                "after": "\n",
+                "loc": {
+                    "firstLine": 1,
+                    "lastLine": 1,
+                    "firstCol": 1,
+                    "lastCol": 22,
+                    "originContent": "@import \"./aaa.less\";"
+                }
+            }
+        ],
         "selectors": [],
         "charsets": [],
         "sComments": [],
