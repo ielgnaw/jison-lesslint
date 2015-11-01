@@ -31,6 +31,8 @@
         sComments: [],
         mComments: []
     };
+
+
 %}
 
 %nonassoc charset_stmt import_stmt single_comment mulit_comment
