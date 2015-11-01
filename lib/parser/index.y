@@ -216,6 +216,7 @@ import_stmt
 
 import_stmt_start
     : IMPORT {
+        console.warn(123123);
         $$ = {
             before: '',
             content: $1
