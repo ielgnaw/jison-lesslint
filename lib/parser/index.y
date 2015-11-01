@@ -61,8 +61,8 @@ root
 blocks
     : charset_stmt
     | blocks charset_stmt
-    // | import_stmt
-    // | blocks import_stmt
+    | import_stmt
+    | blocks import_stmt
     | single_comment
     | blocks single_comment
     | mulit_comment
@@ -225,7 +225,7 @@ import_stmt_start
         $$ = {
             before: '',
             content: $1 + $2
-        }
+        };
     }
     | (SPACE|N) import_stmt_start {
         $$ = {

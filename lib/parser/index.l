@@ -7,6 +7,7 @@ string2                     \'([^\n\r\f\\'])*\'
 string                      {string1}|{string2}
 charset                     '@charset'
 import                      '@import'
+// variable                    @.+\:
 singlecomment               \/\/.*
 // singlecomment               (['"]).*\1.*(\/\/.*)
 multicomment                 \/\*[^*]*\*+([^/*][^*]*\*+)*\/
@@ -44,7 +45,8 @@ quote                       ['"]
 // p 进入属性的状态，这个状态用来帮助找到属性的值
 // im 进入 @import 语句后的状态
 // ch 进入 @charset 语句后的状态
-%x s sc mc b sb p im ch
+// var 进入 变量定义 语句后的状态
+%x s sc mc b sb p im ch var
 
 %%
 
@@ -105,6 +107,11 @@ quote                       ['"]
     return 'CH_SEMICOLON';
 };
 
+// <s>{variable} {
+//     this.begin('var');
+//     return 'VAR_KEY';
+// };
+
 /**
  * im
  */
@@ -132,7 +139,7 @@ quote                       ['"]
     this.begin('s');
 };
 
-<INITIAL,s,sc,mc><<EOF>> {
+<INITIAL,s,sc,mc,im><<EOF>> {
     this.popState();
     return 'EOF';
 };
