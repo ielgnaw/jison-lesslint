@@ -7,6 +7,7 @@ string2                     \'([^\n\r\f\\'])*\'
 string                      {string1}|{string2}
 charset                     '@charset'
 import                      '@import'
+importOpt                   \(('less'|'css'|'multiple'|'once'|'inline'|'reference')\)
 // variable                    @.+\:
 singlecomment               \/\/.*
 // singlecomment               (['"]).*\1.*(\/\/.*)
@@ -126,6 +127,10 @@ quote                       ['"]
 
 <im>{string} {
     return 'IM_STRING';
+};
+
+<im>{importOpt} {
+    return 'IM_OPT';
 };
 
 <im>{semicolon} {

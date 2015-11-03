@@ -35,7 +35,7 @@
 
 %}
 
-%nonassoc charset_stmt import_stmt single_comment mulit_comment
+%nonassoc import_stmt charset_stmt single_comment mulit_comment
 %nonassoc SPACE N
 
 %start root
@@ -194,46 +194,17 @@ charset_stmt_start
 ;
 
 import_stmt
-    : import_stmt_start IM_STRING IM_SEMICOLON {
-        // $$ = {
-        //     type: 'import',
-        //     content: $2,
-        //     quote: $2.slice(0, 1),
-        //     before: $1.before,
-        //     after: '',
-        //     loc: {
-        //         firstLine: @1.first_line,
-        //         lastLine: @2.last_line,
-        //         firstCol: @1.first_column + 1 + $1.before.length,
-        //         lastCol: @3.last_column + 1,
-        //         originContent: $1.content + $2 + $3
-        //     }
-        // };
-        // ast.imports.push($$);
+    : IMPORT (SPACE|N)* IM_OPT SPACE IM_STRING IM_SEMICOLON {
+    }
+    | SPACE IMPORT (SPACE|N)* IM_OPT SPACE IM_STRING IM_SEMICOLON {
+        console.warn(13123);
+    }
+    | IMPORT (SPACE|N)* IM_OPT IM_STRING IM_SEMICOLON {
+    }
+    | SPACE IMPORT (SPACE|N)* IM_OPT IM_STRING IM_SEMICOLON {
+        console.warn(13123);
     }
     | import_stmt (SPACE|N) {
         $1.after = $2 || '';
-    }
-;
-
-import_stmt_start
-    : IMPORT {
-        console.warn(123123);
-        $$ = {
-            before: '',
-            content: $1
-        }
-    }
-    | IMPORT (SPACE|N) {
-        $$ = {
-            before: '',
-            content: $1 + $2
-        };
-    }
-    | (SPACE|N) import_stmt_start {
-        $$ = {
-            before: $1,
-            content: $2.content
-        }
     }
 ;
