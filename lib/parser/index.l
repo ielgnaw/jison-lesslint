@@ -12,7 +12,8 @@ importOpt                   \(('less'|'css'|'multiple'|'once'|'inline'|'referenc
 singlecomment               \/\/[^\n]*
 // singlecomment               (['"]).*\1.*(\/\/.*)
 // multicomment                 \/\*[^*]*\*+([^][^*]*\*+)*\/
-multicomment                 \/\*(?:[^*]|\*+[^\/*])*\*+\/\n?
+// multicomment                 \/\*(?:[^*]|\*+[^\/*])*\*+\/\n?
+multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
 
 /* // 这个注释是为了把 multicomment 的正则所带来的高亮影响给去掉
 
@@ -53,17 +54,33 @@ quote                       ['"]
 
 %%
 
-<s>{space} {
-    return 'SPACE';
+/**
+ * sc
+ */
+<s>\s+/{singlecomment} {
+    // this.begin('sc');
+    return 'S_SPACE';
 };
 
-<s>{n} {
-    return 'N';
+<s,sc>{singlecomment} {
+    if (this.topState() !== 'sc') {
+        this.begin('sc');
+    }
+    return 'SC';
+};
+
+<sc>{n} {
+    this.popState();
 };
 
 /**
  * mc
  */
+<s>\s+/{multicomment} {
+    // this.begin('sc');
+    return 'M_SPACE';
+};
+
 // 这里加上 mc 状态是为了匹配 /*comment*//*comment1*/ 的情况
 <s,mc>{multicomment} {
     if (this.topState() !== 'mc') {
@@ -72,25 +89,21 @@ quote                       ['"]
     return 'MC';
 };
 
-// mc 状态里的空格是指这种情况 /*comment*/ /*comment1*/ 的情况
-<mc>{space} {
-    return 'SPACE';
+<mc>\*+\/[\s\n]? {
+    this.popState();
+    return 'MC_END';
 };
 
 <mc>{n} {
     this.popState();
 };
 
-/**
- * sc
- */
-<s>{singlecomment} {
-    this.begin('sc');
-    return 'SC';
+<s>{space} {
+    return 'SPACE';
 };
 
-<sc>{n} {
-    this.popState();
+<s>{n} {
+    return 'N';
 };
 
 <INITIAL> {

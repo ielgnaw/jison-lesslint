@@ -2,6 +2,18 @@
     "selectors": null,
     "rules": [
         {
+            "value": "/*asdsd\n//sdsads\n//\n\n//\n\n*/\n",
+            "silent": false,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
             "value": "// asdsad /*asdsad*/",
             "silent": true,
             "currentFileInfo": {
@@ -15,6 +27,438 @@
         },
         {
             "value": "/*asdasdsad\n    asdasdasdasd\n*/\n",
+            "silent": false,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "// 111",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "// 2222",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "// 3333 // 333ccc",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "//",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "// 5555",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "/*! */\n",
+            "silent": false,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "/*comment*/",
+            "silent": false,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "/*comment1*/\n",
+            "silent": false,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "/*comment2*/",
+            "silent": false,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "/*comment3*/\n",
+            "silent": false,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "//      Width of column             */",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "/******************\\\n*                  *\n*  Comment Header  *\n*                  *\n\\******************/\n",
+            "silent": false,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "/*\n    Comment\n*/\n",
+            "silent": false,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "/*\n * Comment Test\n *\n * - cloudhead (http://cloudhead.net)\n *\n */\n",
+            "silent": false,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "////////////////",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "////////////////",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "/* Colors\n * ------\n *   #EDF8FC (background blue)\n *   #166C89 (darkest blue)\n *\n * Text:\n *   #333 (standard text) // A comment within a comment!\n *   #1F9EC9 (standard link)\n *\n */\n",
+            "silent": false,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "/* @group Variables\n------------------- */\n",
+            "silent": false,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "/* boo      */",
+            "silent": false,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "/* boo again*/\n",
+            "silent": false,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "//.commented_out3",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "//end of comments1",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "//end of comments2",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "/**/",
+            "silent": false,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "// An empty comment",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "/* A C-style comment */",
+            "silent": false,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "/* A C-style comment1 */\n",
+            "silent": false,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "// padding & margin //",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "// }{ '\"",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "/* commented out\n  #more-comments {\n    color: grey;\n  }\n*/\n",
+            "silent": false,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "//put in @b - causes problems! --->",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "/*  */",
+            "silent": false,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "/* { */",
+            "silent": false,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "/*  */",
+            "silent": false,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "/*  */",
+            "silent": false,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "/*  */\n",
             "silent": false,
             "currentFileInfo": {
                 "filename": "input",

@@ -71,16 +71,13 @@ root
 
 rules
     : mulit_comment {
-        $$ = 1;
     }
     | single_comment {
 
     }
     | rules single_comment {
-        console.warn(123123);
     }
     | rules mulit_comment {
-        console.warn(455);
     }
 ;
 
@@ -100,7 +97,7 @@ single_comment
             }
         });
     }
-    | SPACE SC {
+    | S_SPACE SC {
         ast.sComments.push({
             type: 'sComment',
             content: $2,
@@ -118,33 +115,37 @@ single_comment
 ;
 
 mulit_comment
-    : MC {
+    : MC MC_END {
+        // less ast 上最后只留了一个 \n
+        // $2 = $2.replace(/(\n)+$/, '\n').replace(/(\s)+/, '');
         ast.mComments.push({
             type: 'mComment',
-            content: $1,
+            content: $1 + $2,
             before: '',
             after: '',
             loc: {
                 firstLine: @1.first_line,
-                lastLine: @1.last_line,
+                lastLine: @2.last_line,
                 firstCol: @1.first_column + 1,
-                lastCol: @1.last_column + 1,
-                originContent: $1
+                lastCol: @2.last_column + 1,
+                originContent: $1 + $2
             }
         });
     }
-    | SPACE MC {
+    | M_SPACE MC MC_END {
+        // less ast 上最后只留了一个 \n
+        // $3 = $3.replace(/(\n)+$/, '\n').replace(/(\s)+/, '');
         ast.mComments.push({
             type: 'mComment',
-            content: $2,
+            content: $2 + $3,
             before: $1,
             after: '',
             loc: {
                 firstLine: @2.first_line,
-                lastLine: @2.last_line,
+                lastLine: @3.last_line,
                 firstCol: @2.first_column + 1,
-                lastCol: @2.last_column + 1,
-                originContent: $2
+                lastCol: @3.last_column + 1,
+                originContent: $2 + $3
             }
         });
     }
