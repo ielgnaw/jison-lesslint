@@ -64,9 +64,17 @@ quote                       ['"]
 /**
  * mc
  */
-<s>{multicomment} {
-    this.begin('mc');
+// 这里加上 mc 状态是为了匹配 /*comment*//*comment1*/ 的情况
+<s,mc>{multicomment} {
+    if (this.topState() !== 'mc') {
+        this.begin('mc');
+    }
     return 'MC';
+};
+
+// mc 状态里的空格是指这种情况 /*comment*/ /*comment1*/ 的情况
+<mc>{space} {
+    return 'SPACE';
 };
 
 <mc>{n} {

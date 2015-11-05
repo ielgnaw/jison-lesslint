@@ -104,7 +104,7 @@ single_comment
         ast.sComments.push({
             type: 'sComment',
             content: $2,
-            before: $1.length,
+            before: $1,
             after: '',
             loc: {
                 firstLine: @2.first_line,
@@ -137,7 +137,7 @@ mulit_comment
         ast.mComments.push({
             type: 'mComment',
             content: $2,
-            before: $1.length,
+            before: $1,
             after: '',
             loc: {
                 firstLine: @2.first_line,
