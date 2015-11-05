@@ -8,6 +8,8 @@ string2                     \'([^\n\r\f\\'])*\'
 string                      {string1}|{string2}
 charset                     '@charset'
 import                      '@import'
+importOpt                   \(('less'|'css'|'multiple'|'once'|'inline'|'reference')\)
+// variable                    @.+\:
 singlecomment               \/\/.*
 // singlecomment               (['"]).*\1.*(\/\/.*)
 multicomment                 \/\*[^*]*\*+([^/*][^*]*\*+)*\/
@@ -45,7 +47,8 @@ quote                       ['"]
 // p 进入属性的状态，这个状态用来帮助找到属性的值
 // im 进入 @import 语句后的状态
 // ch 进入 @charset 语句后的状态
-%x s sc mc b sb p im ch
+// var 进入 变量定义 语句后的状态
+%x s sc mc b sb p im ch var
 
 %%
 
@@ -106,6 +109,11 @@ quote                       ['"]
     return 'CH_SEMICOLON';
 };
 
+// <s>{variable} {
+//     this.begin('var');
+//     return 'VAR_KEY';
+// };
+
 /**
  * im
  */
@@ -122,6 +130,10 @@ quote                       ['"]
     return 'IM_STRING';
 };
 
+<im>{importOpt} {
+    return 'IM_OPT';
+};
+
 <im>{semicolon} {
     this.popState();
     return 'IM_SEMICOLON';
@@ -133,7 +145,7 @@ quote                       ['"]
     this.begin('s');
 };
 
-<INITIAL,s,sc,mc><<EOF>> {
+<INITIAL,s,sc,mc,im><<EOF>> {
     this.popState();
     return 'EOF';
 };
@@ -172,9 +184,11 @@ quote                       ['"]
         sComments: [],
         mComments: []
     };
+
+
 %}
 
-%nonassoc charset_stmt import_stmt single_comment mulit_comment
+%nonassoc import_stmt charset_stmt single_comment mulit_comment
 %nonassoc SPACE N
 
 %start root
@@ -202,8 +216,8 @@ root
 blocks
     : charset_stmt
     | blocks charset_stmt
-    // | import_stmt
-    // | blocks import_stmt
+    | import_stmt
+    | blocks import_stmt
     | single_comment
     | blocks single_comment
     | mulit_comment
@@ -333,45 +347,17 @@ charset_stmt_start
 ;
 
 import_stmt
-    : import_stmt_start IM_STRING IM_SEMICOLON {
-        // $$ = {
-        //     type: 'import',
-        //     content: $2,
-        //     quote: $2.slice(0, 1),
-        //     before: $1.before,
-        //     after: '',
-        //     loc: {
-        //         firstLine: @1.first_line,
-        //         lastLine: @2.last_line,
-        //         firstCol: @1.first_column + 1 + $1.before.length,
-        //         lastCol: @3.last_column + 1,
-        //         originContent: $1.content + $2 + $3
-        //     }
-        // };
-        // ast.imports.push($$);
+    : IMPORT (SPACE|N)* IM_OPT SPACE IM_STRING IM_SEMICOLON {
+    }
+    | SPACE IMPORT (SPACE|N)* IM_OPT SPACE IM_STRING IM_SEMICOLON {
+        console.warn(13123);
+    }
+    | IMPORT (SPACE|N)* IM_OPT IM_STRING IM_SEMICOLON {
+    }
+    | SPACE IMPORT (SPACE|N)* IM_OPT IM_STRING IM_SEMICOLON {
+        console.warn(13123);
     }
     | import_stmt (SPACE|N) {
         $1.after = $2 || '';
-    }
-;
-
-import_stmt_start
-    : IMPORT {
-        $$ = {
-            before: '',
-            content: $1
-        }
-    }
-    | IMPORT (SPACE|N) {
-        $$ = {
-            before: '',
-            content: $1 + $2
-        }
-    }
-    | (SPACE|N) import_stmt_start {
-        $$ = {
-            before: $1,
-            content: $2.content
-        }
     }
 ;
