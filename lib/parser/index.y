@@ -116,8 +116,6 @@ single_comment
 
 mulit_comment
     : MC MC_END {
-        // less ast 上最后只留了一个 \n
-        // $2 = $2.replace(/(\n)+$/, '\n').replace(/(\s)+/, '');
         ast.mComments.push({
             type: 'mComment',
             content: $1 + $2,
@@ -133,8 +131,6 @@ mulit_comment
         });
     }
     | M_SPACE MC MC_END {
-        // less ast 上最后只留了一个 \n
-        // $3 = $3.replace(/(\n)+$/, '\n').replace(/(\s)+/, '');
         ast.mComments.push({
             type: 'mComment',
             content: $2 + $3,
