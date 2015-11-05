@@ -1,0 +1,129 @@
+{
+    "root": {
+        "variables": [],
+        "imports": [],
+        "selectors": [],
+        "charsets": [],
+        "sComments": [
+            {
+                "type": "sComment",
+                "content": "// asdsad /*asdsad*/",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 8,
+                    "lastLine": 8,
+                    "firstCol": 1,
+                    "lastCol": 21,
+                    "originContent": "// asdsad /*asdsad*/"
+                }
+            },
+            {
+                "type": "sComment",
+                "content": "// 111",
+                "before": 4,
+                "after": "",
+                "loc": {
+                    "firstLine": 15,
+                    "lastLine": 15,
+                    "firstCol": 5,
+                    "lastCol": 11,
+                    "originContent": "// 111"
+                }
+            },
+            {
+                "type": "sComment",
+                "content": "// 2222",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 16,
+                    "lastLine": 16,
+                    "firstCol": 1,
+                    "lastCol": 8,
+                    "originContent": "// 2222"
+                }
+            },
+            {
+                "type": "sComment",
+                "content": "// 3333 // 333ccc",
+                "before": 4,
+                "after": "",
+                "loc": {
+                    "firstLine": 17,
+                    "lastLine": 17,
+                    "firstCol": 5,
+                    "lastCol": 22,
+                    "originContent": "// 3333 // 333ccc"
+                }
+            },
+            {
+                "type": "sComment",
+                "content": "//",
+                "before": 4,
+                "after": "",
+                "loc": {
+                    "firstLine": 18,
+                    "lastLine": 18,
+                    "firstCol": 5,
+                    "lastCol": 7,
+                    "originContent": "//"
+                }
+            },
+            {
+                "type": "sComment",
+                "content": "// 5555",
+                "before": 4,
+                "after": "",
+                "loc": {
+                    "firstLine": 22,
+                    "lastLine": 22,
+                    "firstCol": 5,
+                    "lastCol": 12,
+                    "originContent": "// 5555"
+                }
+            }
+        ],
+        "mComments": [
+            {
+                "type": "mComment",
+                "content": "/*asdsd\n//sdsads\n//\n\n*/\n",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 1,
+                    "lastLine": 6,
+                    "firstCol": 1,
+                    "lastCol": 1,
+                    "originContent": "/*asdsd\n//sdsads\n//\n\n*/\n"
+                }
+            },
+            {
+                "type": "mComment",
+                "content": "/*asdasdsad\n    asdasdasdasd\n*/\n",
+                "before": 4,
+                "after": "",
+                "loc": {
+                    "firstLine": 10,
+                    "lastLine": 13,
+                    "firstCol": 5,
+                    "lastCol": 1,
+                    "originContent": "/*asdasdsad\n    asdasdasdasd\n*/\n"
+                }
+            },
+            {
+                "type": "mComment",
+                "content": "/*! */\n",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 25,
+                    "lastLine": 26,
+                    "firstCol": 1,
+                    "lastCol": 1,
+                    "originContent": "/*! */\n"
+                }
+            }
+        ]
+    }
+}

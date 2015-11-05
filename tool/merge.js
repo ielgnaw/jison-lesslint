@@ -18,7 +18,10 @@ var mergeContent = ''
     + '\n/lex\n'
     + grammarContent;
 
-mergeContent = mergeContent.replace('var chalk = require(\'chalk\');', '');
+mergeContent = mergeContent
+    .replace('var chalk = require(\'chalk\');', '')
+    .replace('var debug = require(\'debug\')(\'jison-lesslint: lexer\');', '')
+    .replace('var debug = require(\'debug\')(\'jison-lesslint: grammar\');', '');
 
 var outputFilename = path.join(__dirname, '..') + path.sep + 'lib/parser/merge.jison';
 

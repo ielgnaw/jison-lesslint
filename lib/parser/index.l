@@ -9,17 +9,19 @@ charset                     '@charset'
 import                      '@import'
 importOpt                   \(('less'|'css'|'multiple'|'once'|'inline'|'reference')\)
 // variable                    @.+\:
-singlecomment               \/\/.*
+singlecomment               \/\/[^\n]*
 // singlecomment               (['"]).*\1.*(\/\/.*)
-multicomment                 \/\*[^*]*\*+([^/*][^*]*\*+)*\/
+// multicomment                 \/\*[^*]*\*+([^][^*]*\*+)*\/
+multicomment                 \/\*(?:[^*]|\*+[^\/*])*\*+\/\n?
 
-/**/ // 这个注释是为了把 multicomment 的正则所带来的高亮影响给去掉
+/* // 这个注释是为了把 multicomment 的正则所带来的高亮影响给去掉
 
 quote                       ['"]
 
 /*"'*/ // 这个注释是为了把 quote 的正则所带来的高亮影响给去掉
 
 %{
+    var debug = require('debug')('jison-lesslint: lexer');
     yy.a = 'aaa';
     var s, s2, s3;
     var rv, rv2, e_offset, col, row, len, value;
@@ -27,7 +29,7 @@ quote                       ['"]
 
     // console.log("lexer action: ", yy, yy_, this, yytext, YY_START, $avoiding_name_collisions);
     var parser = yy.parser;
-    console.warn(YY_START);
+    debug(YY_START);
 %}
 
 
@@ -82,63 +84,6 @@ quote                       ['"]
 <sc>{n} {
     this.popState();
 };
-
-/**
- * ch
- */
-<s>{charset} {
-    this.begin('ch');
-    return 'CHARSET';
-};
-
-<ch>{space} {
-    return 'SPACE';
-};
-
-<ch>{string} {
-    return 'CH_STRING';
-};
-
-<ch>([^\n\r\f;])+ {
-    return 'CH_STRING';
-};
-
-<ch>{semicolon} {
-    this.popState();
-    return 'CH_SEMICOLON';
-};
-
-// <s>{variable} {
-//     this.begin('var');
-//     return 'VAR_KEY';
-// };
-
-/**
- * im
- */
-<s>{import} {
-    this.begin('im');
-    return 'IMPORT';
-};
-
-<im>{space} {
-    return 'SPACE';
-};
-
-<im>{string} {
-    return 'IM_STRING';
-};
-
-<im>{importOpt} {
-    return 'IM_OPT';
-};
-
-<im>{semicolon} {
-    this.popState();
-    return 'IM_SEMICOLON';
-};
-
-
 
 <INITIAL> {
     this.begin('s');
