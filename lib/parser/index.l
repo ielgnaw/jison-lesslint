@@ -3,7 +3,11 @@ n                           \n+
 space                       [ \t\s]+
 semicolon                   \;+
 string1                     \"([^\n\r\f\\"])*\"
+/*"*/ // 这个注释是为了把 string1 的正则所带来的高亮影响给去掉
+
 string2                     \'([^\n\r\f\\'])*\'
+/*'*/ // 这个注释是为了把 string2 的正则所带来的高亮影响给去掉
+
 string                      {string1}|{string2}
 charset                     '@charset'
 import                      '@import'
@@ -14,12 +18,7 @@ singlecomment               \/\/[^\n]*
 // multicomment                 \/\*[^*]*\*+([^][^*]*\*+)*\/
 // multicomment                 \/\*(?:[^*]|\*+[^\/*])*\*+\/\n?
 multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
-
-/* // 这个注释是为了把 multicomment 的正则所带来的高亮影响给去掉
-
-quote                       ['"]
-
-/*"'*/ // 这个注释是为了把 quote 的正则所带来的高亮影响给去掉
+/* // 这个注释是为了把 multicomment 的正则所带来的高亮影响给去掉 */
 
 %{
     var debug = require('debug')('jison-lesslint: lexer');
@@ -50,7 +49,8 @@ quote                       ['"]
 // im 进入 @import 语句后的状态
 // ch 进入 @charset 语句后的状态
 // var 进入 变量定义 语句后的状态
-%x s sc mc b sb p im ch var
+%x s sc mc
+//b sb p im ch var
 
 %%
 
@@ -77,11 +77,10 @@ quote                       ['"]
  * mc
  */
 <s>\s+/{multicomment} {
-    // this.begin('sc');
+    // this.begin('mc');
     return 'M_SPACE';
 };
 
-// 这里加上 mc 状态是为了匹配 /*comment*//*comment1*/ 的情况
 <s,mc>{multicomment} {
     if (this.topState() !== 'mc') {
         this.begin('mc');
@@ -98,6 +97,8 @@ quote                       ['"]
     this.popState();
 };
 
+
+
 <s>{space} {
     return 'SPACE';
 };
@@ -110,7 +111,7 @@ quote                       ['"]
     this.begin('s');
 };
 
-<INITIAL,s,sc,mc,im><<EOF>> {
+<INITIAL,s,sc,mc><<EOF>> {
     this.popState();
     return 'EOF';
 };

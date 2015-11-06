@@ -46,15 +46,15 @@
             },
             {
                 "type": "sComment",
-                "content": "// 3333 // 333ccc",
+                "content": "// '3333' // 333ccc",
                 "before": "    ",
                 "after": "",
                 "loc": {
                     "firstLine": 19,
                     "lastLine": 19,
                     "firstCol": 5,
-                    "lastCol": 22,
-                    "originContent": "// 3333 // 333ccc"
+                    "lastCol": 24,
+                    "originContent": "// '3333' // 333ccc"
                 }
             },
             {

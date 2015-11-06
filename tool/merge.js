@@ -20,8 +20,10 @@ var mergeContent = ''
 
 mergeContent = mergeContent
     .replace('var chalk = require(\'chalk\');', '')
+    .replace('var util = require(\'util\');', '')
     .replace('var debug = require(\'debug\')(\'jison-lesslint: lexer\');', '')
-    .replace('var debug = require(\'debug\')(\'jison-lesslint: grammar\');', '');
+    .replace('var debug = require(\'debug\')(\'jison-lesslint: grammar\');', '')
+    .replace('debug(YY_START);', '');
 
 var outputFilename = path.join(__dirname, '..') + path.sep + 'lib/parser/merge.jison';
 

@@ -62,6 +62,8 @@ root
     // 4. 一个多行注释块
     // 5. 一行 @charset 语句
     // 6. 一行 @import 语句
+    // @charset, @import, 以及变量定义需要合在一起来做（词法中）
+    // 因为 @charset: 12px 和 @import: 30px 是一个合法的变量定义
     | rules EOF {
         return {
             root: ast
@@ -70,15 +72,10 @@ root
 ;
 
 rules
-    : mulit_comment {
-    }
-    | single_comment {
-
-    }
-    | rules single_comment {
-    }
-    | rules mulit_comment {
-    }
+    : mulit_comment
+    | single_comment
+    | rules single_comment
+    | rules mulit_comment
 ;
 
 single_comment
