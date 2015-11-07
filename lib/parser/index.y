@@ -56,12 +56,10 @@ root
         };
     }
     // rules 指的是一个块，（逻辑上的）
-    // 1. 一行变量定义
-    // 2. 一个选择器块
-    // 3. 一行单行注释
-    // 4. 一个多行注释块
-    // 5. 一行 @charset 语句
-    // 6. 一行 @import 语句
+    // 1. 一个选择器块
+    // 2. 一行单行注释
+    // 3. 一个多行注释块
+    // 4. 一行 @charset 语句；一行 @import 语句；一行变量定义
     // @charset, @import, 以及变量定义需要合在一起来做（词法中）
     // 因为 @charset: 12px 和 @import: 30px 是一个合法的变量定义
     | rules EOF {
@@ -73,9 +71,11 @@ root
 
 rules
     : mulit_comment
+    | rules mulit_comment
     | single_comment
     | rules single_comment
-    | rules mulit_comment
+    | at_stmt
+    | rules at_stmt
 ;
 
 single_comment
@@ -142,6 +142,10 @@ mulit_comment
             }
         });
     }
+;
+
+at_stmt
+    : AT_START
 ;
 
 
