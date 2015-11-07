@@ -44,13 +44,13 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
 // sc 进入单行注释的状态
 // mc 进入多行注释的状态
 // at_start 遇到 @ 的状态
-%x s sc mc at_start
+// ch 进入 @charset 语句后的状态
+%x s sc mc at_start ch
 
 // b 进入选择器内部即块的状态
 // sb 进入选择器内部子选择器内部即子块的状态
 // p 进入属性的状态，这个状态用来帮助找到属性的值
 // im 进入 @import 语句后的状态
-// ch 进入 @charset 语句后的状态
 // var 进入 变量定义 语句后的状态
 //b sb p im ch var
 
@@ -99,14 +99,37 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
     this.popState();
 };
 
+/**
+ * @charset
+ */
 <s>'@'/'charset' {
     this.begin('at_start');
     return 'AT_START';
 };
 
 <at_start>'charset' {
-    console.warn(yytext, '---');
+    this.popState();
+    this.begin('ch');
+    return 'CHARSET';
 };
+
+<ch>{space} {
+    return 'CH_SPACE';
+};
+
+<ch>{string} {
+    return 'CH_STRING';
+};
+
+<ch>{semicolon} {
+    this.popState();
+    return 'CH_SEMICOLON';
+};
+
+
+
+
+
 
 <s>{space} {
     return 'SPACE';

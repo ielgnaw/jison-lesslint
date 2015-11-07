@@ -7,513 +7,96 @@
         "sComments": [
             {
                 "type": "sComment",
-                "content": "// asdsad /*asdsad*/",
+                "content": "//      @charset            \"UTF  //-;8\";@charset    \"asdasda//asdqwew'''qwewqeqw\";",
                 "before": "\n\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 5,
+                    "lastLine": 5,
+                    "firstCol": 1,
+                    "lastCol": 84,
+                    "originContent": "//      @charset            \"UTF  //-;8\";@charset    \"asdasda//asdqwew'''qwewqeqw\";"
+                }
+            },
+            {
+                "type": "sComment",
+                "content": "//  @charset\"utf8\";",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 7,
+                    "lastLine": 7,
+                    "firstCol": 1,
+                    "lastCol": 20,
+                    "originContent": "//  @charset\"utf8\";"
+                }
+            },
+            {
+                "type": "sComment",
+                "content": "// @charset 'gbk';",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 8,
+                    "lastLine": 8,
+                    "firstCol": 1,
+                    "lastCol": 19,
+                    "originContent": "// @charset 'gbk';"
+                }
+            },
+            {
+                "type": "sComment",
+                "content": "// @charset utf8ads;",
+                "before": "",
                 "after": "",
                 "loc": {
                     "firstLine": 10,
                     "lastLine": 10,
                     "firstCol": 1,
                     "lastCol": 21,
-                    "originContent": "// asdsad /*asdsad*/"
+                    "originContent": "// @charset utf8ads;"
                 }
             },
             {
                 "type": "sComment",
-                "content": "// 111",
-                "before": "\n\n    ",
-                "after": "",
-                "loc": {
-                    "firstLine": 17,
-                    "lastLine": 17,
-                    "firstCol": 5,
-                    "lastCol": 11,
-                    "originContent": "// 111"
-                }
-            },
-            {
-                "type": "sComment",
-                "content": "// 2222",
+                "content": "// @charset zcxczcx;",
                 "before": "",
-                "after": "",
-                "loc": {
-                    "firstLine": 18,
-                    "lastLine": 18,
-                    "firstCol": 1,
-                    "lastCol": 8,
-                    "originContent": "// 2222"
-                }
-            },
-            {
-                "type": "sComment",
-                "content": "// '3333' // 333ccc",
-                "before": "    ",
-                "after": "",
-                "loc": {
-                    "firstLine": 19,
-                    "lastLine": 19,
-                    "firstCol": 5,
-                    "lastCol": 24,
-                    "originContent": "// '3333' // 333ccc"
-                }
-            },
-            {
-                "type": "sComment",
-                "content": "//",
-                "before": "    ",
-                "after": "",
-                "loc": {
-                    "firstLine": 20,
-                    "lastLine": 20,
-                    "firstCol": 5,
-                    "lastCol": 7,
-                    "originContent": "//"
-                }
-            },
-            {
-                "type": "sComment",
-                "content": "// 5555",
-                "before": "    ",
-                "after": "",
-                "loc": {
-                    "firstLine": 24,
-                    "lastLine": 24,
-                    "firstCol": 5,
-                    "lastCol": 12,
-                    "originContent": "// 5555"
-                }
-            },
-            {
-                "type": "sComment",
-                "content": "//      Width of column             */",
-                "before": "\n ",
-                "after": "",
-                "loc": {
-                    "firstLine": 32,
-                    "lastLine": 32,
-                    "firstCol": 2,
-                    "lastCol": 40,
-                    "originContent": "//      Width of column             */"
-                }
-            },
-            {
-                "type": "sComment",
-                "content": "////////////////",
-                "before": "\n",
-                "after": "",
-                "loc": {
-                    "firstLine": 52,
-                    "lastLine": 52,
-                    "firstCol": 1,
-                    "lastCol": 17,
-                    "originContent": "////////////////"
-                }
-            },
-            {
-                "type": "sComment",
-                "content": "////////////////",
-                "before": "",
-                "after": "",
-                "loc": {
-                    "firstLine": 54,
-                    "lastLine": 54,
-                    "firstCol": 1,
-                    "lastCol": 17,
-                    "originContent": "////////////////"
-                }
-            },
-            {
-                "type": "sComment",
-                "content": "//.commented_out3",
-                "before": "\n",
-                "after": "",
-                "loc": {
-                    "firstLine": 74,
-                    "lastLine": 74,
-                    "firstCol": 1,
-                    "lastCol": 18,
-                    "originContent": "//.commented_out3"
-                }
-            },
-            {
-                "type": "sComment",
-                "content": "//end of comments1",
-                "before": "    ",
-                "after": "",
-                "loc": {
-                    "firstLine": 77,
-                    "lastLine": 77,
-                    "firstCol": 5,
-                    "lastCol": 23,
-                    "originContent": "//end of comments1"
-                }
-            },
-            {
-                "type": "sComment",
-                "content": "//end of comments2",
-                "before": "",
-                "after": "",
-                "loc": {
-                    "firstLine": 78,
-                    "lastLine": 78,
-                    "firstCol": 1,
-                    "lastCol": 19,
-                    "originContent": "//end of comments2"
-                }
-            },
-            {
-                "type": "sComment",
-                "content": "// An empty comment",
-                "before": "",
-                "after": "",
-                "loc": {
-                    "firstLine": 80,
-                    "lastLine": 80,
-                    "firstCol": 6,
-                    "lastCol": 25,
-                    "originContent": "// An empty comment"
-                }
-            },
-            {
-                "type": "sComment",
-                "content": "// padding & margin //",
-                "before": "\n\n ",
-                "after": "",
-                "loc": {
-                    "firstLine": 86,
-                    "lastLine": 86,
-                    "firstCol": 2,
-                    "lastCol": 24,
-                    "originContent": "// padding & margin //"
-                }
-            },
-            {
-                "type": "sComment",
-                "content": "// }{ '\"",
-                "before": "",
-                "after": "",
-                "loc": {
-                    "firstLine": 89,
-                    "lastLine": 89,
-                    "firstCol": 1,
-                    "lastCol": 9,
-                    "originContent": "// }{ '\""
-                }
-            },
-            {
-                "type": "sComment",
-                "content": "//put in @b - causes problems! --->",
-                "before": "\n\n\n",
-                "after": "",
-                "loc": {
-                    "firstLine": 100,
-                    "lastLine": 100,
-                    "firstCol": 1,
-                    "lastCol": 36,
-                    "originContent": "//put in @b - causes problems! --->"
-                }
-            }
-        ],
-        "mComments": [
-            {
-                "type": "mComment",
-                "content": "/*asdsd\n//sdsads\n//\n\n//\n\n*/\n",
-                "before": "",
-                "after": "",
-                "loc": {
-                    "firstLine": 1,
-                    "lastLine": 8,
-                    "firstCol": 1,
-                    "lastCol": 1,
-                    "originContent": "/*asdsd\n//sdsads\n//\n\n//\n\n*/\n"
-                }
-            },
-            {
-                "type": "mComment",
-                "content": "/*asdasdsad\n    asdasdasdasd\n*/\n",
-                "before": "    ",
                 "after": "",
                 "loc": {
                     "firstLine": 12,
-                    "lastLine": 15,
-                    "firstCol": 5,
-                    "lastCol": 1,
-                    "originContent": "/*asdasdsad\n    asdasdasdasd\n*/\n"
-                }
-            },
-            {
-                "type": "mComment",
-                "content": "/*! */\n",
-                "before": "",
-                "after": "",
-                "loc": {
-                    "firstLine": 27,
-                    "lastLine": 28,
+                    "lastLine": 12,
                     "firstCol": 1,
-                    "lastCol": 1,
-                    "originContent": "/*! */\n"
+                    "lastCol": 21,
+                    "originContent": "// @charset zcxczcx;"
                 }
             },
             {
-                "type": "mComment",
-                "content": "/*comment*/",
-                "before": "\n",
+                "type": "sComment",
+                "content": "// @charset        asdasdassad/;",
+                "before": "",
                 "after": "",
                 "loc": {
-                    "firstLine": 29,
-                    "lastLine": 29,
+                    "firstLine": 14,
+                    "lastLine": 14,
                     "firstCol": 1,
-                    "lastCol": 12,
-                    "originContent": "/*comment*/"
+                    "lastCol": 33,
+                    "originContent": "// @charset        asdasdassad/;"
                 }
             },
             {
-                "type": "mComment",
-                "content": "/*comment1*/\n",
+                "type": "sComment",
+                "content": "// @charset \"ISO-8859-1\";",
                 "before": "",
                 "after": "",
                 "loc": {
-                    "firstLine": 29,
-                    "lastLine": 30,
-                    "firstCol": 12,
-                    "lastCol": 1,
-                    "originContent": "/*comment1*/\n"
-                }
-            },
-            {
-                "type": "mComment",
-                "content": "/*comment2*/ ",
-                "before": "",
-                "after": "",
-                "loc": {
-                    "firstLine": 30,
-                    "lastLine": 30,
+                    "firstLine": 16,
+                    "lastLine": 16,
                     "firstCol": 1,
-                    "lastCol": 14,
-                    "originContent": "/*comment2*/ "
-                }
-            },
-            {
-                "type": "mComment",
-                "content": "/*comment3*/\n",
-                "before": "",
-                "after": "",
-                "loc": {
-                    "firstLine": 30,
-                    "lastLine": 31,
-                    "firstCol": 14,
-                    "lastCol": 1,
-                    "originContent": "/*comment3*/\n"
-                }
-            },
-            {
-                "type": "mComment",
-                "content": "/******************\\\n*                  *\n*  Comment Header  *\n*                  *\n\\******************/\n",
-                "before": "",
-                "after": "",
-                "loc": {
-                    "firstLine": 35,
-                    "lastLine": 40,
-                    "firstCol": 1,
-                    "lastCol": 1,
-                    "originContent": "/******************\\\n*                  *\n*  Comment Header  *\n*                  *\n\\******************/\n"
-                }
-            },
-            {
-                "type": "mComment",
-                "content": "/*\n    Comment\n*/\n",
-                "before": "\n",
-                "after": "",
-                "loc": {
-                    "firstLine": 41,
-                    "lastLine": 44,
-                    "firstCol": 1,
-                    "lastCol": 1,
-                    "originContent": "/*\n    Comment\n*/\n"
-                }
-            },
-            {
-                "type": "mComment",
-                "content": "/*\n * Comment Test\n *\n * - cloudhead (http://cloudhead.net)\n *\n */\n",
-                "before": "\n",
-                "after": "",
-                "loc": {
-                    "firstLine": 45,
-                    "lastLine": 51,
-                    "firstCol": 1,
-                    "lastCol": 1,
-                    "originContent": "/*\n * Comment Test\n *\n * - cloudhead (http://cloudhead.net)\n *\n */\n"
-                }
-            },
-            {
-                "type": "mComment",
-                "content": "/* Colors\n * ------\n *   #EDF8FC (background blue)\n *   #166C89 (darkest blue)\n *\n * Text:\n *   #333 (standard text) // A comment within a comment!\n *   #1F9EC9 (standard link)\n *\n */\n",
-                "before": "",
-                "after": "",
-                "loc": {
-                    "firstLine": 56,
-                    "lastLine": 66,
-                    "firstCol": 1,
-                    "lastCol": 1,
-                    "originContent": "/* Colors\n * ------\n *   #EDF8FC (background blue)\n *   #166C89 (darkest blue)\n *\n * Text:\n *   #333 (standard text) // A comment within a comment!\n *   #1F9EC9 (standard link)\n *\n */\n"
-                }
-            },
-            {
-                "type": "mComment",
-                "content": "/* @group Variables\n------------------- */\n",
-                "before": "\n",
-                "after": "",
-                "loc": {
-                    "firstLine": 67,
-                    "lastLine": 69,
-                    "firstCol": 1,
-                    "lastCol": 1,
-                    "originContent": "/* @group Variables\n------------------- */\n"
-                }
-            },
-            {
-                "type": "mComment",
-                "content": "/* boo      */",
-                "before": "\n\n\n",
-                "after": "",
-                "loc": {
-                    "firstLine": 72,
-                    "lastLine": 72,
-                    "firstCol": 1,
-                    "lastCol": 15,
-                    "originContent": "/* boo      */"
-                }
-            },
-            {
-                "type": "mComment",
-                "content": "/* boo again*/\n",
-                "before": "",
-                "after": "",
-                "loc": {
-                    "firstLine": 72,
-                    "lastLine": 73,
-                    "firstCol": 15,
-                    "lastCol": 1,
-                    "originContent": "/* boo again*/\n"
-                }
-            },
-            {
-                "type": "mComment",
-                "content": "/**/ ",
-                "before": "",
-                "after": "",
-                "loc": {
-                    "firstLine": 80,
-                    "lastLine": 80,
-                    "firstCol": 1,
-                    "lastCol": 6,
-                    "originContent": "/**/ "
-                }
-            },
-            {
-                "type": "mComment",
-                "content": "/* A C-style comment */ ",
-                "before": "",
-                "after": "",
-                "loc": {
-                    "firstLine": 83,
-                    "lastLine": 83,
-                    "firstCol": 1,
-                    "lastCol": 25,
-                    "originContent": "/* A C-style comment */ "
-                }
-            },
-            {
-                "type": "mComment",
-                "content": "/* A C-style comment1 */\n",
-                "before": " ",
-                "after": "",
-                "loc": {
-                    "firstLine": 83,
-                    "lastLine": 84,
-                    "firstCol": 26,
-                    "lastCol": 1,
-                    "originContent": "/* A C-style comment1 */\n"
-                }
-            },
-            {
-                "type": "mComment",
-                "content": "/* commented out\n  #more-comments {\n    color: grey;\n  }\n*/\n",
-                "before": "",
-                "after": "",
-                "loc": {
-                    "firstLine": 92,
-                    "lastLine": 97,
-                    "firstCol": 1,
-                    "lastCol": 1,
-                    "originContent": "/* commented out\n  #more-comments {\n    color: grey;\n  }\n*/\n"
-                }
-            },
-            {
-                "type": "mComment",
-                "content": "/*  */",
-                "before": "",
-                "after": "",
-                "loc": {
-                    "firstLine": 106,
-                    "lastLine": 106,
-                    "firstCol": 1,
-                    "lastCol": 7,
-                    "originContent": "/*  */"
-                }
-            },
-            {
-                "type": "mComment",
-                "content": "/* { */",
-                "before": "",
-                "after": "",
-                "loc": {
-                    "firstLine": 106,
-                    "lastLine": 106,
-                    "firstCol": 7,
-                    "lastCol": 14,
-                    "originContent": "/* { */"
-                }
-            },
-            {
-                "type": "mComment",
-                "content": "/*  */",
-                "before": "",
-                "after": "",
-                "loc": {
-                    "firstLine": 106,
-                    "lastLine": 106,
-                    "firstCol": 14,
-                    "lastCol": 20,
-                    "originContent": "/*  */"
-                }
-            },
-            {
-                "type": "mComment",
-                "content": "/*  */",
-                "before": "",
-                "after": "",
-                "loc": {
-                    "firstLine": 106,
-                    "lastLine": 106,
-                    "firstCol": 20,
                     "lastCol": 26,
-                    "originContent": "/*  */"
-                }
-            },
-            {
-                "type": "mComment",
-                "content": "/*  */\n",
-                "before": "",
-                "after": "",
-                "loc": {
-                    "firstLine": 106,
-                    "lastLine": 107,
-                    "firstCol": 26,
-                    "lastCol": 1,
-                    "originContent": "/*  */\n"
+                    "originContent": "// @charset \"ISO-8859-1\";"
                 }
             }
-        ]
+        ],
+        "mComments": []
     }
 }

@@ -4,9 +4,9 @@
         {
             "name": "@charset",
             "value": {
-                "value": "gbk",
+                "value": "utf-8",
                 "quote": "'",
-                "index": 9,
+                "index": 8,
                 "currentFileInfo": {
                     "filename": "input",
                     "relativeUrls": true,
@@ -26,6 +26,106 @@
                 "rootFilename": "input"
             },
             "debugInfo": null
+        },
+        {
+            "name": "@charset",
+            "value": {
+                "value": "%"
+            },
+            "index": 18,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            },
+            "debugInfo": null
+        },
+        {
+            "value": "//      @charset            \"UTF  //-;8\";@charset    \"asdasda//asdqwew'''qwewqeqw\";",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "//  @charset\"utf8\";",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "// @charset 'gbk';",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "// @charset utf8ads;",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "// @charset zcxczcx;",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "// @charset        asdasdassad/;",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "// @charset \"ISO-8859-1\";",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
         }
     ],
     "_lookups": {},

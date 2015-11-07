@@ -145,7 +145,23 @@ mulit_comment
 ;
 
 at_stmt
-    : AT_START
+    : SPACE* AT_START CHARSET CH_SPACE* CH_STRING CH_SEMICOLON {
+        console.warn($1, $2, $3, $4, $5);
+        // ast.charsets.push({
+        //     type: 'charset',
+        //     content: $2,
+        //     quote: quote,
+        //     before: $1.before,
+        //     after: '',
+        //     loc: {
+        //         firstLine: @1.first_line,
+        //         lastLine: @2.last_line,
+        //         firstCol: @1.first_column + 1 + $1.before.length,
+        //         lastCol: @3.last_column + 1,
+        //         originContent: $1.content + $2 + $3
+        //     }
+        // });
+    }
 ;
 
 
