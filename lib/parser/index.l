@@ -13,7 +13,9 @@ string                      {string1}|{string2}
 letter                      [\w-]+
 
 import                      '@import'
-importOpt                   \(('less'|'css'|'multiple'|'once'|'inline'|'reference')\)
+// importOpt                   ('less'|'css'|'multiple'|'once'|'inline'|'reference')
+importOpt                   \s*(''|'less'|'css'|'multiple'|'once'|'inline'|'reference')\s*(\,\s*(''|'less'|'css'|'multiple'|'once'|'inline'|'reference')*\s*)*
+
 // variable                    @.+\:
 singlecomment               \/\/[^\n]*
 // singlecomment               (['"]).*\1.*(\/\/.*)
@@ -45,9 +47,11 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
 // s 开始状态
 // sc 进入单行注释的状态
 // mc 进入多行注释的状态
-// at_start 遇到 @ 的状态
+// ch_start 遇到 @ 且后面是 charset 的状态
 // ch 进入 @charset 语句后的状态
-%x s sc mc at_start ch
+// im_start 遇到 @ 且后面是 import 的状态
+// im 进入 @import 语句后的状态
+%x s sc mc ch_start ch im_start im
 
 // b 进入选择器内部即块的状态
 // sb 进入选择器内部子选择器内部即子块的状态
@@ -109,11 +113,11 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
 };
 
 <s>'@'/'charset' {
-    this.begin('at_start');
-    return 'AT_START';
+    this.begin('ch_start');
+    return 'CH_START';
 };
 
-<at_start>'charset' {
+<ch_start>'charset' {
     this.popState();
     this.begin('ch');
     return 'CHARSET';
@@ -136,9 +140,50 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
     return 'CH_SEMICOLON';
 };
 
+/**
+ * @import
+ * @import 语句必须有引号
+ * @import importOptions 必须在小括号内
+ */
+<s>\s+/'@import' {
+    return 'IM_SPACE';
+};
 
+<s>'@'/'import' {
+    this.begin('im_start');
+    return 'IM_START';
+};
 
+<im_start>'import' {
+    this.popState();
+    this.begin('im');
+    return 'IMPORT';
+};
 
+<im>{space}'('{importOpt}')' {
+    return 'IM_OPT';
+};
+
+<im>{space} {
+    return 'IM_SPACE';
+};
+
+<im>{string} {
+    return 'IM_STRING';
+};
+
+<im>'url('[^\)]+')' {
+    return 'IM_URL';
+};
+
+<im>[\w-\s\:\(\)]+ {
+    return 'IM_MEDIA';
+};
+
+<im>{semicolon} {
+    this.popState();
+    return 'IM_SEMICOLON';
+};
 
 
 

@@ -1,223 +1,641 @@
 {
     "root": {
         "variables": [],
-        "imports": [],
-        "selectors": [],
-        "charsets": [
+        "imports": [
             {
-                "type": "charset",
-                "originContent": "@charset'utf-8';",
-                "content": "'utf-8'",
-                "quote": "'",
+                "type": "import",
+                "originContent": "@import url(\"./variable.less\");",
+                "value": " url(\"./variable.less\")",
+                "quote": "\"",
+                "importOption": [],
+                "originImportOption": "",
+                "mediaValue": "",
                 "before": "",
                 "after": "",
                 "loc": {
                     "firstLine": 1,
                     "lastLine": 1,
                     "firstCol": 1,
-                    "lastCol": 17
+                    "lastCol": 32
                 }
             },
             {
-                "type": "charset",
-                "originContent": "\n\n    @charset wasdasd;",
-                "content": " wasdasd",
-                "quote": "",
-                "before": "\n\n    ",
+                "type": "import",
+                "originContent": "    @import \"./variable.less\" screen and (max-width: 601px);",
+                "value": " \"./variable.less\" ",
+                "quote": "\"",
+                "importOption": [],
+                "originImportOption": "",
+                "mediaValue": "screen and (max-width: 601px)",
+                "before": "    ",
                 "after": "",
                 "loc": {
                     "firstLine": 3,
                     "lastLine": 3,
                     "firstCol": 5,
-                    "lastCol": 22
+                    "lastCol": 61
                 }
             },
             {
-                "type": "charset",
-                "originContent": "\n\n@charset gbk;",
-                "content": " gbk",
-                "quote": "",
+                "type": "import",
+                "originContent": "\n\n@import () './variable';",
+                "value": " './variable'",
+                "quote": "'",
+                "importOption": [],
+                "originImportOption": " ()",
+                "mediaValue": "",
                 "before": "\n\n",
                 "after": "",
                 "loc": {
                     "firstLine": 5,
                     "lastLine": 5,
                     "firstCol": 1,
-                    "lastCol": 14
+                    "lastCol": 25
                 }
             },
             {
-                "type": "charset",
-                "originContent": "\n\n@charset            UTF-8;",
-                "content": "            UTF-8",
-                "quote": "",
-                "before": "\n\n",
+                "type": "import",
+                "originContent": "\n\n    @import    (  less  , inline  )    \"./variable.less\";",
+                "value": "    \"./variable.less\"",
+                "quote": "\"",
+                "importOption": [
+                    "less",
+                    "inline"
+                ],
+                "originImportOption": "    (  less  , inline  )",
+                "mediaValue": "",
+                "before": "\n\n    ",
                 "after": "",
                 "loc": {
                     "firstLine": 7,
                     "lastLine": 7,
-                    "firstCol": 1,
-                    "lastCol": 27
+                    "firstCol": 5,
+                    "lastCol": 58
                 }
             },
             {
-                "type": "charset",
-                "originContent": "\n@charset 123;",
-                "content": " 123",
-                "quote": "",
-                "before": "\n",
+                "type": "import",
+                "originContent": "\n    @import './charset.less'  ;",
+                "value": " './charset.less'  ",
+                "quote": "'",
+                "importOption": [],
+                "originImportOption": "",
+                "mediaValue": "",
+                "before": "\n    ",
                 "after": "",
                 "loc": {
-                    "firstLine": 8,
-                    "lastLine": 8,
-                    "firstCol": 1,
-                    "lastCol": 14
+                    "firstLine": 116,
+                    "lastLine": 116,
+                    "firstCol": 5,
+                    "lastCol": 32
                 }
             },
             {
-                "type": "charset",
-                "originContent": "\n@charset            \"456\";",
-                "content": "            \"456\"",
+                "type": "import",
+                "originContent": "\n@import \"import-@{in}@{terpolation}2.less\";",
+                "value": " \"import-@{in}@{terpolation}2.less\"",
                 "quote": "\"",
+                "importOption": [],
+                "originImportOption": "",
+                "mediaValue": "",
                 "before": "\n",
                 "after": "",
                 "loc": {
-                    "firstLine": 9,
-                    "lastLine": 9,
+                    "firstLine": 117,
+                    "lastLine": 117,
                     "firstCol": 1,
-                    "lastCol": 27
+                    "lastCol": 44
                 }
             },
             {
-                "type": "charset",
-                "originContent": "@charset            789;",
-                "content": "            789",
-                "quote": "",
+                "type": "import",
+                "originContent": "\n\n    @import \"import-@{in}@{terpolation}3.less\";",
+                "value": " \"import-@{in}@{terpolation}3.less\"",
+                "quote": "\"",
+                "importOption": [],
+                "originImportOption": "",
+                "mediaValue": "",
+                "before": "\n\n    ",
+                "after": "",
+                "loc": {
+                    "firstLine": 119,
+                    "lastLine": 119,
+                    "firstCol": 5,
+                    "lastCol": 48
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "\n\n\n@import (inline) \"./singlecomment.less\";",
+                "value": " \"./singlecomment.less\"",
+                "quote": "\"",
+                "importOption": [
+                    "inline"
+                ],
+                "originImportOption": " (inline)",
+                "mediaValue": "",
+                "before": "\n\n\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 122,
+                    "lastLine": 122,
+                    "firstCol": 1,
+                    "lastCol": 41
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "\n    @import (multiple,  ) \"./dd.less\";",
+                "value": " \"./dd.less\"",
+                "quote": "\"",
+                "importOption": [
+                    "multiple"
+                ],
+                "originImportOption": " (multiple,  )",
+                "mediaValue": "",
+                "before": "\n    ",
+                "after": "",
+                "loc": {
+                    "firstLine": 123,
+                    "lastLine": 123,
+                    "firstCol": 5,
+                    "lastCol": 39
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "\n\n\n@import url(\"test.css\");",
+                "value": " url(\"test.css\")",
+                "quote": "\"",
+                "importOption": [],
+                "originImportOption": "",
+                "mediaValue": "",
+                "before": "\n\n\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 126,
+                    "lastLine": 126,
+                    "firstCol": 1,
+                    "lastCol": 25
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "\n\n\n@import \"../css/background.css\";",
+                "value": " \"../css/background.css\"",
+                "quote": "\"",
+                "importOption": [],
+                "originImportOption": "",
+                "mediaValue": "",
+                "before": "\n\n\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 129,
+                    "lastLine": 129,
+                    "firstCol": 1,
+                    "lastCol": 33
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "\n@import \"import-test-d.css\";",
+                "value": " \"import-test-d.css\"",
+                "quote": "\"",
+                "importOption": [],
+                "originImportOption": "",
+                "mediaValue": "",
+                "before": "\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 130,
+                    "lastLine": 130,
+                    "firstCol": 1,
+                    "lastCol": 29
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "\n\n@import \"imports/logo\";",
+                "value": " \"imports/logo\"",
+                "quote": "\"",
+                "importOption": [],
+                "originImportOption": "",
+                "mediaValue": "",
+                "before": "\n\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 132,
+                    "lastLine": 132,
+                    "firstCol": 1,
+                    "lastCol": 24
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "\n@import \"imports/font\";",
+                "value": " \"imports/font\"",
+                "quote": "\"",
+                "importOption": [],
+                "originImportOption": "",
+                "mediaValue": "",
+                "before": "\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 133,
+                    "lastLine": 133,
+                    "firstCol": 1,
+                    "lastCol": 24
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "\n\n\n@import (inline) \"imports/logo.less\";",
+                "value": " \"imports/logo.less\"",
+                "quote": "\"",
+                "importOption": [
+                    "inline"
+                ],
+                "originImportOption": " (inline)",
+                "mediaValue": "",
+                "before": "\n\n\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 136,
+                    "lastLine": 136,
+                    "firstCol": 1,
+                    "lastCol": 38
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "\n@import \"import-@{in}@{terpolation}2.less\";",
+                "value": " \"import-@{in}@{terpolation}2.less\"",
+                "quote": "\"",
+                "importOption": [],
+                "originImportOption": "",
+                "mediaValue": "",
+                "before": "\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 137,
+                    "lastLine": 137,
+                    "firstCol": 1,
+                    "lastCol": 44
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "@import url(\"import/import-test-c.less\");",
+                "value": " url(\"import/import-test-c.less\")",
+                "quote": "\"",
+                "importOption": [],
+                "originImportOption": "",
+                "mediaValue": "",
                 "before": "",
                 "after": "",
                 "loc": {
-                    "firstLine": 9,
-                    "lastLine": 9,
-                    "firstCol": 27,
+                    "firstLine": 139,
+                    "lastLine": 139,
+                    "firstCol": 1,
+                    "lastCol": 42
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "@import (inline) url(\"import/import-test-d.css\") (min-width:600px);",
+                "value": " url(\"import/import-test-d.css\") ",
+                "quote": "\"",
+                "importOption": [
+                    "inline"
+                ],
+                "originImportOption": " (inline)",
+                "mediaValue": "(min-width:600px)",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 140,
+                    "lastLine": 140,
+                    "firstCol": 1,
+                    "lastCol": 68
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "\n@import (inline, css) url('import/invalid-css.less');",
+                "value": " url('import/invalid-css.less')",
+                "quote": "'",
+                "importOption": [
+                    "inline",
+                    "css"
+                ],
+                "originImportOption": " (inline, css)",
+                "mediaValue": "",
+                "before": "\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 141,
+                    "lastLine": 141,
+                    "firstCol": 1,
+                    "lastCol": 54
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "\n@import (inline, css) url(import/invalid-css1.less);",
+                "value": " url(import/invalid-css1.less)",
+                "quote": "",
+                "importOption": [
+                    "inline",
+                    "css"
+                ],
+                "originImportOption": " (inline, css)",
+                "mediaValue": "",
+                "before": "\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 142,
+                    "lastLine": 142,
+                    "firstCol": 1,
+                    "lastCol": 53
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "\n\n\n@import \"import/import-once-test-c\";",
+                "value": " \"import/import-once-test-c\"",
+                "quote": "\"",
+                "importOption": [],
+                "originImportOption": "",
+                "mediaValue": "",
+                "before": "\n\n\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 145,
+                    "lastLine": 145,
+                    "firstCol": 1,
+                    "lastCol": 37
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "\n@import \"import/import-once-test-c\";",
+                "value": " \"import/import-once-test-c\"",
+                "quote": "\"",
+                "importOption": [],
+                "originImportOption": "",
+                "mediaValue": "",
+                "before": "\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 146,
+                    "lastLine": 146,
+                    "firstCol": 1,
+                    "lastCol": 37
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "\n@import \"import/import-once-test-c.less\";",
+                "value": " \"import/import-once-test-c.less\"",
+                "quote": "\"",
+                "importOption": [],
+                "originImportOption": "",
+                "mediaValue": "",
+                "before": "\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 147,
+                    "lastLine": 147,
+                    "firstCol": 1,
+                    "lastCol": 42
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "\n@import \"import/deeper/import-once-test-a\";",
+                "value": " \"import/deeper/import-once-test-a\"",
+                "quote": "\"",
+                "importOption": [],
+                "originImportOption": "",
+                "mediaValue": "",
+                "before": "\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 148,
+                    "lastLine": 148,
+                    "firstCol": 1,
+                    "lastCol": 44
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "\n@import (multiple) \"import/import-test-f.less\";",
+                "value": " \"import/import-test-f.less\"",
+                "quote": "\"",
+                "importOption": [
+                    "multiple"
+                ],
+                "originImportOption": " (multiple)",
+                "mediaValue": "",
+                "before": "\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 149,
+                    "lastLine": 149,
+                    "firstCol": 1,
+                    "lastCol": 48
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "\n@import (multiple) \"import/import-test-f.less\";",
+                "value": " \"import/import-test-f.less\"",
+                "quote": "\"",
+                "importOption": [
+                    "multiple"
+                ],
+                "originImportOption": " (multiple)",
+                "mediaValue": "",
+                "before": "\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 150,
+                    "lastLine": 150,
+                    "firstCol": 1,
+                    "lastCol": 48
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "\n\n@import (reference) url(\"import-once.less\");",
+                "value": " url(\"import-once.less\")",
+                "quote": "\"",
+                "importOption": [
+                    "reference"
+                ],
+                "originImportOption": " (reference)",
+                "mediaValue": "",
+                "before": "\n\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 152,
+                    "lastLine": 152,
+                    "firstCol": 1,
+                    "lastCol": 45
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "\n@import (reference) url(\"css-3.less\");",
+                "value": " url(\"css-3.less\")",
+                "quote": "\"",
+                "importOption": [
+                    "reference"
+                ],
+                "originImportOption": " (reference)",
+                "mediaValue": "",
+                "before": "\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 153,
+                    "lastLine": 153,
+                    "firstCol": 1,
+                    "lastCol": 39
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "\n@import (reference) url(\"media.less\");",
+                "value": " url(\"media.less\")",
+                "quote": "\"",
+                "importOption": [
+                    "reference"
+                ],
+                "originImportOption": " (reference)",
+                "mediaValue": "",
+                "before": "\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 154,
+                    "lastLine": 154,
+                    "firstCol": 1,
+                    "lastCol": 39
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "\n@import (reference) url(\"import/import-reference.less\");",
+                "value": " url(\"import/import-reference.less\")",
+                "quote": "\"",
+                "importOption": [
+                    "reference"
+                ],
+                "originImportOption": " (reference)",
+                "mediaValue": "",
+                "before": "\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 155,
+                    "lastLine": 155,
+                    "firstCol": 1,
+                    "lastCol": 57
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "\n@import (reference) url(\"import/css-import.less\");",
+                "value": " url(\"import/css-import.less\")",
+                "quote": "\"",
+                "importOption": [
+                    "reference"
+                ],
+                "originImportOption": " (reference)",
+                "mediaValue": "",
+                "before": "\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 156,
+                    "lastLine": 156,
+                    "firstCol": 1,
                     "lastCol": 51
                 }
             },
             {
-                "type": "charset",
-                "originContent": "    @charset            \"456\";",
-                "content": "            \"456\"",
-                "quote": "\"",
-                "before": "    ",
-                "after": "",
-                "loc": {
-                    "firstLine": 9,
-                    "lastLine": 9,
-                    "firstCol": 55,
-                    "lastCol": 81
-                }
-            },
-            {
-                "type": "charset",
-                "originContent": "@charset'qqq';",
-                "content": "'qqq'",
-                "quote": "'",
-                "before": "",
-                "after": "",
-                "loc": {
-                    "firstLine": 9,
-                    "lastLine": 9,
-                    "firstCol": 81,
-                    "lastCol": 95
-                }
-            },
-            {
-                "type": "charset",
-                "originContent": "\n@charset 123;",
-                "content": " 123",
+                "type": "import",
+                "originContent": "\n\n@import url(http://fonts.googleapis.com/css?family=Open+Sans);",
+                "value": " url(http://fonts.googleapis.com/css?family=Open+Sans)",
                 "quote": "",
-                "before": "\n",
+                "importOption": [],
+                "originImportOption": "",
+                "mediaValue": "",
+                "before": "\n\n",
                 "after": "",
                 "loc": {
-                    "firstLine": 10,
-                    "lastLine": 10,
+                    "firstLine": 158,
+                    "lastLine": 158,
                     "firstCol": 1,
-                    "lastCol": 14
+                    "lastCol": 63
                 }
             },
             {
-                "type": "charset",
-                "originContent": "@charset \"ISO-8859-1\";",
-                "content": " \"ISO-8859-1\"",
+                "type": "import",
+                "originContent": "\n\n@import url(/absolute/something.css) screen and (color) and (max-width: 600px);",
+                "value": " url(/absolute/something.css) ",
+                "quote": "",
+                "importOption": [],
+                "originImportOption": "",
+                "mediaValue": "screen and (color) and (max-width: 600px)",
+                "before": "\n\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 160,
+                    "lastLine": 160,
+                    "firstCol": 1,
+                    "lastCol": 80
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "@import (less, multiple) \"import/import-test-d.css\" screen and (max-width: 601px);\n",
+                "value": " \"import/import-test-d.css\" ",
                 "quote": "\"",
+                "importOption": [
+                    "less",
+                    "multiple"
+                ],
+                "originImportOption": " (less, multiple)",
+                "mediaValue": "screen and (max-width: 601px)",
                 "before": "",
-                "after": "",
+                "after": "\n",
                 "loc": {
-                    "firstLine": 24,
-                    "lastLine": 24,
+                    "firstLine": 164,
+                    "lastLine": 164,
                     "firstCol": 1,
-                    "lastCol": 23
-                }
-            },
-            {
-                "type": "charset",
-                "originContent": "  @charset'//123';",
-                "content": "'//123'",
-                "quote": "'",
-                "before": "  ",
-                "after": "",
-                "loc": {
-                    "firstLine": 24,
-                    "lastLine": 24,
-                    "firstCol": 25,
-                    "lastCol": 41
+                    "lastCol": 83
                 }
             }
         ],
+        "selectors": [],
+        "charsets": [],
         "sComments": [
             {
                 "type": "sComment",
-                "originContent": "//      @charset            \"UTF  //-;8\";@charset    \"asdasda//asdqwew'''qwewqeqw\";",
-                "content": "//      @charset            \"UTF  //-;8\";@charset    \"asdasda//asdqwew'''qwewqeqw\";",
-                "before": "\n\n\n",
+                "originContent": "// import inline should not float above this #1954",
+                "content": "// import inline should not float above this #1954",
+                "before": "",
                 "after": "",
                 "loc": {
-                    "firstLine": 13,
-                    "lastLine": 13,
-                    "firstCol": 1,
-                    "lastCol": 84
+                    "firstLine": 1,
+                    "lastLine": 1,
+                    "firstCol": 32,
+                    "lastCol": 82
                 }
             },
             {
                 "type": "sComment",
-                "originContent": "//  @charset\"utf8\";",
-                "content": "//  @charset\"utf8\";",
-                "before": "",
-                "after": "",
-                "loc": {
-                    "firstLine": 15,
-                    "lastLine": 15,
-                    "firstCol": 1,
-                    "lastCol": 20
-                }
-            },
-            {
-                "type": "sComment",
-                "originContent": "// @charset 'gbk';",
-                "content": "// @charset 'gbk';",
-                "before": "",
-                "after": "",
-                "loc": {
-                    "firstLine": 16,
-                    "lastLine": 16,
-                    "firstCol": 1,
-                    "lastCol": 19
-                }
-            },
-            {
-                "type": "sComment",
-                "originContent": "// @charset utf8ads;",
-                "content": "// @charset utf8ads;",
-                "before": "",
+                "originContent": "// asdsad /*asdsad*/",
+                "content": "// asdsad /*asdsad*/",
+                "before": "\n\n",
                 "after": "",
                 "loc": {
                     "firstLine": 18,
@@ -228,31 +646,539 @@
             },
             {
                 "type": "sComment",
-                "originContent": "// @charset zcxczcx;",
-                "content": "// @charset zcxczcx;",
-                "before": "",
+                "originContent": "// 111",
+                "content": "// 111",
+                "before": "\n\n    ",
                 "after": "",
                 "loc": {
-                    "firstLine": 20,
-                    "lastLine": 20,
-                    "firstCol": 1,
-                    "lastCol": 21
+                    "firstLine": 25,
+                    "lastLine": 25,
+                    "firstCol": 5,
+                    "lastCol": 11
                 }
             },
             {
                 "type": "sComment",
-                "originContent": "// @charset        asdasdassad/;",
-                "content": "// @charset        asdasdassad/;",
+                "originContent": "// 2222",
+                "content": "// 2222",
                 "before": "",
                 "after": "",
                 "loc": {
-                    "firstLine": 22,
-                    "lastLine": 22,
+                    "firstLine": 26,
+                    "lastLine": 26,
                     "firstCol": 1,
-                    "lastCol": 33
+                    "lastCol": 8
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// '3333' // 333ccc",
+                "content": "// '3333' // 333ccc",
+                "before": "    ",
+                "after": "",
+                "loc": {
+                    "firstLine": 27,
+                    "lastLine": 27,
+                    "firstCol": 5,
+                    "lastCol": 24
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "//",
+                "content": "//",
+                "before": "    ",
+                "after": "",
+                "loc": {
+                    "firstLine": 28,
+                    "lastLine": 28,
+                    "firstCol": 5,
+                    "lastCol": 7
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// 5555",
+                "content": "// 5555",
+                "before": "    ",
+                "after": "",
+                "loc": {
+                    "firstLine": 32,
+                    "lastLine": 32,
+                    "firstCol": 5,
+                    "lastCol": 12
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "//      Width of column             */",
+                "content": "//      Width of column             */",
+                "before": "\n ",
+                "after": "",
+                "loc": {
+                    "firstLine": 40,
+                    "lastLine": 40,
+                    "firstCol": 2,
+                    "lastCol": 40
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "////////////////",
+                "content": "////////////////",
+                "before": "\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 60,
+                    "lastLine": 60,
+                    "firstCol": 1,
+                    "lastCol": 17
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "////////////////",
+                "content": "////////////////",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 62,
+                    "lastLine": 62,
+                    "firstCol": 1,
+                    "lastCol": 17
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "//.commented_out3",
+                "content": "//.commented_out3",
+                "before": "\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 82,
+                    "lastLine": 82,
+                    "firstCol": 1,
+                    "lastCol": 18
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "//end of comments1",
+                "content": "//end of comments1",
+                "before": "    ",
+                "after": "",
+                "loc": {
+                    "firstLine": 85,
+                    "lastLine": 85,
+                    "firstCol": 5,
+                    "lastCol": 23
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "//end of comments2",
+                "content": "//end of comments2",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 86,
+                    "lastLine": 86,
+                    "firstCol": 1,
+                    "lastCol": 19
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// An empty comment",
+                "content": "// An empty comment",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 88,
+                    "lastLine": 88,
+                    "firstCol": 6,
+                    "lastCol": 25
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// padding & margin //",
+                "content": "// padding & margin //",
+                "before": "\n\n ",
+                "after": "",
+                "loc": {
+                    "firstLine": 94,
+                    "lastLine": 94,
+                    "firstCol": 2,
+                    "lastCol": 24
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// }{ '\"",
+                "content": "// }{ '\"",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 97,
+                    "lastLine": 97,
+                    "firstCol": 1,
+                    "lastCol": 9
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "//put in @b - causes problems! --->",
+                "content": "//put in @b - causes problems! --->",
+                "before": "\n\n\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 108,
+                    "lastLine": 108,
+                    "firstCol": 1,
+                    "lastCol": 36
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// asdas",
+                "content": "// asdas",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 137,
+                    "lastLine": 137,
+                    "firstCol": 44,
+                    "lastCol": 52
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// import inline should not float above this #1954",
+                "content": "// import inline should not float above this #1954",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 139,
+                    "lastLine": 139,
+                    "firstCol": 42,
+                    "lastCol": 92
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// @import (optional) \"file-does-not-exist.does-not-exist\";",
+                "content": "// @import (optional) \"file-does-not-exist.does-not-exist\";",
+                "before": "\n\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 162,
+                    "lastLine": 162,
+                    "firstCol": 1,
+                    "lastCol": 60
                 }
             }
         ],
-        "mComments": []
+        "mComments": [
+            {
+                "type": "mComment",
+                "content": "/*asdsd\n//sdsads\n//\n\n//\n\n*/\n",
+                "before": "\n\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 9,
+                    "lastLine": 16,
+                    "firstCol": 1,
+                    "lastCol": 1,
+                    "originContent": "/*asdsd\n//sdsads\n//\n\n//\n\n*/\n"
+                }
+            },
+            {
+                "type": "mComment",
+                "content": "/*asdasdsad\n    asdasdasdasd\n*/\n",
+                "before": "    ",
+                "after": "",
+                "loc": {
+                    "firstLine": 20,
+                    "lastLine": 23,
+                    "firstCol": 5,
+                    "lastCol": 1,
+                    "originContent": "/*asdasdsad\n    asdasdasdasd\n*/\n"
+                }
+            },
+            {
+                "type": "mComment",
+                "content": "/*! */\n",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 35,
+                    "lastLine": 36,
+                    "firstCol": 1,
+                    "lastCol": 1,
+                    "originContent": "/*! */\n"
+                }
+            },
+            {
+                "type": "mComment",
+                "content": "/*comment*/",
+                "before": "\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 37,
+                    "lastLine": 37,
+                    "firstCol": 1,
+                    "lastCol": 12,
+                    "originContent": "/*comment*/"
+                }
+            },
+            {
+                "type": "mComment",
+                "content": "/*comment1*/\n",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 37,
+                    "lastLine": 38,
+                    "firstCol": 12,
+                    "lastCol": 1,
+                    "originContent": "/*comment1*/\n"
+                }
+            },
+            {
+                "type": "mComment",
+                "content": "/*comment2*/ ",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 38,
+                    "lastLine": 38,
+                    "firstCol": 1,
+                    "lastCol": 14,
+                    "originContent": "/*comment2*/ "
+                }
+            },
+            {
+                "type": "mComment",
+                "content": "/*comment3*/\n",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 38,
+                    "lastLine": 39,
+                    "firstCol": 14,
+                    "lastCol": 1,
+                    "originContent": "/*comment3*/\n"
+                }
+            },
+            {
+                "type": "mComment",
+                "content": "/******************\\\n*                  *\n*  Comment Header  *\n*                  *\n\\******************/\n",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 43,
+                    "lastLine": 48,
+                    "firstCol": 1,
+                    "lastCol": 1,
+                    "originContent": "/******************\\\n*                  *\n*  Comment Header  *\n*                  *\n\\******************/\n"
+                }
+            },
+            {
+                "type": "mComment",
+                "content": "/*\n    Comment\n*/\n",
+                "before": "\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 49,
+                    "lastLine": 52,
+                    "firstCol": 1,
+                    "lastCol": 1,
+                    "originContent": "/*\n    Comment\n*/\n"
+                }
+            },
+            {
+                "type": "mComment",
+                "content": "/*\n * Comment Test\n *\n * - cloudhead (http://cloudhead.net)\n *\n */\n",
+                "before": "\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 53,
+                    "lastLine": 59,
+                    "firstCol": 1,
+                    "lastCol": 1,
+                    "originContent": "/*\n * Comment Test\n *\n * - cloudhead (http://cloudhead.net)\n *\n */\n"
+                }
+            },
+            {
+                "type": "mComment",
+                "content": "/* Colors\n * ------\n *   #EDF8FC (background blue)\n *   #166C89 (darkest blue)\n *\n * Text:\n *   #333 (standard text) // A comment within a comment!\n *   #1F9EC9 (standard link)\n *\n */\n",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 64,
+                    "lastLine": 74,
+                    "firstCol": 1,
+                    "lastCol": 1,
+                    "originContent": "/* Colors\n * ------\n *   #EDF8FC (background blue)\n *   #166C89 (darkest blue)\n *\n * Text:\n *   #333 (standard text) // A comment within a comment!\n *   #1F9EC9 (standard link)\n *\n */\n"
+                }
+            },
+            {
+                "type": "mComment",
+                "content": "/* @group Variables\n------------------- */\n",
+                "before": "\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 75,
+                    "lastLine": 77,
+                    "firstCol": 1,
+                    "lastCol": 1,
+                    "originContent": "/* @group Variables\n------------------- */\n"
+                }
+            },
+            {
+                "type": "mComment",
+                "content": "/* boo      */",
+                "before": "\n\n\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 80,
+                    "lastLine": 80,
+                    "firstCol": 1,
+                    "lastCol": 15,
+                    "originContent": "/* boo      */"
+                }
+            },
+            {
+                "type": "mComment",
+                "content": "/* boo again*/\n",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 80,
+                    "lastLine": 81,
+                    "firstCol": 15,
+                    "lastCol": 1,
+                    "originContent": "/* boo again*/\n"
+                }
+            },
+            {
+                "type": "mComment",
+                "content": "/**/ ",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 88,
+                    "lastLine": 88,
+                    "firstCol": 1,
+                    "lastCol": 6,
+                    "originContent": "/**/ "
+                }
+            },
+            {
+                "type": "mComment",
+                "content": "/* A C-style comment */ ",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 91,
+                    "lastLine": 91,
+                    "firstCol": 1,
+                    "lastCol": 25,
+                    "originContent": "/* A C-style comment */ "
+                }
+            },
+            {
+                "type": "mComment",
+                "content": "/* A C-style comment1 */\n",
+                "before": " ",
+                "after": "",
+                "loc": {
+                    "firstLine": 91,
+                    "lastLine": 92,
+                    "firstCol": 26,
+                    "lastCol": 1,
+                    "originContent": "/* A C-style comment1 */\n"
+                }
+            },
+            {
+                "type": "mComment",
+                "content": "/* commented out\n  #more-comments {\n    color: grey;\n  }\n*/\n",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 100,
+                    "lastLine": 105,
+                    "firstCol": 1,
+                    "lastCol": 1,
+                    "originContent": "/* commented out\n  #more-comments {\n    color: grey;\n  }\n*/\n"
+                }
+            },
+            {
+                "type": "mComment",
+                "content": "/*  */",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 114,
+                    "lastLine": 114,
+                    "firstCol": 1,
+                    "lastCol": 7,
+                    "originContent": "/*  */"
+                }
+            },
+            {
+                "type": "mComment",
+                "content": "/* { */",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 114,
+                    "lastLine": 114,
+                    "firstCol": 7,
+                    "lastCol": 14,
+                    "originContent": "/* { */"
+                }
+            },
+            {
+                "type": "mComment",
+                "content": "/*  */",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 114,
+                    "lastLine": 114,
+                    "firstCol": 14,
+                    "lastCol": 20,
+                    "originContent": "/*  */"
+                }
+            },
+            {
+                "type": "mComment",
+                "content": "/*  */",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 114,
+                    "lastLine": 114,
+                    "firstCol": 20,
+                    "lastCol": 26,
+                    "originContent": "/*  */"
+                }
+            },
+            {
+                "type": "mComment",
+                "content": "/*  */\n",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 114,
+                    "lastLine": 115,
+                    "firstCol": 26,
+                    "lastCol": 1,
+                    "originContent": "/*  */\n"
+                }
+            }
+        ]
     }
 }

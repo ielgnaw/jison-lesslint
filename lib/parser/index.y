@@ -74,8 +74,10 @@ rules
     | rules mulit_comment
     | single_comment
     | rules single_comment
-    | at_stmt
-    | rules at_stmt
+    | charset_stmt
+    | rules charset_stmt
+    | import_stmt
+    | rules import_stmt
 ;
 
 single_comment
@@ -144,10 +146,29 @@ mulit_comment
     }
 ;
 
-at_stmt
-    : CH_SPACE* AT_START CHARSET CH_SPACE* (CH_STRING|CH_LETTER) CH_SEMICOLON SPACE* {
-        // console.warn($1, $2, $3, $4, $5);
-        // console.warn($1.join('').replace(/\n/g, ''), '---');
+charset_stmt
+    : CH_START CHARSET CH_SPACE* (CH_STRING|CH_LETTER) CH_SPACE* CH_SEMICOLON SPACE* {
+        var quote = '';
+        var match;
+        if (match = $4.match(/^(['"]).*\1/)) {
+            quote = match[1];
+        }
+        ast.charsets.push({
+            type: 'charset',
+            originContent: $1 + $2 + $3 + $4 + $5 + $6 + $7,
+            content: $3.join('') + $4 + $5.join(''),
+            quote: quote,
+            before: '',
+            after: '',
+            loc: {
+                firstLine: @1.first_line,
+                lastLine: @6.last_line,
+                firstCol: @1.first_column + 1,
+                lastCol: @6.last_column + 1
+            }
+        });
+    }
+    | CH_SPACE CH_START CHARSET CH_SPACE* (CH_STRING|CH_LETTER) CH_SPACE* CH_SEMICOLON SPACE* {
         var quote = '';
         var match;
         if (match = $5.match(/^(['"]).*\1/)) {
@@ -155,16 +176,95 @@ at_stmt
         }
         ast.charsets.push({
             type: 'charset',
-            originContent: $1 + $2 + $3 + $4 + $5 + $6,
-            content: $4.join('') + $5,
+            originContent: $1 + $2 + $3 + $4 + $5 + $6 + $7 + $8,
+            content: $4.join('') + $5 + $6.join(''),
             quote: quote,
-            before: $1.join(''),
+            before: $1,
             after: '',
             loc: {
                 firstLine: @2.first_line,
-                lastLine: @6.last_line,
+                lastLine: @7.last_line,
                 firstCol: @2.first_column + 1,
-                lastCol: @6.last_column + 1
+                lastCol: @7.last_column + 1
+            }
+        });
+    }
+;
+
+import_stmt
+    : IM_SPACE IM_START IMPORT IM_OPT* IM_SPACE* (IM_STRING|IM_URL) IM_SPACE* IM_MEDIA* IM_SEMICOLON SPACE* {
+        var quote = '';
+        var match;
+        if (match = $6.match(/(['"]).*\1/)) {
+            quote = match[1];
+        }
+
+        var importOption = [];
+        var imOptStr = $4.join('');
+        if (imOptStr) {
+            var t = imOptStr.split(',');
+            var s;
+            for (var i = 0, len = t.length; i < len; i++) {
+                s = t[i].replace(/^[\s\(]*/g, '').replace(/[\s\)]*$/, '');
+                if (s) {
+                    importOption.push(s);
+                }
+            }
+        }
+
+        ast.imports.push({
+            type: 'import',
+            originContent: $1 + $2 + $3 + $4 + $5 + $6 + $7 + $8 + $9 + $10,
+            value: $5.join('') + $6 + $7.join(''),
+            quote: quote,
+            importOption: importOption,
+            originImportOption: imOptStr,
+            mediaValue: $8.join(''),
+            before: $1,
+            after: $10.join(''),
+            loc: {
+                firstLine: @2.first_line,
+                lastLine: @9.last_line,
+                firstCol: @2.first_column + 1,
+                lastCol: @9.last_column + 1
+            }
+        });
+    }
+    | IM_START IMPORT IM_OPT* IM_SPACE* (IM_STRING|IM_URL) IM_SPACE* IM_MEDIA* IM_SEMICOLON SPACE* {
+        var quote = '';
+        var match;
+        if (match = $5.match(/(['"]).*\1/)) {
+            quote = match[1];
+        }
+
+        var importOption = [];
+        var imOptStr = $3.join('');
+        if (imOptStr) {
+            var t = imOptStr.split(',');
+            var s;
+            for (var i = 0, len = t.length; i < len; i++) {
+                s = t[i].replace(/^[\s\(]*/g, '').replace(/[\s\)]*$/, '');
+                if (s) {
+                    importOption.push(s);
+                }
+            }
+        }
+
+        ast.imports.push({
+            type: 'import',
+            originContent: $1 + $2 + $3 + $4 + $5 + $6 + $7 + $8 + $9,
+            value: $4.join('') + $5 + $6.join(''),
+            quote: quote,
+            importOption: importOption,
+            originImportOption: imOptStr,
+            mediaValue: $7.join(''),
+            before: '',
+            after: $9.join(''),
+            loc: {
+                firstLine: @1.first_line,
+                lastLine: @8.last_line,
+                firstCol: @1.first_column + 1,
+                lastCol: @8.last_column + 1
             }
         });
     }

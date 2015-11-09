@@ -2,105 +2,22 @@
     "selectors": null,
     "rules": [
         {
-            "name": "@charset",
-            "value": {
-                "value": "utf-8",
-                "quote": "'",
-                "index": 8,
-                "currentFileInfo": {
-                    "filename": "input",
-                    "relativeUrls": true,
-                    "rootpath": "",
-                    "currentDirectory": "",
-                    "entryPath": "",
-                    "rootFilename": "input"
-                }
-            },
+            "options": {},
             "index": 0,
-            "currentFileInfo": {
-                "filename": "input",
-                "relativeUrls": true,
-                "rootpath": "",
-                "currentDirectory": "",
-                "entryPath": "",
-                "rootFilename": "input"
-            },
-            "debugInfo": null
-        },
-        {
-            "name": "@charset",
-            "value": {
-                "value": "wasdasd"
-            },
-            "index": 22,
-            "currentFileInfo": {
-                "filename": "input",
-                "relativeUrls": true,
-                "rootpath": "",
-                "currentDirectory": "",
-                "entryPath": "",
-                "rootFilename": "input"
-            },
-            "debugInfo": null
-        },
-        {
-            "name": "@charset",
-            "value": {
-                "value": "gbk"
-            },
-            "index": 41,
-            "currentFileInfo": {
-                "filename": "input",
-                "relativeUrls": true,
-                "rootpath": "",
-                "currentDirectory": "",
-                "entryPath": "",
-                "rootFilename": "input"
-            },
-            "debugInfo": null
-        },
-        {
-            "name": "@charset",
-            "value": {
-                "value": "UTF-8"
-            },
-            "index": 56,
-            "currentFileInfo": {
-                "filename": "input",
-                "relativeUrls": true,
-                "rootpath": "",
-                "currentDirectory": "",
-                "entryPath": "",
-                "rootFilename": "input"
-            },
-            "debugInfo": null
-        },
-        {
-            "name": "@charset",
-            "value": {
-                "value": 123,
-                "unit": {
-                    "numerator": [],
-                    "denominator": []
-                }
-            },
-            "index": 83,
-            "currentFileInfo": {
-                "filename": "input",
-                "relativeUrls": true,
-                "rootpath": "",
-                "currentDirectory": "",
-                "entryPath": "",
-                "rootFilename": "input"
-            },
-            "debugInfo": null
-        },
-        {
-            "name": "@charset",
-            "value": {
-                "value": "456",
-                "quote": "\"",
-                "index": 117,
+            "path": {
+                "value": {
+                    "value": "variable.less",
+                    "quote": "\"",
+                    "index": 12,
+                    "currentFileInfo": {
+                        "filename": "input",
+                        "relativeUrls": true,
+                        "rootpath": "",
+                        "currentDirectory": "",
+                        "entryPath": "",
+                        "rootFilename": "input"
+                    }
+                },
                 "currentFileInfo": {
                     "filename": "input",
                     "relativeUrls": true,
@@ -108,9 +25,10 @@
                     "currentDirectory": "",
                     "entryPath": "",
                     "rootFilename": "input"
-                }
+                },
+                "isEvald": true
             },
-            "index": 97,
+            "features": null,
             "currentFileInfo": {
                 "filename": "input",
                 "relativeUrls": true,
@@ -119,102 +37,164 @@
                 "entryPath": "",
                 "rootFilename": "input"
             },
-            "debugInfo": null
+            "root": {
+                "selectors": null,
+                "rules": [
+                    {
+                        "name": "@var1",
+                        "value": {
+                            "value": [
+                                {
+                                    "value": [
+                                        {
+                                            "rgb": [
+                                                255,
+                                                0,
+                                                0
+                                            ],
+                                            "alpha": 1
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "important": "",
+                        "merge": false,
+                        "index": 0,
+                        "currentFileInfo": {
+                            "relativeUrls": true,
+                            "entryPath": "",
+                            "rootpath": "",
+                            "rootFilename": "input",
+                            "currentDirectory": "/Users/ielgnaw/Workspace/git/jison-lesslint/test/",
+                            "filename": "/Users/ielgnaw/Workspace/git/jison-lesslint/test/variable.less"
+                        },
+                        "inline": false,
+                        "variable": true
+                    },
+                    {
+                        "value": "// @name: var1;",
+                        "silent": true,
+                        "currentFileInfo": {
+                            "relativeUrls": true,
+                            "entryPath": "",
+                            "rootpath": "",
+                            "rootFilename": "input",
+                            "currentDirectory": "/Users/ielgnaw/Workspace/git/jison-lesslint/test/",
+                            "filename": "/Users/ielgnaw/Workspace/git/jison-lesslint/test/variable.less"
+                        }
+                    },
+                    {
+                        "value": "// body {",
+                        "silent": true,
+                        "currentFileInfo": {
+                            "relativeUrls": true,
+                            "entryPath": "",
+                            "rootpath": "",
+                            "rootFilename": "input",
+                            "currentDirectory": "/Users/ielgnaw/Workspace/git/jison-lesslint/test/",
+                            "filename": "/Users/ielgnaw/Workspace/git/jison-lesslint/test/variable.less"
+                        }
+                    },
+                    {
+                        "value": "//     color: @@name;",
+                        "silent": true,
+                        "currentFileInfo": {
+                            "relativeUrls": true,
+                            "entryPath": "",
+                            "rootpath": "",
+                            "rootFilename": "input",
+                            "currentDirectory": "/Users/ielgnaw/Workspace/git/jison-lesslint/test/",
+                            "filename": "/Users/ielgnaw/Workspace/git/jison-lesslint/test/variable.less"
+                        }
+                    },
+                    {
+                        "value": "// }",
+                        "silent": true,
+                        "currentFileInfo": {
+                            "relativeUrls": true,
+                            "entryPath": "",
+                            "rootpath": "",
+                            "rootFilename": "input",
+                            "currentDirectory": "/Users/ielgnaw/Workspace/git/jison-lesslint/test/",
+                            "filename": "/Users/ielgnaw/Workspace/git/jison-lesslint/test/variable.less"
+                        }
+                    },
+                    {
+                        "name": "@charset",
+                        "value": {
+                            "value": [
+                                {
+                                    "value": [
+                                        {
+                                            "value": 132,
+                                            "unit": {
+                                                "numerator": [
+                                                    "px"
+                                                ],
+                                                "denominator": []
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "important": "",
+                        "merge": false,
+                        "index": 68,
+                        "currentFileInfo": {
+                            "relativeUrls": true,
+                            "entryPath": "",
+                            "rootpath": "",
+                            "rootFilename": "input",
+                            "currentDirectory": "/Users/ielgnaw/Workspace/git/jison-lesslint/test/",
+                            "filename": "/Users/ielgnaw/Workspace/git/jison-lesslint/test/variable.less"
+                        },
+                        "inline": false,
+                        "variable": true
+                    },
+                    {
+                        "name": "@import",
+                        "value": {
+                            "value": [
+                                {
+                                    "value": [
+                                        {
+                                            "value": 33,
+                                            "unit": {
+                                                "numerator": [
+                                                    "px"
+                                                ],
+                                                "denominator": []
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "important": "",
+                        "merge": false,
+                        "index": 85,
+                        "currentFileInfo": {
+                            "relativeUrls": true,
+                            "entryPath": "",
+                            "rootpath": "",
+                            "rootFilename": "input",
+                            "currentDirectory": "/Users/ielgnaw/Workspace/git/jison-lesslint/test/",
+                            "filename": "/Users/ielgnaw/Workspace/git/jison-lesslint/test/variable.less"
+                        },
+                        "inline": false,
+                        "variable": true
+                    }
+                ],
+                "_lookups": {},
+                "root": true,
+                "firstRoot": true
+            },
+            "importedFilename": "/Users/ielgnaw/Workspace/git/jison-lesslint/test/variable.less"
         },
         {
-            "name": "@charset",
-            "value": {
-                "value": 789,
-                "unit": {
-                    "numerator": [],
-                    "denominator": []
-                }
-            },
-            "index": 123,
-            "currentFileInfo": {
-                "filename": "input",
-                "relativeUrls": true,
-                "rootpath": "",
-                "currentDirectory": "",
-                "entryPath": "",
-                "rootFilename": "input"
-            },
-            "debugInfo": null
-        },
-        {
-            "name": "@charset",
-            "value": {
-                "value": "456",
-                "quote": "\"",
-                "index": 171,
-                "currentFileInfo": {
-                    "filename": "input",
-                    "relativeUrls": true,
-                    "rootpath": "",
-                    "currentDirectory": "",
-                    "entryPath": "",
-                    "rootFilename": "input"
-                }
-            },
-            "index": 151,
-            "currentFileInfo": {
-                "filename": "input",
-                "relativeUrls": true,
-                "rootpath": "",
-                "currentDirectory": "",
-                "entryPath": "",
-                "rootFilename": "input"
-            },
-            "debugInfo": null
-        },
-        {
-            "name": "@charset",
-            "value": {
-                "value": "qqq",
-                "quote": "'",
-                "index": 185,
-                "currentFileInfo": {
-                    "filename": "input",
-                    "relativeUrls": true,
-                    "rootpath": "",
-                    "currentDirectory": "",
-                    "entryPath": "",
-                    "rootFilename": "input"
-                }
-            },
-            "index": 177,
-            "currentFileInfo": {
-                "filename": "input",
-                "relativeUrls": true,
-                "rootpath": "",
-                "currentDirectory": "",
-                "entryPath": "",
-                "rootFilename": "input"
-            },
-            "debugInfo": null
-        },
-        {
-            "name": "@charset",
-            "value": {
-                "value": 123,
-                "unit": {
-                    "numerator": [],
-                    "denominator": []
-                }
-            },
-            "index": 192,
-            "currentFileInfo": {
-                "filename": "input",
-                "relativeUrls": true,
-                "rootpath": "",
-                "currentDirectory": "",
-                "entryPath": "",
-                "rootFilename": "input"
-            },
-            "debugInfo": null
-        },
-        {
-            "value": "//      @charset            \"UTF  //-;8\";@charset    \"asdasda//asdqwew'''qwewqeqw\";",
+            "value": "// import inline should not float above this #1954",
             "silent": true,
             "currentFileInfo": {
                 "filename": "input",
@@ -226,7 +206,7 @@
             }
         },
         {
-            "value": "//  @charset\"utf8\";",
+            "value": "//     @import \"./variable.less\" screen and (max-width: 601px);",
             "silent": true,
             "currentFileInfo": {
                 "filename": "input",
@@ -238,7 +218,7 @@
             }
         },
         {
-            "value": "// @charset 'gbk';",
+            "value": "// @import () './variable';",
             "silent": true,
             "currentFileInfo": {
                 "filename": "input",
@@ -250,7 +230,7 @@
             }
         },
         {
-            "value": "// @charset utf8ads;",
+            "value": "//     @import    (  less  , inline  )    \"./variable.less\";",
             "silent": true,
             "currentFileInfo": {
                 "filename": "input",
@@ -262,7 +242,7 @@
             }
         },
         {
-            "value": "// @charset zcxczcx;",
+            "value": "//     @import './charset.less'  ;",
             "silent": true,
             "currentFileInfo": {
                 "filename": "input",
@@ -274,7 +254,7 @@
             }
         },
         {
-            "value": "// @charset        asdasdassad/;",
+            "value": "// @import \"import-@{in}@{terpolation}2.less\";",
             "silent": true,
             "currentFileInfo": {
                 "filename": "input",
@@ -286,21 +266,8 @@
             }
         },
         {
-            "name": "@charset",
-            "value": {
-                "value": "ISO-8859-1",
-                "quote": "\"",
-                "index": 420,
-                "currentFileInfo": {
-                    "filename": "input",
-                    "relativeUrls": true,
-                    "rootpath": "",
-                    "currentDirectory": "",
-                    "entryPath": "",
-                    "rootFilename": "input"
-                }
-            },
-            "index": 411,
+            "value": "//     @import \"import-@{in}@{terpolation}3.less\";",
+            "silent": true,
             "currentFileInfo": {
                 "filename": "input",
                 "relativeUrls": true,
@@ -308,25 +275,11 @@
                 "currentDirectory": "",
                 "entryPath": "",
                 "rootFilename": "input"
-            },
-            "debugInfo": null
+            }
         },
         {
-            "name": "@charset",
-            "value": {
-                "value": "//123",
-                "quote": "'",
-                "index": 443,
-                "currentFileInfo": {
-                    "filename": "input",
-                    "relativeUrls": true,
-                    "rootpath": "",
-                    "currentDirectory": "",
-                    "entryPath": "",
-                    "rootFilename": "input"
-                }
-            },
-            "index": 435,
+            "value": "// @import (inline) \"./singlecomment.less\";",
+            "silent": true,
             "currentFileInfo": {
                 "filename": "input",
                 "relativeUrls": true,
@@ -334,8 +287,319 @@
                 "currentDirectory": "",
                 "entryPath": "",
                 "rootFilename": "input"
-            },
-            "debugInfo": null
+            }
+        },
+        {
+            "value": "//     @import (multiple,  ) \"./dd.less\";",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "// // @import url(\"test.css\");",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "// @import \"../css/background.css\";",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "// @import \"import-test-d.css\";",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "// @import \"imports/logo\";",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "// @import \"imports/font\";",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "// @import (inline) \"imports/logo.less\";",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "// @import \"import-@{in}@{terpolation}2.less\";// asdas",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "// // @import url(\"import/import-test-c.less\");// import inline should not float above this #1954",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "// // @import (inline) url(\"import/import-test-d.css\") (min-width:600px);",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "// // @import (inline, css) url(\"import/invalid-css.less\");",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "// @import \"import/import-once-test-c\";",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "// @import \"import/import-once-test-c\";",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "// @import \"import/import-once-test-c.less\";",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "// @import \"import/deeper/import-once-test-a\";",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "// @import (multiple) \"import/import-test-f.less\";",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "// @import (multiple) \"import/import-test-f.less\";",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "// // @import (reference) url(\"import-once.less\");",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "// // @import (reference) url(\"css-3.less\");",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "// // @import (reference) url(\"media.less\");",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "// // @import (reference) url(\"import/import-reference.less\");",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "// // @import (reference) url(\"import/css-import.less\");",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "// // @import url(http://fonts.googleapis.com/css?family=Open+Sans);",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "// // @import url(/absolute/something.css) screen and (color) and (max-width: 600px);",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "// // @import (optional) \"file-does-not-exist.does-not-exist\";",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "// @import (less, multiple) \"import/import-test-d.css\" screen and (max-width: 601px);",
+            "silent": true,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
         }
     ],
     "_lookups": {},

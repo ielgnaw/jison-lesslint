@@ -1,2 +1,58 @@
-// @import (inline) "./singlecomment.less";
-    // @import (ccc) "./dd.less";
+@import url("./variable.less");// import inline should not float above this #1954
+
+    @import "./variable.less" screen and (max-width: 601px);
+
+@import () './variable';
+
+    @import    (  less  , inline  )    "./variable.less";
+
+
+    @import './charset.less'  ;
+@import "import-@{in}@{terpolation}2.less";
+
+    @import "import-@{in}@{terpolation}3.less";
+
+
+@import (inline) "./singlecomment.less";
+    @import (multiple,  ) "./dd.less";
+
+
+@import url("test.css");
+
+
+@import "../css/background.css";
+@import "import-test-d.css";
+
+@import "imports/logo";
+@import "imports/font";
+
+
+@import (inline) "imports/logo.less";
+@import "import-@{in}@{terpolation}2.less";// asdas
+
+@import url("import/import-test-c.less");// import inline should not float above this #1954
+@import (inline) url("import/import-test-d.css") (min-width:600px);
+@import (inline, css) url('import/invalid-css.less');
+@import (inline, css) url(import/invalid-css1.less);
+
+
+@import "import/import-once-test-c";
+@import "import/import-once-test-c";
+@import "import/import-once-test-c.less";
+@import "import/deeper/import-once-test-a";
+@import (multiple) "import/import-test-f.less";
+@import (multiple) "import/import-test-f.less";
+
+@import (reference) url("import-once.less");
+@import (reference) url("css-3.less");
+@import (reference) url("media.less");
+@import (reference) url("import/import-reference.less");
+@import (reference) url("import/css-import.less");
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+@import url(/absolute/something.css) screen and (color) and (max-width: 600px);
+
+// @import (optional) "file-does-not-exist.does-not-exist";
+
+@import (less, multiple) "import/import-test-d.css" screen and (max-width: 601px);
