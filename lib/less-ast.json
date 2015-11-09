@@ -286,8 +286,21 @@
             }
         },
         {
-            "value": "// @charset \"ISO-8859-1\";",
-            "silent": true,
+            "name": "@charset",
+            "value": {
+                "value": "ISO-8859-1",
+                "quote": "\"",
+                "index": 420,
+                "currentFileInfo": {
+                    "filename": "input",
+                    "relativeUrls": true,
+                    "rootpath": "",
+                    "currentDirectory": "",
+                    "entryPath": "",
+                    "rootFilename": "input"
+                }
+            },
+            "index": 411,
             "currentFileInfo": {
                 "filename": "input",
                 "relativeUrls": true,
@@ -295,7 +308,34 @@
                 "currentDirectory": "",
                 "entryPath": "",
                 "rootFilename": "input"
-            }
+            },
+            "debugInfo": null
+        },
+        {
+            "name": "@charset",
+            "value": {
+                "value": "//123",
+                "quote": "'",
+                "index": 443,
+                "currentFileInfo": {
+                    "filename": "input",
+                    "relativeUrls": true,
+                    "rootpath": "",
+                    "currentDirectory": "",
+                    "entryPath": "",
+                    "rootFilename": "input"
+                }
+            },
+            "index": 435,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            },
+            "debugInfo": null
         }
     ],
     "_lookups": {},

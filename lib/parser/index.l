@@ -104,6 +104,10 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
 /**
  * @charset
  */
+<s>\s+/'@charset' {
+    return 'CH_SPACE';
+};
+
 <s>'@'/'charset' {
     this.begin('at_start');
     return 'AT_START';

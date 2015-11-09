@@ -145,7 +145,7 @@ mulit_comment
 ;
 
 at_stmt
-    : SPACE* AT_START CHARSET CH_SPACE* (CH_STRING|CH_LETTER) CH_SEMICOLON {
+    : CH_SPACE* AT_START CHARSET CH_SPACE* (CH_STRING|CH_LETTER) CH_SEMICOLON SPACE* {
         // console.warn($1, $2, $3, $4, $5);
         // console.warn($1.join('').replace(/\n/g, ''), '---');
         var quote = '';

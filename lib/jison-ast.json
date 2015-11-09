@@ -143,6 +143,34 @@
                     "firstCol": 1,
                     "lastCol": 14
                 }
+            },
+            {
+                "type": "charset",
+                "originContent": "@charset \"ISO-8859-1\";",
+                "content": " \"ISO-8859-1\"",
+                "quote": "\"",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 24,
+                    "lastLine": 24,
+                    "firstCol": 1,
+                    "lastCol": 23
+                }
+            },
+            {
+                "type": "charset",
+                "originContent": "  @charset'//123';",
+                "content": "'//123'",
+                "quote": "'",
+                "before": "  ",
+                "after": "",
+                "loc": {
+                    "firstLine": 24,
+                    "lastLine": 24,
+                    "firstCol": 25,
+                    "lastCol": 41
+                }
             }
         ],
         "sComments": [
@@ -150,11 +178,11 @@
                 "type": "sComment",
                 "originContent": "//      @charset            \"UTF  //-;8\";@charset    \"asdasda//asdqwew'''qwewqeqw\";",
                 "content": "//      @charset            \"UTF  //-;8\";@charset    \"asdasda//asdqwew'''qwewqeqw\";",
-                "before": "\n\n",
+                "before": "\n\n\n",
                 "after": "",
                 "loc": {
-                    "firstLine": 12,
-                    "lastLine": 12,
+                    "firstLine": 13,
+                    "lastLine": 13,
                     "firstCol": 1,
                     "lastCol": 84
                 }
@@ -166,8 +194,8 @@
                 "before": "",
                 "after": "",
                 "loc": {
-                    "firstLine": 14,
-                    "lastLine": 14,
+                    "firstLine": 15,
+                    "lastLine": 15,
                     "firstCol": 1,
                     "lastCol": 20
                 }
@@ -179,8 +207,8 @@
                 "before": "",
                 "after": "",
                 "loc": {
-                    "firstLine": 15,
-                    "lastLine": 15,
+                    "firstLine": 16,
+                    "lastLine": 16,
                     "firstCol": 1,
                     "lastCol": 19
                 }
@@ -192,8 +220,8 @@
                 "before": "",
                 "after": "",
                 "loc": {
-                    "firstLine": 17,
-                    "lastLine": 17,
+                    "firstLine": 18,
+                    "lastLine": 18,
                     "firstCol": 1,
                     "lastCol": 21
                 }
@@ -205,8 +233,8 @@
                 "before": "",
                 "after": "",
                 "loc": {
-                    "firstLine": 19,
-                    "lastLine": 19,
+                    "firstLine": 20,
+                    "lastLine": 20,
                     "firstCol": 1,
                     "lastCol": 21
                 }
@@ -218,23 +246,10 @@
                 "before": "",
                 "after": "",
                 "loc": {
-                    "firstLine": 21,
-                    "lastLine": 21,
+                    "firstLine": 22,
+                    "lastLine": 22,
                     "firstCol": 1,
                     "lastCol": 33
-                }
-            },
-            {
-                "type": "sComment",
-                "originContent": "// @charset \"ISO-8859-1\";",
-                "content": "// @charset \"ISO-8859-1\";",
-                "before": "",
-                "after": "",
-                "loc": {
-                    "firstLine": 23,
-                    "lastLine": 23,
-                    "firstCol": 1,
-                    "lastCol": 26
                 }
             }
         ],
