@@ -12,7 +12,6 @@ string                      {string1}|{string2}
 
 letter                      [\w-]+
 
-import                      '@import'
 // importOpt                   ('less'|'css'|'multiple'|'once'|'inline'|'reference')
 importOpt                   \s*(''|'less'|'css'|'multiple'|'once'|'inline'|'reference')\s*(\,\s*(''|'less'|'css'|'multiple'|'once'|'inline'|'reference')*\s*)*
 
