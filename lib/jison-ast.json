@@ -3,97 +3,238 @@
         "variables": [],
         "imports": [],
         "selectors": [],
-        "charsets": [],
-        "sComments": [
+        "charsets": [
             {
-                "type": "sComment",
-                "content": "//      @charset            \"UTF  //-;8\";@charset    \"asdasda//asdqwew'''qwewqeqw\";",
+                "type": "charset",
+                "originContent": "@charset'utf-8';",
+                "content": "'utf-8'",
+                "quote": "'",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 1,
+                    "lastLine": 1,
+                    "firstCol": 1,
+                    "lastCol": 17
+                }
+            },
+            {
+                "type": "charset",
+                "originContent": "\n\n    @charset wasdasd;",
+                "content": " wasdasd",
+                "quote": "",
+                "before": "\n\n    ",
+                "after": "",
+                "loc": {
+                    "firstLine": 3,
+                    "lastLine": 3,
+                    "firstCol": 5,
+                    "lastCol": 22
+                }
+            },
+            {
+                "type": "charset",
+                "originContent": "\n\n@charset gbk;",
+                "content": " gbk",
+                "quote": "",
                 "before": "\n\n",
                 "after": "",
                 "loc": {
                     "firstLine": 5,
                     "lastLine": 5,
                     "firstCol": 1,
-                    "lastCol": 84,
-                    "originContent": "//      @charset            \"UTF  //-;8\";@charset    \"asdasda//asdqwew'''qwewqeqw\";"
+                    "lastCol": 14
                 }
             },
             {
-                "type": "sComment",
-                "content": "//  @charset\"utf8\";",
-                "before": "",
+                "type": "charset",
+                "originContent": "\n\n@charset            UTF-8;",
+                "content": "            UTF-8",
+                "quote": "",
+                "before": "\n\n",
                 "after": "",
                 "loc": {
                     "firstLine": 7,
                     "lastLine": 7,
                     "firstCol": 1,
-                    "lastCol": 20,
-                    "originContent": "//  @charset\"utf8\";"
+                    "lastCol": 27
                 }
             },
             {
-                "type": "sComment",
-                "content": "// @charset 'gbk';",
-                "before": "",
+                "type": "charset",
+                "originContent": "\n@charset 123;",
+                "content": " 123",
+                "quote": "",
+                "before": "\n",
                 "after": "",
                 "loc": {
                     "firstLine": 8,
                     "lastLine": 8,
                     "firstCol": 1,
-                    "lastCol": 19,
-                    "originContent": "// @charset 'gbk';"
+                    "lastCol": 14
                 }
             },
             {
-                "type": "sComment",
-                "content": "// @charset utf8ads;",
+                "type": "charset",
+                "originContent": "\n@charset            \"456\";",
+                "content": "            \"456\"",
+                "quote": "\"",
+                "before": "\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 9,
+                    "lastLine": 9,
+                    "firstCol": 1,
+                    "lastCol": 27
+                }
+            },
+            {
+                "type": "charset",
+                "originContent": "@charset            789;",
+                "content": "            789",
+                "quote": "",
                 "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 9,
+                    "lastLine": 9,
+                    "firstCol": 27,
+                    "lastCol": 51
+                }
+            },
+            {
+                "type": "charset",
+                "originContent": "    @charset            \"456\";",
+                "content": "            \"456\"",
+                "quote": "\"",
+                "before": "    ",
+                "after": "",
+                "loc": {
+                    "firstLine": 9,
+                    "lastLine": 9,
+                    "firstCol": 55,
+                    "lastCol": 81
+                }
+            },
+            {
+                "type": "charset",
+                "originContent": "@charset'qqq';",
+                "content": "'qqq'",
+                "quote": "'",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 9,
+                    "lastLine": 9,
+                    "firstCol": 81,
+                    "lastCol": 95
+                }
+            },
+            {
+                "type": "charset",
+                "originContent": "\n@charset 123;",
+                "content": " 123",
+                "quote": "",
+                "before": "\n",
                 "after": "",
                 "loc": {
                     "firstLine": 10,
                     "lastLine": 10,
                     "firstCol": 1,
-                    "lastCol": 21,
-                    "originContent": "// @charset utf8ads;"
+                    "lastCol": 14
                 }
-            },
+            }
+        ],
+        "sComments": [
             {
                 "type": "sComment",
-                "content": "// @charset zcxczcx;",
-                "before": "",
+                "originContent": "//      @charset            \"UTF  //-;8\";@charset    \"asdasda//asdqwew'''qwewqeqw\";",
+                "content": "//      @charset            \"UTF  //-;8\";@charset    \"asdasda//asdqwew'''qwewqeqw\";",
+                "before": "\n\n",
                 "after": "",
                 "loc": {
                     "firstLine": 12,
                     "lastLine": 12,
                     "firstCol": 1,
-                    "lastCol": 21,
-                    "originContent": "// @charset zcxczcx;"
+                    "lastCol": 84
                 }
             },
             {
                 "type": "sComment",
-                "content": "// @charset        asdasdassad/;",
+                "originContent": "//  @charset\"utf8\";",
+                "content": "//  @charset\"utf8\";",
                 "before": "",
                 "after": "",
                 "loc": {
                     "firstLine": 14,
                     "lastLine": 14,
                     "firstCol": 1,
-                    "lastCol": 33,
-                    "originContent": "// @charset        asdasdassad/;"
+                    "lastCol": 20
                 }
             },
             {
                 "type": "sComment",
+                "originContent": "// @charset 'gbk';",
+                "content": "// @charset 'gbk';",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 15,
+                    "lastLine": 15,
+                    "firstCol": 1,
+                    "lastCol": 19
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// @charset utf8ads;",
+                "content": "// @charset utf8ads;",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 17,
+                    "lastLine": 17,
+                    "firstCol": 1,
+                    "lastCol": 21
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// @charset zcxczcx;",
+                "content": "// @charset zcxczcx;",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 19,
+                    "lastLine": 19,
+                    "firstCol": 1,
+                    "lastCol": 21
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// @charset        asdasdassad/;",
+                "content": "// @charset        asdasdassad/;",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 21,
+                    "lastLine": 21,
+                    "firstCol": 1,
+                    "lastCol": 33
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// @charset \"ISO-8859-1\";",
                 "content": "// @charset \"ISO-8859-1\";",
                 "before": "",
                 "after": "",
                 "loc": {
-                    "firstLine": 16,
-                    "lastLine": 16,
+                    "firstLine": 23,
+                    "lastLine": 23,
                     "firstCol": 1,
-                    "lastCol": 26,
-                    "originContent": "// @charset \"ISO-8859-1\";"
+                    "lastCol": 26
                 }
             }
         ],

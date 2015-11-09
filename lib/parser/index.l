@@ -9,7 +9,9 @@ string2                     \'([^\n\r\f\\'])*\'
 /*'*/ // 这个注释是为了把 string2 的正则所带来的高亮影响给去掉
 
 string                      {string1}|{string2}
-charset                     '@charset'
+
+letter                      [\w-]+
+
 import                      '@import'
 importOpt                   \(('less'|'css'|'multiple'|'once'|'inline'|'reference')\)
 // variable                    @.+\:
@@ -119,6 +121,10 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
 
 <ch>{string} {
     return 'CH_STRING';
+};
+
+<ch>{letter} {
+    return 'CH_LETTER';
 };
 
 <ch>{semicolon} {

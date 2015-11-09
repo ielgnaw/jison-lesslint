@@ -82,6 +82,7 @@ single_comment
     : SC {
         ast.sComments.push({
             type: 'sComment',
+            originContent: $1,
             content: $1,
             before: '',
             after: '',
@@ -89,14 +90,14 @@ single_comment
                 firstLine: @1.first_line,
                 lastLine: @1.last_line,
                 firstCol: @1.first_column + 1,
-                lastCol: @1.last_column + 1,
-                originContent: $1
+                lastCol: @1.last_column + 1
             }
         });
     }
     | S_SPACE SC {
         ast.sComments.push({
             type: 'sComment',
+            originContent: $2,
             content: $2,
             before: $1,
             after: '',
@@ -104,8 +105,7 @@ single_comment
                 firstLine: @2.first_line,
                 lastLine: @2.last_line,
                 firstCol: @2.first_column + 1,
-                lastCol: @2.last_column + 1,
-                originContent: $2
+                lastCol: @2.last_column + 1
             }
         });
     }
@@ -145,22 +145,28 @@ mulit_comment
 ;
 
 at_stmt
-    : SPACE* AT_START CHARSET CH_SPACE* CH_STRING CH_SEMICOLON {
-        console.warn($1, $2, $3, $4, $5);
-        // ast.charsets.push({
-        //     type: 'charset',
-        //     content: $2,
-        //     quote: quote,
-        //     before: $1.before,
-        //     after: '',
-        //     loc: {
-        //         firstLine: @1.first_line,
-        //         lastLine: @2.last_line,
-        //         firstCol: @1.first_column + 1 + $1.before.length,
-        //         lastCol: @3.last_column + 1,
-        //         originContent: $1.content + $2 + $3
-        //     }
-        // });
+    : SPACE* AT_START CHARSET CH_SPACE* (CH_STRING|CH_LETTER) CH_SEMICOLON {
+        // console.warn($1, $2, $3, $4, $5);
+        // console.warn($1.join('').replace(/\n/g, ''), '---');
+        var quote = '';
+        var match;
+        if (match = $5.match(/^(['"]).*\1/)) {
+            quote = match[1];
+        }
+        ast.charsets.push({
+            type: 'charset',
+            originContent: $1 + $2 + $3 + $4 + $5 + $6,
+            content: $4.join('') + $5,
+            quote: quote,
+            before: $1.join(''),
+            after: '',
+            loc: {
+                firstLine: @2.first_line,
+                lastLine: @6.last_line,
+                firstCol: @2.first_column + 1,
+                lastCol: @6.last_column + 1
+            }
+        });
     }
 ;
 

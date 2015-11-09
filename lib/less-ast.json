@@ -30,9 +30,179 @@
         {
             "name": "@charset",
             "value": {
-                "value": "%"
+                "value": "wasdasd"
             },
-            "index": 18,
+            "index": 22,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            },
+            "debugInfo": null
+        },
+        {
+            "name": "@charset",
+            "value": {
+                "value": "gbk"
+            },
+            "index": 41,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            },
+            "debugInfo": null
+        },
+        {
+            "name": "@charset",
+            "value": {
+                "value": "UTF-8"
+            },
+            "index": 56,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            },
+            "debugInfo": null
+        },
+        {
+            "name": "@charset",
+            "value": {
+                "value": 123,
+                "unit": {
+                    "numerator": [],
+                    "denominator": []
+                }
+            },
+            "index": 83,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            },
+            "debugInfo": null
+        },
+        {
+            "name": "@charset",
+            "value": {
+                "value": "456",
+                "quote": "\"",
+                "index": 117,
+                "currentFileInfo": {
+                    "filename": "input",
+                    "relativeUrls": true,
+                    "rootpath": "",
+                    "currentDirectory": "",
+                    "entryPath": "",
+                    "rootFilename": "input"
+                }
+            },
+            "index": 97,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            },
+            "debugInfo": null
+        },
+        {
+            "name": "@charset",
+            "value": {
+                "value": 789,
+                "unit": {
+                    "numerator": [],
+                    "denominator": []
+                }
+            },
+            "index": 123,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            },
+            "debugInfo": null
+        },
+        {
+            "name": "@charset",
+            "value": {
+                "value": "456",
+                "quote": "\"",
+                "index": 171,
+                "currentFileInfo": {
+                    "filename": "input",
+                    "relativeUrls": true,
+                    "rootpath": "",
+                    "currentDirectory": "",
+                    "entryPath": "",
+                    "rootFilename": "input"
+                }
+            },
+            "index": 151,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            },
+            "debugInfo": null
+        },
+        {
+            "name": "@charset",
+            "value": {
+                "value": "qqq",
+                "quote": "'",
+                "index": 185,
+                "currentFileInfo": {
+                    "filename": "input",
+                    "relativeUrls": true,
+                    "rootpath": "",
+                    "currentDirectory": "",
+                    "entryPath": "",
+                    "rootFilename": "input"
+                }
+            },
+            "index": 177,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            },
+            "debugInfo": null
+        },
+        {
+            "name": "@charset",
+            "value": {
+                "value": 123,
+                "unit": {
+                    "numerator": [],
+                    "denominator": []
+                }
+            },
+            "index": 192,
             "currentFileInfo": {
                 "filename": "input",
                 "relativeUrls": true,
