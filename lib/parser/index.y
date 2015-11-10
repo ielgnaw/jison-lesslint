@@ -78,6 +78,8 @@ rules
     | rules charset_stmt
     | import_stmt
     | rules import_stmt
+    | variable_stmt
+    | rules variable_stmt
 ;
 
 single_comment
@@ -85,7 +87,7 @@ single_comment
         ast.sComments.push({
             type: 'sComment',
             originContent: $1,
-            content: $1,
+            value: $1,
             before: '',
             after: '',
             loc: {
@@ -100,7 +102,7 @@ single_comment
         ast.sComments.push({
             type: 'sComment',
             originContent: $2,
-            content: $2,
+            value: $2,
             before: $1,
             after: '',
             loc: {
@@ -117,7 +119,7 @@ mulit_comment
     : MC MC_END {
         ast.mComments.push({
             type: 'mComment',
-            content: $1 + $2,
+            value: $1 + $2,
             before: '',
             after: '',
             loc: {
@@ -132,7 +134,7 @@ mulit_comment
     | M_SPACE MC MC_END {
         ast.mComments.push({
             type: 'mComment',
-            content: $2 + $3,
+            value: $2 + $3,
             before: $1,
             after: '',
             loc: {
@@ -156,7 +158,7 @@ charset_stmt
         ast.charsets.push({
             type: 'charset',
             originContent: $1 + $2 + $3 + $4 + $5 + $6 + $7,
-            content: $3.join('') + $4 + $5.join(''),
+            value: $3.join('') + $4 + $5.join(''),
             quote: quote,
             before: '',
             after: '',
@@ -177,7 +179,7 @@ charset_stmt
         ast.charsets.push({
             type: 'charset',
             originContent: $1 + $2 + $3 + $4 + $5 + $6 + $7 + $8,
-            content: $4.join('') + $5 + $6.join(''),
+            value: $4.join('') + $5 + $6.join(''),
             quote: quote,
             before: $1,
             after: '',
@@ -270,6 +272,62 @@ import_stmt
     }
 ;
 
+variable_stmt
+    : VARI_SPACE VARI_START VARI_NAME VARI_SPACE* VARI_COLON VARI_VALUE VARI_SPACE* VARI_SEMICOLON SPACE* {
+        var valueBefore = '';
+        var match = /^(\s+)/.exec($6);
+        if (match) {
+            valueBefore = match[0];
+        }
+
+        var pureValue = $6.replace(/^(\s+)/, '');
+
+        ast.variables.push({
+            type: 'variable',
+            originContent: $1 + $2 + $3 + $4 + $5 + $6 + $7 + $8 + $9,
+            variableName: $3,
+            variableValue: pureValue,
+            variableValueBefore: valueBefore,
+            variableValueAfter: $7.join(''),
+            value: pureValue,
+            before: $1,
+            after: $9.join(''),
+            loc: {
+                firstLine: @2.first_line,
+                lastLine: @8.last_line,
+                firstCol: @2.first_column + 1,
+                lastCol: @8.last_column + 1
+            }
+        });
+    }
+    | VARI_START VARI_NAME VARI_SPACE* VARI_COLON VARI_VALUE VARI_SPACE* VARI_SEMICOLON SPACE* {
+        var valueBefore = '';
+        var match = /^(\s+)/.exec($5);
+        if (match) {
+            valueBefore = match[0];
+        }
+
+        var pureValue = $5.replace(/^(\s+)/, '');
+
+        ast.variables.push({
+            type: 'variable',
+            originContent: $1 + $2 + $3 + $4 + $5 + $6 + $7 + $8,
+            variableName: $2,
+            variableValue: pureValue,
+            variableValueBefore: valueBefore,
+            variableValueAfter: $6.join(''),
+            value: pureValue,
+            before: '',
+            after: $8.join(''),
+            loc: {
+                firstLine: @1.first_line,
+                lastLine: @7.last_line,
+                firstCol: @1.first_column + 1,
+                lastCol: @7.last_column + 1
+            }
+        });
+    }
+;
 
 // blocks
 //     : charset_stmt

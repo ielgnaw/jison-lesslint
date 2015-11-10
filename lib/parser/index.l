@@ -50,7 +50,10 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
 // ch 进入 @charset 语句后的状态
 // im_start 遇到 @ 且后面是 import 的状态
 // im 进入 @import 语句后的状态
-%x s sc mc ch_start ch im_start im
+// vari_start 遇到 @ 且后面是 variable 的状态
+// vari 进入 @variable 的状态
+// vari_colon_start @variable: 匹配冒号后面，分号前面的状态
+%x s sc mc ch_start ch im_start im vari_start vari vari_colon_start
 
 // b 进入选择器内部即块的状态
 // sb 进入选择器内部子选择器内部即子块的状态
@@ -62,7 +65,7 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
 %%
 
 /**
- * sc
+ * singlecomment
  */
 <s>\s+/{singlecomment} {
     // this.begin('sc');
@@ -81,7 +84,7 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
 };
 
 /**
- * mc
+ * multicomment
  */
 <s>\s+/{multicomment} {
     // this.begin('mc');
@@ -103,6 +106,48 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
 <mc>{n} {
     this.popState();
 };
+
+
+
+/**
+ * variable
+ * 变量定义的时候只能是 @name 而不能是 @{name}，@{name} 是在使用变量的时候使用的
+ */
+<s>{space}/('@'{letter}\s*\:+) {
+    return 'VARI_SPACE';
+};
+
+<s>'@'/({letter}\s*\:+) {
+    this.begin('vari_start');
+    return 'VARI_START';
+};
+
+<vari_start>{letter} {
+    this.popState();
+    this.begin('vari');
+    return 'VARI_NAME';
+};
+
+<vari>\:+ {
+    this.begin('vari_colon_start');
+    return 'VARI_COLON';
+};
+
+<vari_colon_start>\s*('%'|'@'?[_A-Za-z0-9-]|{string}|'#'([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3}))* {
+    this.popState();
+    return 'VARI_VALUE';
+};
+
+<vari>{space} {
+    return 'VARI_SPACE';
+};
+
+<vari>{semicolon} {
+    this.popState();
+    return 'VARI_SEMICOLON';
+};
+
+
 
 /**
  * @charset

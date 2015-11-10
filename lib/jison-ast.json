@@ -1,673 +1,341 @@
 {
     "root": {
-        "variables": [],
-        "imports": [
+        "variables": [
             {
-                "type": "import",
-                "originContent": "@import url(\"./variable.less\");",
-                "value": " url(\"./variable.less\")",
-                "quote": "\"",
-                "importOption": [],
-                "originImportOption": "",
-                "mediaValue": "",
-                "before": "",
+                "type": "variable",
+                "originContent": "    @property:  co%-lo_r;",
+                "variableName": "property",
+                "variableValue": "co%-lo_r",
+                "variableValueBefore": "  ",
+                "variableValueAfter": "",
+                "value": "co%-lo_r",
+                "before": "    ",
                 "after": "",
                 "loc": {
                     "firstLine": 1,
                     "lastLine": 1,
-                    "firstCol": 1,
-                    "lastCol": 32
+                    "firstCol": 5,
+                    "lastCol": 26
                 }
             },
             {
-                "type": "import",
-                "originContent": "    @import \"./variable.less\" screen and (max-width: 601px);",
-                "value": " \"./variable.less\" ",
-                "quote": "\"",
-                "importOption": [],
-                "originImportOption": "",
-                "mediaValue": "screen and (max-width: 601px)",
-                "before": "    ",
+                "type": "variable",
+                "originContent": "\n\n@a : 1 ;",
+                "variableName": "a",
+                "variableValue": "1",
+                "variableValueBefore": " ",
+                "variableValueAfter": " ",
+                "value": "1",
+                "before": "\n\n",
                 "after": "",
                 "loc": {
                     "firstLine": 3,
                     "lastLine": 3,
-                    "firstCol": 5,
-                    "lastCol": 61
+                    "firstCol": 1,
+                    "lastCol": 9
                 }
             },
             {
-                "type": "import",
-                "originContent": "\n\n@import () './variable';",
-                "value": " './variable'",
-                "quote": "'",
-                "importOption": [],
-                "originImportOption": " ()",
-                "mediaValue": "",
-                "before": "\n\n",
+                "type": "variable",
+                "originContent": "\n\n    @fnord:  \"I am fnord.\";",
+                "variableName": "fnord",
+                "variableValue": "\"I am fnord.\"",
+                "variableValueBefore": "  ",
+                "variableValueAfter": "",
+                "value": "\"I am fnord.\"",
+                "before": "\n\n    ",
                 "after": "",
                 "loc": {
                     "firstLine": 5,
                     "lastLine": 5,
-                    "firstCol": 1,
-                    "lastCol": 25
-                }
-            },
-            {
-                "type": "import",
-                "originContent": "\n\n    @import    (  less  , inline  )    \"./variable.less\";",
-                "value": "    \"./variable.less\"",
-                "quote": "\"",
-                "importOption": [
-                    "less",
-                    "inline"
-                ],
-                "originImportOption": "    (  less  , inline  )",
-                "mediaValue": "",
-                "before": "\n\n    ",
-                "after": "",
-                "loc": {
-                    "firstLine": 7,
-                    "lastLine": 7,
                     "firstCol": 5,
-                    "lastCol": 58
+                    "lastCol": 28
                 }
             },
             {
-                "type": "import",
-                "originContent": "\n\n\n    @import './charset.less'  ;",
-                "value": " './charset.less'  ",
-                "quote": "'",
-                "importOption": [],
-                "originImportOption": "",
-                "mediaValue": "",
-                "before": "\n\n\n    ",
-                "after": "",
-                "loc": {
-                    "firstLine": 10,
-                    "lastLine": 10,
-                    "firstCol": 5,
-                    "lastCol": 32
-                }
-            },
-            {
-                "type": "import",
-                "originContent": "\n@import \"import-@{in}@{terpolation}2.less\";",
-                "value": " \"import-@{in}@{terpolation}2.less\"",
-                "quote": "\"",
-                "importOption": [],
-                "originImportOption": "",
-                "mediaValue": "",
+                "type": "variable",
+                "originContent": "\n@var:    \"fnord\";",
+                "variableName": "var",
+                "variableValue": "\"fnord\"",
+                "variableValueBefore": "    ",
+                "variableValueAfter": "",
+                "value": "\"fnord\"",
                 "before": "\n",
                 "after": "",
                 "loc": {
-                    "firstLine": 11,
-                    "lastLine": 11,
+                    "firstLine": 6,
+                    "lastLine": 6,
                     "firstCol": 1,
-                    "lastCol": 44
+                    "lastCol": 18
                 }
             },
             {
-                "type": "import",
-                "originContent": "\n\n    @import \"import-@{in}@{terpolation}3.less\";",
-                "value": " \"import-@{in}@{terpolation}3.less\"",
-                "quote": "\"",
-                "importOption": [],
-                "originImportOption": "",
-                "mediaValue": "",
-                "before": "\n\n    ",
+                "type": "variable",
+                "originContent": "\n\n@name: var1;",
+                "variableName": "name",
+                "variableValue": "var1",
+                "variableValueBefore": " ",
+                "variableValueAfter": "",
+                "value": "var1",
+                "before": "\n\n",
                 "after": "",
                 "loc": {
-                    "firstLine": 13,
-                    "lastLine": 13,
-                    "firstCol": 5,
-                    "lastCol": 48
-                }
-            },
-            {
-                "type": "import",
-                "originContent": "\n\n\n@import (inline) \"./singlecomment.less\";",
-                "value": " \"./singlecomment.less\"",
-                "quote": "\"",
-                "importOption": [
-                    "inline"
-                ],
-                "originImportOption": " (inline)",
-                "mediaValue": "",
-                "before": "\n\n\n",
-                "after": "",
-                "loc": {
-                    "firstLine": 16,
-                    "lastLine": 16,
+                    "firstLine": 14,
+                    "lastLine": 14,
                     "firstCol": 1,
-                    "lastCol": 41
+                    "lastCol": 13
                 }
             },
             {
-                "type": "import",
-                "originContent": "\n    @import (multiple,  ) \"./dd.less\";",
-                "value": " \"./dd.less\"",
-                "quote": "\"",
-                "importOption": [
-                    "multiple"
-                ],
-                "originImportOption": " (multiple,  )",
-                "mediaValue": "",
-                "before": "\n    ",
+                "type": "variable",
+                "originContent": "@charset: utf8;",
+                "variableName": "charset",
+                "variableValue": "utf8",
+                "variableValueBefore": " ",
+                "variableValueAfter": "",
+                "value": "utf8",
+                "before": "",
                 "after": "",
                 "loc": {
-                    "firstLine": 17,
-                    "lastLine": 17,
-                    "firstCol": 5,
-                    "lastCol": 39
-                }
-            },
-            {
-                "type": "import",
-                "originContent": "\n\n\n@import url(\"test.css\");",
-                "value": " url(\"test.css\")",
-                "quote": "\"",
-                "importOption": [],
-                "originImportOption": "",
-                "mediaValue": "",
-                "before": "\n\n\n",
-                "after": "",
-                "loc": {
-                    "firstLine": 20,
-                    "lastLine": 20,
+                    "firstLine": 21,
+                    "lastLine": 21,
                     "firstCol": 1,
-                    "lastCol": 25
+                    "lastCol": 16
                 }
             },
             {
-                "type": "import",
-                "originContent": "\n\n\n@import \"../css/background.css\";",
-                "value": " \"../css/background.css\"",
-                "quote": "\"",
-                "importOption": [],
-                "originImportOption": "",
-                "mediaValue": "",
-                "before": "\n\n\n",
-                "after": "",
-                "loc": {
-                    "firstLine": 23,
-                    "lastLine": 23,
-                    "firstCol": 1,
-                    "lastCol": 33
-                }
-            },
-            {
-                "type": "import",
-                "originContent": "\n@import \"import-test-d.css\";",
-                "value": " \"import-test-d.css\"",
-                "quote": "\"",
-                "importOption": [],
-                "originImportOption": "",
-                "mediaValue": "",
+                "type": "variable",
+                "originContent": "\n@import: 33px;",
+                "variableName": "import",
+                "variableValue": "33px",
+                "variableValueBefore": " ",
+                "variableValueAfter": "",
+                "value": "33px",
                 "before": "\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 22,
+                    "lastLine": 22,
+                    "firstCol": 1,
+                    "lastCol": 15
+                }
+            },
+            {
+                "type": "variable",
+                "originContent": "\n\n@a: 2;",
+                "variableName": "a",
+                "variableValue": "2",
+                "variableValueBefore": " ",
+                "variableValueAfter": "",
+                "value": "2",
+                "before": "\n\n",
                 "after": "",
                 "loc": {
                     "firstLine": 24,
                     "lastLine": 24,
                     "firstCol": 1,
-                    "lastCol": 29
+                    "lastCol": 7
                 }
             },
             {
-                "type": "import",
-                "originContent": "\n\n@import \"imports/logo\";",
-                "value": " \"imports/logo\"",
-                "quote": "\"",
-                "importOption": [],
-                "originImportOption": "",
-                "mediaValue": "",
+                "type": "variable",
+                "originContent": "@var: -1;",
+                "variableName": "var",
+                "variableValue": "-1",
+                "variableValueBefore": " ",
+                "variableValueAfter": "",
+                "value": "-1",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 28,
+                    "lastLine": 28,
+                    "firstCol": 1,
+                    "lastCol": 10
+                }
+            },
+            {
+                "type": "variable",
+                "originContent": "\n\n@c: #888;",
+                "variableName": "c",
+                "variableValue": "#888",
+                "variableValueBefore": " ",
+                "variableValueAfter": "",
+                "value": "#888",
                 "before": "\n\n",
-                "after": "",
-                "loc": {
-                    "firstLine": 26,
-                    "lastLine": 26,
-                    "firstCol": 1,
-                    "lastCol": 24
-                }
-            },
-            {
-                "type": "import",
-                "originContent": "\n@import \"imports/font\";",
-                "value": " \"imports/font\"",
-                "quote": "\"",
-                "importOption": [],
-                "originImportOption": "",
-                "mediaValue": "",
-                "before": "\n",
-                "after": "",
-                "loc": {
-                    "firstLine": 27,
-                    "lastLine": 27,
-                    "firstCol": 1,
-                    "lastCol": 24
-                }
-            },
-            {
-                "type": "import",
-                "originContent": "\n\n\n@import (inline) \"imports/logo.less\";",
-                "value": " \"imports/logo.less\"",
-                "quote": "\"",
-                "importOption": [
-                    "inline"
-                ],
-                "originImportOption": " (inline)",
-                "mediaValue": "",
-                "before": "\n\n\n",
                 "after": "",
                 "loc": {
                     "firstLine": 30,
                     "lastLine": 30,
                     "firstCol": 1,
-                    "lastCol": 38
+                    "lastCol": 10
                 }
             },
             {
-                "type": "import",
-                "originContent": "\n@import \"import-@{in}@{terpolation}2.less\";",
-                "value": " \"import-@{in}@{terpolation}2.less\"",
-                "quote": "\"",
-                "importOption": [],
-                "originImportOption": "",
-                "mediaValue": "",
-                "before": "\n",
-                "after": "",
-                "loc": {
-                    "firstLine": 31,
-                    "lastLine": 31,
-                    "firstCol": 1,
-                    "lastCol": 44
-                }
-            },
-            {
-                "type": "import",
-                "originContent": "@import url(\"import/import-test-c.less\");",
-                "value": " url(\"import/import-test-c.less\")",
-                "quote": "\"",
-                "importOption": [],
-                "originImportOption": "",
-                "mediaValue": "",
-                "before": "",
-                "after": "",
-                "loc": {
-                    "firstLine": 33,
-                    "lastLine": 33,
-                    "firstCol": 1,
-                    "lastCol": 42
-                }
-            },
-            {
-                "type": "import",
-                "originContent": "@import (inline) url(\"import/import-test-d.css\") (min-width:600px);",
-                "value": " url(\"import/import-test-d.css\") ",
-                "quote": "\"",
-                "importOption": [
-                    "inline"
-                ],
-                "originImportOption": " (inline)",
-                "mediaValue": "(min-width:600px)",
-                "before": "",
-                "after": "",
-                "loc": {
-                    "firstLine": 34,
-                    "lastLine": 34,
-                    "firstCol": 1,
-                    "lastCol": 68
-                }
-            },
-            {
-                "type": "import",
-                "originContent": "\n@import (inline, css) url('import/invalid-css.less');",
-                "value": " url('import/invalid-css.less')",
-                "quote": "'",
-                "importOption": [
-                    "inline",
-                    "css"
-                ],
-                "originImportOption": " (inline, css)",
-                "mediaValue": "",
-                "before": "\n",
-                "after": "",
-                "loc": {
-                    "firstLine": 35,
-                    "lastLine": 35,
-                    "firstCol": 1,
-                    "lastCol": 54
-                }
-            },
-            {
-                "type": "import",
-                "originContent": "\n@import (inline, css) url(import/invalid-css1.less);",
-                "value": " url(import/invalid-css1.less)",
-                "quote": "",
-                "importOption": [
-                    "inline",
-                    "css"
-                ],
-                "originImportOption": " (inline, css)",
-                "mediaValue": "",
-                "before": "\n",
-                "after": "",
-                "loc": {
-                    "firstLine": 36,
-                    "lastLine": 36,
-                    "firstCol": 1,
-                    "lastCol": 53
-                }
-            },
-            {
-                "type": "import",
-                "originContent": "\n\n\n@import \"import/import-once-test-c\";",
-                "value": " \"import/import-once-test-c\"",
-                "quote": "\"",
-                "importOption": [],
-                "originImportOption": "",
-                "mediaValue": "",
-                "before": "\n\n\n",
-                "after": "",
-                "loc": {
-                    "firstLine": 39,
-                    "lastLine": 39,
-                    "firstCol": 1,
-                    "lastCol": 37
-                }
-            },
-            {
-                "type": "import",
-                "originContent": "\n@import \"import/import-once-test-c\";",
-                "value": " \"import/import-once-test-c\"",
-                "quote": "\"",
-                "importOption": [],
-                "originImportOption": "",
-                "mediaValue": "",
-                "before": "\n",
-                "after": "",
-                "loc": {
-                    "firstLine": 40,
-                    "lastLine": 40,
-                    "firstCol": 1,
-                    "lastCol": 37
-                }
-            },
-            {
-                "type": "import",
-                "originContent": "\n@import \"import/import-once-test-c.less\";",
-                "value": " \"import/import-once-test-c.less\"",
-                "quote": "\"",
-                "importOption": [],
-                "originImportOption": "",
-                "mediaValue": "",
-                "before": "\n",
-                "after": "",
-                "loc": {
-                    "firstLine": 41,
-                    "lastLine": 41,
-                    "firstCol": 1,
-                    "lastCol": 42
-                }
-            },
-            {
-                "type": "import",
-                "originContent": "\n@import \"import/deeper/import-once-test-a\";",
-                "value": " \"import/deeper/import-once-test-a\"",
-                "quote": "\"",
-                "importOption": [],
-                "originImportOption": "",
-                "mediaValue": "",
-                "before": "\n",
-                "after": "",
-                "loc": {
-                    "firstLine": 42,
-                    "lastLine": 42,
-                    "firstCol": 1,
-                    "lastCol": 44
-                }
-            },
-            {
-                "type": "import",
-                "originContent": "\n@import (multiple) \"import/import-test-f.less\";",
-                "value": " \"import/import-test-f.less\"",
-                "quote": "\"",
-                "importOption": [
-                    "multiple"
-                ],
-                "originImportOption": " (multiple)",
-                "mediaValue": "",
-                "before": "\n",
-                "after": "",
-                "loc": {
-                    "firstLine": 43,
-                    "lastLine": 43,
-                    "firstCol": 1,
-                    "lastCol": 48
-                }
-            },
-            {
-                "type": "import",
-                "originContent": "\n@import (multiple) \"import/import-test-f.less\";",
-                "value": " \"import/import-test-f.less\"",
-                "quote": "\"",
-                "importOption": [
-                    "multiple"
-                ],
-                "originImportOption": " (multiple)",
-                "mediaValue": "",
-                "before": "\n",
-                "after": "",
-                "loc": {
-                    "firstLine": 44,
-                    "lastLine": 44,
-                    "firstCol": 1,
-                    "lastCol": 48
-                }
-            },
-            {
-                "type": "import",
-                "originContent": "\n\n@import (reference) url(\"import-once.less\");",
-                "value": " url(\"import-once.less\")",
-                "quote": "\"",
-                "importOption": [
-                    "reference"
-                ],
-                "originImportOption": " (reference)",
-                "mediaValue": "",
-                "before": "\n\n",
-                "after": "",
-                "loc": {
-                    "firstLine": 46,
-                    "lastLine": 46,
-                    "firstCol": 1,
-                    "lastCol": 45
-                }
-            },
-            {
-                "type": "import",
-                "originContent": "\n@import (reference) url(\"css-3.less\");",
-                "value": " url(\"css-3.less\")",
-                "quote": "\"",
-                "importOption": [
-                    "reference"
-                ],
-                "originImportOption": " (reference)",
-                "mediaValue": "",
-                "before": "\n",
-                "after": "",
-                "loc": {
-                    "firstLine": 47,
-                    "lastLine": 47,
-                    "firstCol": 1,
-                    "lastCol": 39
-                }
-            },
-            {
-                "type": "import",
-                "originContent": "\n@import (reference) url(\"media.less\");",
-                "value": " url(\"media.less\")",
-                "quote": "\"",
-                "importOption": [
-                    "reference"
-                ],
-                "originImportOption": " (reference)",
-                "mediaValue": "",
-                "before": "\n",
-                "after": "",
-                "loc": {
-                    "firstLine": 48,
-                    "lastLine": 48,
-                    "firstCol": 1,
-                    "lastCol": 39
-                }
-            },
-            {
-                "type": "import",
-                "originContent": "\n@import (reference) url(\"import/import-reference.less\");",
-                "value": " url(\"import/import-reference.less\")",
-                "quote": "\"",
-                "importOption": [
-                    "reference"
-                ],
-                "originImportOption": " (reference)",
-                "mediaValue": "",
-                "before": "\n",
-                "after": "",
-                "loc": {
-                    "firstLine": 49,
-                    "lastLine": 49,
-                    "firstCol": 1,
-                    "lastCol": 57
-                }
-            },
-            {
-                "type": "import",
-                "originContent": "\n@import (reference) url(\"import/css-import.less\");",
-                "value": " url(\"import/css-import.less\")",
-                "quote": "\"",
-                "importOption": [
-                    "reference"
-                ],
-                "originImportOption": " (reference)",
-                "mediaValue": "",
-                "before": "\n",
-                "after": "",
-                "loc": {
-                    "firstLine": 50,
-                    "lastLine": 50,
-                    "firstCol": 1,
-                    "lastCol": 51
-                }
-            },
-            {
-                "type": "import",
-                "originContent": "\n\n@import url(http://fonts.googleapis.com/css?family=Open+Sans);",
-                "value": " url(http://fonts.googleapis.com/css?family=Open+Sans)",
-                "quote": "",
-                "importOption": [],
-                "originImportOption": "",
-                "mediaValue": "",
-                "before": "\n\n",
-                "after": "",
-                "loc": {
-                    "firstLine": 52,
-                    "lastLine": 52,
-                    "firstCol": 1,
-                    "lastCol": 63
-                }
-            },
-            {
-                "type": "import",
-                "originContent": "\n\n@import url(/absolute/something.css) screen and (color) and (max-width: 600px);",
-                "value": " url(/absolute/something.css) ",
-                "quote": "",
-                "importOption": [],
-                "originImportOption": "",
-                "mediaValue": "screen and (color) and (max-width: 600px)",
-                "before": "\n\n",
-                "after": "",
-                "loc": {
-                    "firstLine": 54,
-                    "lastLine": 54,
-                    "firstCol": 1,
-                    "lastCol": 80
-                }
-            },
-            {
-                "type": "import",
-                "originContent": "@import (less, multiple) \"import/import-test-d.css\" screen and (max-width: 601px);\n",
-                "value": " \"import/import-test-d.css\" ",
-                "quote": "\"",
-                "importOption": [
-                    "less",
-                    "multiple"
-                ],
-                "originImportOption": " (less, multiple)",
-                "mediaValue": "screen and (max-width: 601px)",
+                "type": "variable",
+                "originContent": "@f: @c;\n",
+                "variableName": "f",
+                "variableValue": "@c",
+                "variableValueBefore": " ",
+                "variableValueAfter": "",
+                "value": "@c",
                 "before": "",
                 "after": "\n",
                 "loc": {
-                    "firstLine": 58,
-                    "lastLine": 58,
+                    "firstLine": 33,
+                    "lastLine": 33,
                     "firstCol": 1,
-                    "lastCol": 83
+                    "lastCol": 8
                 }
             }
         ],
+        "imports": [],
         "selectors": [],
-        "charsets": [],
+        "charsets": [
+            {
+                "type": "charset",
+                "originContent": "@charset 'utf8';",
+                "value": " 'utf8'",
+                "quote": "'",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 12,
+                    "lastLine": 12,
+                    "firstCol": 1,
+                    "lastCol": 17
+                }
+            }
+        ],
         "sComments": [
             {
                 "type": "sComment",
-                "originContent": "// import inline should not float above this #1954",
-                "content": "// import inline should not float above this #1954",
-                "before": "",
-                "after": "",
-                "loc": {
-                    "firstLine": 1,
-                    "lastLine": 1,
-                    "firstCol": 32,
-                    "lastCol": 82
-                }
-            },
-            {
-                "type": "sComment",
-                "originContent": "// asdas",
-                "content": "// asdas",
-                "before": "",
-                "after": "",
-                "loc": {
-                    "firstLine": 31,
-                    "lastLine": 31,
-                    "firstCol": 44,
-                    "lastCol": 52
-                }
-            },
-            {
-                "type": "sComment",
-                "originContent": "// import inline should not float above this #1954",
-                "content": "// import inline should not float above this #1954",
-                "before": "",
-                "after": "",
-                "loc": {
-                    "firstLine": 33,
-                    "lastLine": 33,
-                    "firstCol": 42,
-                    "lastCol": 92
-                }
-            },
-            {
-                "type": "sComment",
-                "originContent": "// @import (optional) \"file-does-not-exist.does-not-exist\";",
-                "content": "// @import (optional) \"file-does-not-exist.does-not-exist\";",
+                "originContent": "// body {",
+                "value": "// body {",
                 "before": "\n\n",
                 "after": "",
                 "loc": {
-                    "firstLine": 56,
-                    "lastLine": 56,
+                    "firstLine": 8,
+                    "lastLine": 8,
                     "firstCol": 1,
-                    "lastCol": 60
+                    "lastCol": 10
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "//     content: @@var;",
+                "value": "//     content: @@var;",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 9,
+                    "lastLine": 9,
+                    "firstCol": 1,
+                    "lastCol": 23
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// }",
+                "value": "// }",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 10,
+                    "lastLine": 10,
+                    "firstCol": 1,
+                    "lastCol": 5
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// body {",
+                "value": "// body {",
+                "before": "\n\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 16,
+                    "lastLine": 16,
+                    "firstCol": 1,
+                    "lastCol": 10
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "//     color: @@name;",
+                "value": "//     color: @@name;",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 17,
+                    "lastLine": 17,
+                    "firstCol": 1,
+                    "lastCol": 22
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// }",
+                "value": "// }",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 18,
+                    "lastLine": 18,
+                    "firstCol": 1,
+                    "lastCol": 5
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// @x: (@a * @a);",
+                "value": "// @x: (@a * @a);",
+                "before": "\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 25,
+                    "lastLine": 25,
+                    "firstCol": 1,
+                    "lastCol": 18
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// @y: (@x + 1);",
+                "value": "// @y: (@x + 1);",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 26,
+                    "lastLine": 26,
+                    "firstCol": 1,
+                    "lastCol": 17
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// @z: (@x * 2 + @y);",
+                "value": "// @z: (@x * 2 + @y);",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 27,
+                    "lastLine": 27,
+                    "firstCol": 1,
+                    "lastCol": 22
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// @fonts: \"Trebuchet MS\", Verdana, sans-serif;",
+                "value": "// @fonts: \"Trebuchet MS\", Verdana, sans-serif;",
+                "before": "\n\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 32,
+                    "lastLine": 32,
+                    "firstCol": 1,
+                    "lastCol": 48
                 }
             }
         ],
