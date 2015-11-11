@@ -4,13 +4,11 @@ space                       [ \t\s]+
 semicolon                   \;+
 string1                     \"([^\n\r\f\\"])*\"
 /*"*/ // 这个注释是为了把 string1 的正则所带来的高亮影响给去掉
-
 string2                     \'([^\n\r\f\\'])*\'
 /*'*/ // 这个注释是为了把 string2 的正则所带来的高亮影响给去掉
-
 string                      {string1}|{string2}
-
 letter                      [\w-]+
+hexcolor                    '#'([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})
 
 // importOpt                   ('less'|'css'|'multiple'|'once'|'inline'|'reference')
 importOpt                   \s*(''|'less'|'css'|'multiple'|'once'|'inline'|'reference')\s*(\,\s*(''|'less'|'css'|'multiple'|'once'|'inline'|'reference')*\s*)*
@@ -133,7 +131,8 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
     return 'VARI_COLON';
 };
 
-<vari_colon_start>\s*('%'|'@'?[_A-Za-z0-9-]|{string}|'#'([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3}))* {
+// <vari_colon_start>\s*('%'|'@'?[_A-Za-z0-9-]|{string}|{hexcolor})* {
+<vari_colon_start>\s*('%'|'@'?[_A-Za-z0-9-]|{string}|{hexcolor}|[\(\)\+\-\*\/\s]*|','\s*)* {
     this.popState();
     return 'VARI_VALUE';
 };
