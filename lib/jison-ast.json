@@ -1,49 +1,37 @@
 {
     "root": {
-        "variables": [
-            {
-                "type": "variable",
-                "originContent": "@property:  co%-lo_r;",
-                "variableName": "property",
-                "variableNameBefore": "",
-                "variablenameAfter": "",
-                "variableValue": "co%-lo_r",
-                "variableValueBefore": "  ",
-                "variableValueAfter": "",
-                "value": "co%-lo_r",
-                "before": "",
-                "after": "",
-                "loc": {
-                    "firstLine": 1,
-                    "lastLine": 1,
-                    "firstCol": 1,
-                    "lastCol": 22
-                }
-            },
-            {
-                "type": "variable",
-                "originContent": "\n\n@a: 1;\n",
-                "variableName": "a",
-                "variableNameBefore": "\n\n",
-                "variablenameAfter": "",
-                "variableValue": "1",
-                "variableValueBefore": " ",
-                "variableValueAfter": "",
-                "value": "1",
-                "before": "\n\n",
-                "after": "\n",
-                "loc": {
-                    "firstLine": 3,
-                    "lastLine": 3,
-                    "firstCol": 1,
-                    "lastCol": 7
-                }
-            }
-        ],
+        "variables": [],
         "imports": [],
         "selectors": [],
         "charsets": [],
         "sComments": [],
-        "mComments": []
+        "mComments": [
+            {
+                "type": "mComment",
+                "value": "/*aaaaaa*/\n",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 1,
+                    "lastLine": 2,
+                    "firstCol": 1,
+                    "lastCol": 1,
+                    "originContent": "/*aaaaaa*/\n"
+                }
+            },
+            {
+                "type": "mComment",
+                "value": "/*bbbbb*/\n",
+                "before": "\n\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 4,
+                    "lastLine": 5,
+                    "firstCol": 1,
+                    "lastCol": 1,
+                    "originContent": "/*bbbbb*/\n"
+                }
+            }
+        ]
     }
 }

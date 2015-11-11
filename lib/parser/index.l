@@ -23,6 +23,7 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
 
 %{
     var debug = require('debug')('jison-lesslint: lexer');
+    var parser = yy.parser;
     yy.a = 'aaa';
     var s, s2, s3;
     var rv, rv2, e_offset, col, row, len, value;
@@ -56,9 +57,6 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
 // b 进入选择器内部即块的状态
 // sb 进入选择器内部子选择器内部即子块的状态
 // p 进入属性的状态，这个状态用来帮助找到属性的值
-// im 进入 @import 语句后的状态
-// var 进入 变量定义 语句后的状态
-//b sb p im ch var
 
 %%
 
