@@ -23,14 +23,12 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
 
 %{
     var debug = require('debug')('jison-lesslint: lexer');
-    var parser = yy.parser;
-    yy.a = 'aaa';
     var s, s2, s3;
     var rv, rv2, e_offset, col, row, len, value;
     var match, match2;
 
     // console.log("lexer action: ", yy, yy_, this, yytext, YY_START, $avoiding_name_collisions);
-    var parser = yy.parser;
+    // var parser = yy.parser;
     debug(YY_START);
 %}
 

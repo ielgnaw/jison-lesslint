@@ -35,7 +35,6 @@
         mComments: []
     };
 
-
 %}
 
 // %nonassoc mulit_comment
@@ -117,6 +116,7 @@ single_comment
 
 mulit_comment
     : MC MC_END {
+        yy.test();
         ast.mComments.push({
             type: 'mComment',
             value: $1 + $2,
