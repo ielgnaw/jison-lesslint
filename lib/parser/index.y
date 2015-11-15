@@ -116,7 +116,7 @@ single_comment
 
 mulit_comment
     : MC MC_END {
-        yy.test();
+        // yy.test();
         ast.mComments.push({
             type: 'mComment',
             value: $1 + $2,

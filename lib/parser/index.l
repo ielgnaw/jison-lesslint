@@ -61,8 +61,8 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
 /**
  * singlecomment
  */
-<s>\s+/{singlecomment} {
-    // this.begin('sc');
+<s>{space}/{singlecomment} {
+    yytext = yytext.replace(/^\n+/g, '');
     return 'S_SPACE';
 };
 
@@ -77,11 +77,13 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
     this.popState();
 };
 
+
+
 /**
  * multicomment
  */
-<s>\s+/{multicomment} {
-    // this.begin('mc');
+<s>{space}/{multicomment} {
+    yytext = yytext.replace(/^\n+/g, '');
     return 'M_SPACE';
 };
 
@@ -108,6 +110,7 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
  * 变量定义的时候只能是 @name 而不能是 @{name}，@{name} 是在使用变量的时候使用的
  */
 <s>{space}/('@'{letter}\s*\:+) {
+    yytext = yytext.replace(/^\n+/g, '');
     return 'VARI_SPACE';
 };
 
@@ -147,7 +150,8 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
 /**
  * @charset
  */
-<s>\s+/'@charset' {
+<s>{space}/'@charset' {
+    yytext = yytext.replace(/^\n+/g, '');
     return 'CH_SPACE';
 };
 
@@ -179,12 +183,15 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
     return 'CH_SEMICOLON';
 };
 
+
+
 /**
  * @import
  * @import 语句必须有引号
  * @import importOptions 必须在小括号内
  */
-<s>\s+/'@import' {
+<s>{space}/'@import' {
+    yytext = yytext.replace(/^\n+/g, '');
     return 'IM_SPACE';
 };
 

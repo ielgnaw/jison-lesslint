@@ -1,45 +1,1679 @@
 {
     "root": {
-        "variables": [],
-        "imports": [],
-        "selectors": [],
-        "charsets": [],
-        "sComments": [],
-        "mComments": [
+        "variables": [
             {
-                "type": "mComment",
-                "value": "/*aaaaaa*/\n",
-                "before": "",
+                "type": "variable",
+                "originContent": "    @property:  co%-lo_r;",
+                "variableName": "property",
+                "variableNameBefore": "    ",
+                "variablenameAfter": "",
+                "variableValue": "co%-lo_r",
+                "variableValueBefore": "  ",
+                "variableValueAfter": "",
+                "value": "co%-lo_r",
+                "before": "    ",
                 "after": "",
                 "loc": {
                     "firstLine": 1,
-                    "lastLine": 2,
+                    "lastLine": 1,
+                    "firstCol": 5,
+                    "lastCol": 26
+                }
+            },
+            {
+                "type": "variable",
+                "originContent": "        @a : 1 ;",
+                "variableName": "a",
+                "variableNameBefore": "        ",
+                "variablenameAfter": " ",
+                "variableValue": "1 ",
+                "variableValueBefore": " ",
+                "variableValueAfter": "",
+                "value": "1 ",
+                "before": "        ",
+                "after": "",
+                "loc": {
+                    "firstLine": 3,
+                    "lastLine": 3,
+                    "firstCol": 9,
+                    "lastCol": 17
+                }
+            },
+            {
+                "type": "variable",
+                "originContent": "    @fnord:  \"I am fnord.\";",
+                "variableName": "fnord",
+                "variableNameBefore": "    ",
+                "variablenameAfter": "",
+                "variableValue": "\"I am fnord.\"",
+                "variableValueBefore": "  ",
+                "variableValueAfter": "",
+                "value": "\"I am fnord.\"",
+                "before": "    ",
+                "after": "",
+                "loc": {
+                    "firstLine": 5,
+                    "lastLine": 5,
+                    "firstCol": 5,
+                    "lastCol": 28
+                }
+            },
+            {
+                "type": "variable",
+                "originContent": "@var:    \"fnord\";",
+                "variableName": "var",
+                "variableNameBefore": "",
+                "variablenameAfter": "",
+                "variableValue": "\"fnord\"",
+                "variableValueBefore": "    ",
+                "variableValueAfter": "",
+                "value": "\"fnord\"",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 6,
+                    "lastLine": 6,
+                    "firstCol": 1,
+                    "lastCol": 18
+                }
+            },
+            {
+                "type": "variable",
+                "originContent": "@rete: '@{charset}';",
+                "variableName": "rete",
+                "variableNameBefore": "",
+                "variablenameAfter": "",
+                "variableValue": "'@{charset}'",
+                "variableValueBefore": " ",
+                "variableValueAfter": "",
+                "value": "'@{charset}'",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 14,
+                    "lastLine": 14,
+                    "firstCol": 1,
+                    "lastCol": 21
+                }
+            },
+            {
+                "type": "variable",
+                "originContent": "@name: var1;",
+                "variableName": "name",
+                "variableNameBefore": "",
+                "variablenameAfter": "",
+                "variableValue": "var1",
+                "variableValueBefore": " ",
+                "variableValueAfter": "",
+                "value": "var1",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 16,
+                    "lastLine": 16,
+                    "firstCol": 1,
+                    "lastCol": 13
+                }
+            },
+            {
+                "type": "variable",
+                "originContent": "@charset: utf8;",
+                "variableName": "charset",
+                "variableNameBefore": "",
+                "variablenameAfter": "",
+                "variableValue": "utf8",
+                "variableValueBefore": " ",
+                "variableValueAfter": "",
+                "value": "utf8",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 23,
+                    "lastLine": 23,
+                    "firstCol": 1,
+                    "lastCol": 16
+                }
+            },
+            {
+                "type": "variable",
+                "originContent": "@import: 33px;",
+                "variableName": "import",
+                "variableNameBefore": "",
+                "variablenameAfter": "",
+                "variableValue": "33px",
+                "variableValueBefore": " ",
+                "variableValueAfter": "",
+                "value": "33px",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 24,
+                    "lastLine": 24,
+                    "firstCol": 1,
+                    "lastCol": 15
+                }
+            },
+            {
+                "type": "variable",
+                "originContent": "@a: 2;",
+                "variableName": "a",
+                "variableNameBefore": "",
+                "variablenameAfter": "",
+                "variableValue": "2",
+                "variableValueBefore": " ",
+                "variableValueAfter": "",
+                "value": "2",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 26,
+                    "lastLine": 26,
+                    "firstCol": 1,
+                    "lastCol": 7
+                }
+            },
+            {
+                "type": "variable",
+                "originContent": "@x: (@a * @a);",
+                "variableName": "x",
+                "variableNameBefore": "",
+                "variablenameAfter": "",
+                "variableValue": "(@a * @a)",
+                "variableValueBefore": " ",
+                "variableValueAfter": "",
+                "value": "(@a * @a)",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 27,
+                    "lastLine": 27,
+                    "firstCol": 1,
+                    "lastCol": 15
+                }
+            },
+            {
+                "type": "variable",
+                "originContent": "@y: (@x + 1);",
+                "variableName": "y",
+                "variableNameBefore": "",
+                "variablenameAfter": "",
+                "variableValue": "(@x + 1)",
+                "variableValueBefore": " ",
+                "variableValueAfter": "",
+                "value": "(@x + 1)",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 28,
+                    "lastLine": 28,
+                    "firstCol": 1,
+                    "lastCol": 14
+                }
+            },
+            {
+                "type": "variable",
+                "originContent": "@z: (@x * 2 + @y;",
+                "variableName": "z",
+                "variableNameBefore": "",
+                "variablenameAfter": "",
+                "variableValue": "(@x * 2 + @y",
+                "variableValueBefore": " ",
+                "variableValueAfter": "",
+                "value": "(@x * 2 + @y",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 29,
+                    "lastLine": 29,
+                    "firstCol": 1,
+                    "lastCol": 18
+                }
+            },
+            {
+                "type": "variable",
+                "originContent": "@z: 1px + 2;",
+                "variableName": "z",
+                "variableNameBefore": "",
+                "variablenameAfter": "",
+                "variableValue": "1px + 2",
+                "variableValueBefore": " ",
+                "variableValueAfter": "",
+                "value": "1px + 2",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 30,
+                    "lastLine": 30,
+                    "firstCol": 1,
+                    "lastCol": 13
+                }
+            },
+            {
+                "type": "variable",
+                "originContent": "@var: -1;",
+                "variableName": "var",
+                "variableNameBefore": "",
+                "variablenameAfter": "",
+                "variableValue": "-1",
+                "variableValueBefore": " ",
+                "variableValueAfter": "",
+                "value": "-1",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 31,
+                    "lastLine": 31,
+                    "firstCol": 1,
+                    "lastCol": 10
+                }
+            },
+            {
+                "type": "variable",
+                "originContent": "@keyframes          : key  ;",
+                "variableName": "keyframes",
+                "variableNameBefore": "",
+                "variablenameAfter": "          ",
+                "variableValue": "key  ",
+                "variableValueBefore": " ",
+                "variableValueAfter": "",
+                "value": "key  ",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 33,
+                    "lastLine": 33,
+                    "firstCol": 1,
+                    "lastCol": 29
+                }
+            },
+            {
+                "type": "variable",
+                "originContent": "@c: #888;",
+                "variableName": "c",
+                "variableNameBefore": "",
+                "variablenameAfter": "",
+                "variableValue": "#888",
+                "variableValueBefore": " ",
+                "variableValueAfter": "",
+                "value": "#888",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 35,
+                    "lastLine": 35,
+                    "firstCol": 1,
+                    "lastCol": 10
+                }
+            },
+            {
+                "type": "variable",
+                "originContent": "@fonts:     \"Trebuchet MS\", Verdana,sans-serif,  ;",
+                "variableName": "fonts",
+                "variableNameBefore": "",
+                "variablenameAfter": "",
+                "variableValue": "\"Trebuchet MS\", Verdana,sans-serif,  ",
+                "variableValueBefore": "     ",
+                "variableValueAfter": "",
+                "value": "\"Trebuchet MS\", Verdana,sans-serif,  ",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 38,
+                    "lastLine": 38,
+                    "firstCol": 1,
+                    "lastCol": 51
+                }
+            },
+            {
+                "type": "variable",
+                "originContent": "@f: @c;",
+                "variableName": "f",
+                "variableNameBefore": "",
+                "variablenameAfter": "",
+                "variableValue": "@c",
+                "variableValueBefore": " ",
+                "variableValueAfter": "",
+                "value": "@c",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 39,
+                    "lastLine": 39,
+                    "firstCol": 1,
+                    "lastCol": 8
+                }
+            }
+        ],
+        "imports": [
+            {
+                "type": "import",
+                "originContent": "@import url(\"./variable.less\");",
+                "value": " url(\"./variable.less\")",
+                "quote": "\"",
+                "importOption": [],
+                "originImportOption": "",
+                "mediaValue": "",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 66,
+                    "lastLine": 66,
+                    "firstCol": 1,
+                    "lastCol": 32
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "    @import \"./variable.less\" screen and (max-width: 601px);",
+                "value": " \"./variable.less\" ",
+                "quote": "\"",
+                "importOption": [],
+                "originImportOption": "",
+                "mediaValue": "screen and (max-width: 601px)",
+                "before": "    ",
+                "after": "",
+                "loc": {
+                    "firstLine": 68,
+                    "lastLine": 68,
+                    "firstCol": 5,
+                    "lastCol": 61
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "@import () './variable';",
+                "value": " './variable'",
+                "quote": "'",
+                "importOption": [],
+                "originImportOption": " ()",
+                "mediaValue": "",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 70,
+                    "lastLine": 70,
+                    "firstCol": 1,
+                    "lastCol": 25
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "    @import    (  less  , inline  )    \"./variable.less\";",
+                "value": "    \"./variable.less\"",
+                "quote": "\"",
+                "importOption": [
+                    "less",
+                    "inline"
+                ],
+                "originImportOption": "    (  less  , inline  )",
+                "mediaValue": "",
+                "before": "    ",
+                "after": "",
+                "loc": {
+                    "firstLine": 72,
+                    "lastLine": 72,
+                    "firstCol": 5,
+                    "lastCol": 58
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "    @import './charset.less'  ;",
+                "value": " './charset.less'  ",
+                "quote": "'",
+                "importOption": [],
+                "originImportOption": "",
+                "mediaValue": "",
+                "before": "    ",
+                "after": "",
+                "loc": {
+                    "firstLine": 75,
+                    "lastLine": 75,
+                    "firstCol": 5,
+                    "lastCol": 32
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "@import \"import-@{in}@{terpolation}2.less\";",
+                "value": " \"import-@{in}@{terpolation}2.less\"",
+                "quote": "\"",
+                "importOption": [],
+                "originImportOption": "",
+                "mediaValue": "",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 76,
+                    "lastLine": 76,
+                    "firstCol": 1,
+                    "lastCol": 44
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "    @import \"import-@{in}@{terpolation}3.less\";",
+                "value": " \"import-@{in}@{terpolation}3.less\"",
+                "quote": "\"",
+                "importOption": [],
+                "originImportOption": "",
+                "mediaValue": "",
+                "before": "    ",
+                "after": "",
+                "loc": {
+                    "firstLine": 78,
+                    "lastLine": 78,
+                    "firstCol": 5,
+                    "lastCol": 48
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "@import (inline) \"./singlecomment.less\";",
+                "value": " \"./singlecomment.less\"",
+                "quote": "\"",
+                "importOption": [
+                    "inline"
+                ],
+                "originImportOption": " (inline)",
+                "mediaValue": "",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 81,
+                    "lastLine": 81,
+                    "firstCol": 1,
+                    "lastCol": 41
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "    @import (multiple,  ) \"./dd.less\";",
+                "value": " \"./dd.less\"",
+                "quote": "\"",
+                "importOption": [
+                    "multiple"
+                ],
+                "originImportOption": " (multiple,  )",
+                "mediaValue": "",
+                "before": "    ",
+                "after": "",
+                "loc": {
+                    "firstLine": 82,
+                    "lastLine": 82,
+                    "firstCol": 5,
+                    "lastCol": 39
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "@import url(\"test.css\");",
+                "value": " url(\"test.css\")",
+                "quote": "\"",
+                "importOption": [],
+                "originImportOption": "",
+                "mediaValue": "",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 85,
+                    "lastLine": 85,
+                    "firstCol": 1,
+                    "lastCol": 25
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "@import \"../css/background.css\";",
+                "value": " \"../css/background.css\"",
+                "quote": "\"",
+                "importOption": [],
+                "originImportOption": "",
+                "mediaValue": "",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 88,
+                    "lastLine": 88,
+                    "firstCol": 1,
+                    "lastCol": 33
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "@import \"import-test-d.css\";",
+                "value": " \"import-test-d.css\"",
+                "quote": "\"",
+                "importOption": [],
+                "originImportOption": "",
+                "mediaValue": "",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 89,
+                    "lastLine": 89,
+                    "firstCol": 1,
+                    "lastCol": 29
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "@import \"imports/logo\";",
+                "value": " \"imports/logo\"",
+                "quote": "\"",
+                "importOption": [],
+                "originImportOption": "",
+                "mediaValue": "",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 91,
+                    "lastLine": 91,
+                    "firstCol": 1,
+                    "lastCol": 24
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "@import \"imports/font\";",
+                "value": " \"imports/font\"",
+                "quote": "\"",
+                "importOption": [],
+                "originImportOption": "",
+                "mediaValue": "",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 92,
+                    "lastLine": 92,
+                    "firstCol": 1,
+                    "lastCol": 24
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "@import (inline) \"imports/logo.less\";",
+                "value": " \"imports/logo.less\"",
+                "quote": "\"",
+                "importOption": [
+                    "inline"
+                ],
+                "originImportOption": " (inline)",
+                "mediaValue": "",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 95,
+                    "lastLine": 95,
+                    "firstCol": 1,
+                    "lastCol": 38
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "@import \"import-@{in}@{terpolation}2.less\";",
+                "value": " \"import-@{in}@{terpolation}2.less\"",
+                "quote": "\"",
+                "importOption": [],
+                "originImportOption": "",
+                "mediaValue": "",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 96,
+                    "lastLine": 96,
+                    "firstCol": 1,
+                    "lastCol": 44
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "@import url(\"import/import-test-c.less\");",
+                "value": " url(\"import/import-test-c.less\")",
+                "quote": "\"",
+                "importOption": [],
+                "originImportOption": "",
+                "mediaValue": "",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 98,
+                    "lastLine": 98,
+                    "firstCol": 1,
+                    "lastCol": 42
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "@import (inline) url(\"import/import-test-d.css\") (min-width:600px);",
+                "value": " url(\"import/import-test-d.css\") ",
+                "quote": "\"",
+                "importOption": [
+                    "inline"
+                ],
+                "originImportOption": " (inline)",
+                "mediaValue": "(min-width:600px)",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 99,
+                    "lastLine": 99,
+                    "firstCol": 1,
+                    "lastCol": 68
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "@import (inline, css) url('import/invalid-css.less');",
+                "value": " url('import/invalid-css.less')",
+                "quote": "'",
+                "importOption": [
+                    "inline",
+                    "css"
+                ],
+                "originImportOption": " (inline, css)",
+                "mediaValue": "",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 100,
+                    "lastLine": 100,
+                    "firstCol": 1,
+                    "lastCol": 54
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "@import (inline, css) url(import/invalid-css1.less);",
+                "value": " url(import/invalid-css1.less)",
+                "quote": "",
+                "importOption": [
+                    "inline",
+                    "css"
+                ],
+                "originImportOption": " (inline, css)",
+                "mediaValue": "",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 101,
+                    "lastLine": 101,
+                    "firstCol": 1,
+                    "lastCol": 53
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "@import \"import/import-once-test-c\";",
+                "value": " \"import/import-once-test-c\"",
+                "quote": "\"",
+                "importOption": [],
+                "originImportOption": "",
+                "mediaValue": "",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 104,
+                    "lastLine": 104,
+                    "firstCol": 1,
+                    "lastCol": 37
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "@import \"import/import-once-test-c\";",
+                "value": " \"import/import-once-test-c\"",
+                "quote": "\"",
+                "importOption": [],
+                "originImportOption": "",
+                "mediaValue": "",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 105,
+                    "lastLine": 105,
+                    "firstCol": 1,
+                    "lastCol": 37
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "@import \"import/import-once-test-c.less\";",
+                "value": " \"import/import-once-test-c.less\"",
+                "quote": "\"",
+                "importOption": [],
+                "originImportOption": "",
+                "mediaValue": "",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 106,
+                    "lastLine": 106,
+                    "firstCol": 1,
+                    "lastCol": 42
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "@import \"import/deeper/import-once-test-a\";",
+                "value": " \"import/deeper/import-once-test-a\"",
+                "quote": "\"",
+                "importOption": [],
+                "originImportOption": "",
+                "mediaValue": "",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 107,
+                    "lastLine": 107,
+                    "firstCol": 1,
+                    "lastCol": 44
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "@import (multiple) \"import/import-test-f.less\";",
+                "value": " \"import/import-test-f.less\"",
+                "quote": "\"",
+                "importOption": [
+                    "multiple"
+                ],
+                "originImportOption": " (multiple)",
+                "mediaValue": "",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 108,
+                    "lastLine": 108,
+                    "firstCol": 1,
+                    "lastCol": 48
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "@import (multiple) \"import/import-test-f.less\";",
+                "value": " \"import/import-test-f.less\"",
+                "quote": "\"",
+                "importOption": [
+                    "multiple"
+                ],
+                "originImportOption": " (multiple)",
+                "mediaValue": "",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 109,
+                    "lastLine": 109,
+                    "firstCol": 1,
+                    "lastCol": 48
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "@import (reference) url(\"import-once.less\");",
+                "value": " url(\"import-once.less\")",
+                "quote": "\"",
+                "importOption": [
+                    "reference"
+                ],
+                "originImportOption": " (reference)",
+                "mediaValue": "",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 111,
+                    "lastLine": 111,
+                    "firstCol": 1,
+                    "lastCol": 45
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "@import (reference) url(\"css-3.less\");",
+                "value": " url(\"css-3.less\")",
+                "quote": "\"",
+                "importOption": [
+                    "reference"
+                ],
+                "originImportOption": " (reference)",
+                "mediaValue": "",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 112,
+                    "lastLine": 112,
+                    "firstCol": 1,
+                    "lastCol": 39
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "@import (reference) url(\"media.less\");",
+                "value": " url(\"media.less\")",
+                "quote": "\"",
+                "importOption": [
+                    "reference"
+                ],
+                "originImportOption": " (reference)",
+                "mediaValue": "",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 113,
+                    "lastLine": 113,
+                    "firstCol": 1,
+                    "lastCol": 39
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "@import (reference) url(\"import/import-reference.less\");",
+                "value": " url(\"import/import-reference.less\")",
+                "quote": "\"",
+                "importOption": [
+                    "reference"
+                ],
+                "originImportOption": " (reference)",
+                "mediaValue": "",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 114,
+                    "lastLine": 114,
+                    "firstCol": 1,
+                    "lastCol": 57
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "@import (reference) url(\"import/css-import.less\");",
+                "value": " url(\"import/css-import.less\")",
+                "quote": "\"",
+                "importOption": [
+                    "reference"
+                ],
+                "originImportOption": " (reference)",
+                "mediaValue": "",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 115,
+                    "lastLine": 115,
+                    "firstCol": 1,
+                    "lastCol": 51
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "@import url(http://fonts.googleapis.com/css?family=Open+Sans);",
+                "value": " url(http://fonts.googleapis.com/css?family=Open+Sans)",
+                "quote": "",
+                "importOption": [],
+                "originImportOption": "",
+                "mediaValue": "",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 117,
+                    "lastLine": 117,
+                    "firstCol": 1,
+                    "lastCol": 63
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "@import url(/absolute/something.css) screen and (color) and (max-width: 600px);",
+                "value": " url(/absolute/something.css) ",
+                "quote": "",
+                "importOption": [],
+                "originImportOption": "",
+                "mediaValue": "screen and (color) and (max-width: 600px)",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 119,
+                    "lastLine": 119,
+                    "firstCol": 1,
+                    "lastCol": 80
+                }
+            },
+            {
+                "type": "import",
+                "originContent": "@import (less, multiple) \"import/import-test-d.css\" screen and (max-width: 601px);",
+                "value": " \"import/import-test-d.css\" ",
+                "quote": "\"",
+                "importOption": [
+                    "less",
+                    "multiple"
+                ],
+                "originImportOption": " (less, multiple)",
+                "mediaValue": "screen and (max-width: 601px)",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 123,
+                    "lastLine": 123,
+                    "firstCol": 1,
+                    "lastCol": 83
+                }
+            }
+        ],
+        "selectors": [],
+        "charsets": [
+            {
+                "type": "charset",
+                "originContent": "@charset 'utf8';",
+                "value": " 'utf8'",
+                "quote": "'",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 12,
+                    "lastLine": 12,
+                    "firstCol": 1,
+                    "lastCol": 17
+                }
+            },
+            {
+                "type": "charset",
+                "originContent": "@charset'utf-8';",
+                "value": "'utf-8'",
+                "quote": "'",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 41,
+                    "lastLine": 41,
+                    "firstCol": 1,
+                    "lastCol": 17
+                }
+            },
+            {
+                "type": "charset",
+                "originContent": "    @charset wasdasd;",
+                "value": " wasdasd",
+                "quote": "",
+                "before": "    ",
+                "after": "",
+                "loc": {
+                    "firstLine": 43,
+                    "lastLine": 43,
+                    "firstCol": 5,
+                    "lastCol": 22
+                }
+            },
+            {
+                "type": "charset",
+                "originContent": "@charset gbk;",
+                "value": " gbk",
+                "quote": "",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 45,
+                    "lastLine": 45,
+                    "firstCol": 1,
+                    "lastCol": 14
+                }
+            },
+            {
+                "type": "charset",
+                "originContent": "@charset            UTF-8;",
+                "value": "            UTF-8",
+                "quote": "",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 47,
+                    "lastLine": 47,
+                    "firstCol": 1,
+                    "lastCol": 27
+                }
+            },
+            {
+                "type": "charset",
+                "originContent": "@charset 123;",
+                "value": " 123",
+                "quote": "",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 48,
+                    "lastLine": 48,
+                    "firstCol": 1,
+                    "lastCol": 14
+                }
+            },
+            {
+                "type": "charset",
+                "originContent": "@charset            \"456\";",
+                "value": "            \"456\"",
+                "quote": "\"",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 49,
+                    "lastLine": 49,
+                    "firstCol": 1,
+                    "lastCol": 27
+                }
+            },
+            {
+                "type": "charset",
+                "originContent": "@charset            789;",
+                "value": "            789",
+                "quote": "",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 49,
+                    "lastLine": 49,
+                    "firstCol": 27,
+                    "lastCol": 51
+                }
+            },
+            {
+                "type": "charset",
+                "originContent": "    @charset            \"456\";",
+                "value": "            \"456\"",
+                "quote": "\"",
+                "before": "    ",
+                "after": "",
+                "loc": {
+                    "firstLine": 49,
+                    "lastLine": 49,
+                    "firstCol": 55,
+                    "lastCol": 81
+                }
+            },
+            {
+                "type": "charset",
+                "originContent": "@charset'qqq';",
+                "value": "'qqq'",
+                "quote": "'",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 49,
+                    "lastLine": 49,
+                    "firstCol": 81,
+                    "lastCol": 95
+                }
+            },
+            {
+                "type": "charset",
+                "originContent": "@charset 123;",
+                "value": " 123",
+                "quote": "",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 50,
+                    "lastLine": 50,
+                    "firstCol": 1,
+                    "lastCol": 14
+                }
+            },
+            {
+                "type": "charset",
+                "originContent": "@charset \"ISO-8859-1\";",
+                "value": " \"ISO-8859-1\"",
+                "quote": "\"",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 64,
+                    "lastLine": 64,
+                    "firstCol": 1,
+                    "lastCol": 23
+                }
+            },
+            {
+                "type": "charset",
+                "originContent": "  @charset'//123';",
+                "value": "'//123'",
+                "quote": "'",
+                "before": "  ",
+                "after": "",
+                "loc": {
+                    "firstLine": 64,
+                    "lastLine": 64,
+                    "firstCol": 25,
+                    "lastCol": 41
+                }
+            }
+        ],
+        "sComments": [
+            {
+                "type": "sComment",
+                "originContent": "// body {",
+                "value": "// body {",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 8,
+                    "lastLine": 8,
+                    "firstCol": 1,
+                    "lastCol": 10
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "//     content: @@var;",
+                "value": "//     content: @@var;",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 9,
+                    "lastLine": 9,
+                    "firstCol": 1,
+                    "lastCol": 23
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// }",
+                "value": "// }",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 10,
+                    "lastLine": 10,
+                    "firstCol": 1,
+                    "lastCol": 5
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// body {",
+                "value": "// body {",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 18,
+                    "lastLine": 18,
+                    "firstCol": 1,
+                    "lastCol": 10
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "//     color: @@name;",
+                "value": "//     color: @@name;",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 19,
+                    "lastLine": 19,
+                    "firstCol": 1,
+                    "lastCol": 22
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// }",
+                "value": "// }",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 20,
+                    "lastLine": 20,
+                    "firstCol": 1,
+                    "lastCol": 5
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "//      @charset            \"UTF  //-;8\";@charset    \"asdasda//asdqwew'''qwewqeqw\";",
+                "value": "//      @charset            \"UTF  //-;8\";@charset    \"asdasda//asdqwew'''qwewqeqw\";",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 53,
+                    "lastLine": 53,
+                    "firstCol": 1,
+                    "lastCol": 84
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "//  @charset\"utf8\";",
+                "value": "//  @charset\"utf8\";",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 55,
+                    "lastLine": 55,
+                    "firstCol": 1,
+                    "lastCol": 20
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// @charset 'gbk';",
+                "value": "// @charset 'gbk';",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 56,
+                    "lastLine": 56,
+                    "firstCol": 1,
+                    "lastCol": 19
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// @charset utf8ads;",
+                "value": "// @charset utf8ads;",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 58,
+                    "lastLine": 58,
+                    "firstCol": 1,
+                    "lastCol": 21
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// @charset zcxczcx;",
+                "value": "// @charset zcxczcx;",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 60,
+                    "lastLine": 60,
+                    "firstCol": 1,
+                    "lastCol": 21
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// @charset        asdasdassad;",
+                "value": "// @charset        asdasdassad;",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 62,
+                    "lastLine": 62,
+                    "firstCol": 1,
+                    "lastCol": 32
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// import inline should not float above this #1954",
+                "value": "// import inline should not float above this #1954",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 66,
+                    "lastLine": 66,
+                    "firstCol": 32,
+                    "lastCol": 82
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// asdas",
+                "value": "// asdas",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 96,
+                    "lastLine": 96,
+                    "firstCol": 44,
+                    "lastCol": 52
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// import inline should not float above this #1954",
+                "value": "// import inline should not float above this #1954",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 98,
+                    "lastLine": 98,
+                    "firstCol": 42,
+                    "lastCol": 92
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// @import (optional) \"file-does-not-exist.does-not-exist\";",
+                "value": "// @import (optional) \"file-does-not-exist.does-not-exist\";",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 121,
+                    "lastLine": 121,
+                    "firstCol": 1,
+                    "lastCol": 60
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// asdsad /*asdsad*/",
+                "value": "// asdsad /*asdsad*/",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 135,
+                    "lastLine": 135,
+                    "firstCol": 1,
+                    "lastCol": 21
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// 111",
+                "value": "// 111",
+                "before": "    ",
+                "after": "",
+                "loc": {
+                    "firstLine": 142,
+                    "lastLine": 142,
+                    "firstCol": 5,
+                    "lastCol": 11
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// 2222",
+                "value": "// 2222",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 143,
+                    "lastLine": 143,
+                    "firstCol": 1,
+                    "lastCol": 8
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// '3333' // 333ccc",
+                "value": "// '3333' // 333ccc",
+                "before": "    ",
+                "after": "",
+                "loc": {
+                    "firstLine": 144,
+                    "lastLine": 144,
+                    "firstCol": 5,
+                    "lastCol": 24
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "//",
+                "value": "//",
+                "before": "    ",
+                "after": "",
+                "loc": {
+                    "firstLine": 145,
+                    "lastLine": 145,
+                    "firstCol": 5,
+                    "lastCol": 7
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// 5555",
+                "value": "// 5555",
+                "before": "    ",
+                "after": "",
+                "loc": {
+                    "firstLine": 149,
+                    "lastLine": 149,
+                    "firstCol": 5,
+                    "lastCol": 12
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "//      Width of column             */",
+                "value": "//      Width of column             */",
+                "before": " ",
+                "after": "",
+                "loc": {
+                    "firstLine": 157,
+                    "lastLine": 157,
+                    "firstCol": 2,
+                    "lastCol": 40
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "////////////////",
+                "value": "////////////////",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 177,
+                    "lastLine": 177,
+                    "firstCol": 1,
+                    "lastCol": 17
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "////////////////",
+                "value": "////////////////",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 179,
+                    "lastLine": 179,
+                    "firstCol": 1,
+                    "lastCol": 17
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "//.commented_out3",
+                "value": "//.commented_out3",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 199,
+                    "lastLine": 199,
+                    "firstCol": 1,
+                    "lastCol": 18
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "//end of comments1",
+                "value": "//end of comments1",
+                "before": "    ",
+                "after": "",
+                "loc": {
+                    "firstLine": 202,
+                    "lastLine": 202,
+                    "firstCol": 5,
+                    "lastCol": 23
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "//end of comments2",
+                "value": "//end of comments2",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 203,
+                    "lastLine": 203,
+                    "firstCol": 1,
+                    "lastCol": 19
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// An empty comment",
+                "value": "// An empty comment",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 205,
+                    "lastLine": 205,
+                    "firstCol": 6,
+                    "lastCol": 25
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// padding & margin //",
+                "value": "// padding & margin //",
+                "before": " ",
+                "after": "",
+                "loc": {
+                    "firstLine": 211,
+                    "lastLine": 211,
+                    "firstCol": 2,
+                    "lastCol": 24
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// }{ '\"",
+                "value": "// }{ '\"",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 214,
+                    "lastLine": 214,
+                    "firstCol": 1,
+                    "lastCol": 9
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "//put in @b - causes problems! --->",
+                "value": "//put in @b - causes problems! --->",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 225,
+                    "lastLine": 225,
+                    "firstCol": 1,
+                    "lastCol": 36
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// 111",
+                "value": "// 111",
+                "before": "    ",
+                "after": "",
+                "loc": {
+                    "firstLine": 232,
+                    "lastLine": 232,
+                    "firstCol": 5,
+                    "lastCol": 11
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// 2222",
+                "value": "// 2222",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 233,
+                    "lastLine": 233,
+                    "firstCol": 1,
+                    "lastCol": 8
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// 3333 // 333ccc",
+                "value": "// 3333 // 333ccc",
+                "before": "    ",
+                "after": "",
+                "loc": {
+                    "firstLine": 234,
+                    "lastLine": 234,
+                    "firstCol": 5,
+                    "lastCol": 22
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "//",
+                "value": "//",
+                "before": "    ",
+                "after": "",
+                "loc": {
+                    "firstLine": 235,
+                    "lastLine": 235,
+                    "firstCol": 5,
+                    "lastCol": 7
+                }
+            },
+            {
+                "type": "sComment",
+                "originContent": "// 5555",
+                "value": "// 5555",
+                "before": "    ",
+                "after": "",
+                "loc": {
+                    "firstLine": 239,
+                    "lastLine": 239,
+                    "firstCol": 5,
+                    "lastCol": 12
+                }
+            }
+        ],
+        "mComments": [
+            {
+                "type": "mComment",
+                "value": "/*asdsd\n//sdsads\n//\n\n//\n\n*/\n",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 126,
+                    "lastLine": 133,
                     "firstCol": 1,
                     "lastCol": 1,
-                    "originContent": "/*aaaaaa*/\n"
+                    "originContent": "/*asdsd\n//sdsads\n//\n\n//\n\n*/\n"
                 }
             },
             {
                 "type": "mComment",
-                "value": "/*bbbbb*/\n",
-                "before": "\n\n",
+                "value": "/*asdasdsad\n    asdasdasdasd\n*/\n",
+                "before": "    ",
                 "after": "",
                 "loc": {
-                    "firstLine": 4,
-                    "lastLine": 5,
+                    "firstLine": 137,
+                    "lastLine": 140,
+                    "firstCol": 5,
+                    "lastCol": 1,
+                    "originContent": "/*asdasdsad\n    asdasdasdasd\n*/\n"
+                }
+            },
+            {
+                "type": "mComment",
+                "value": "/*! */\n",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 152,
+                    "lastLine": 153,
                     "firstCol": 1,
                     "lastCol": 1,
-                    "originContent": "/*bbbbb*/\n"
+                    "originContent": "/*! */\n"
                 }
             },
             {
                 "type": "mComment",
                 "value": "/*comment*/",
-                "before": "\n\n",
+                "before": "",
                 "after": "",
                 "loc": {
-                    "firstLine": 7,
-                    "lastLine": 7,
+                    "firstLine": 154,
+                    "lastLine": 154,
                     "firstCol": 1,
                     "lastCol": 12,
                     "originContent": "/*comment*/"
@@ -51,8 +1685,8 @@
                 "before": "",
                 "after": "",
                 "loc": {
-                    "firstLine": 7,
-                    "lastLine": 8,
+                    "firstLine": 154,
+                    "lastLine": 155,
                     "firstCol": 12,
                     "lastCol": 1,
                     "originContent": "/*comment1*/\n"
@@ -61,13 +1695,13 @@
             {
                 "type": "mComment",
                 "value": "/*comment2*/ ",
-                "before": "    ",
+                "before": "",
                 "after": "",
                 "loc": {
-                    "firstLine": 8,
-                    "lastLine": 8,
-                    "firstCol": 5,
-                    "lastCol": 18,
+                    "firstLine": 155,
+                    "lastLine": 155,
+                    "firstCol": 1,
+                    "lastCol": 14,
                     "originContent": "/*comment2*/ "
                 }
             },
@@ -77,24 +1711,219 @@
                 "before": "",
                 "after": "",
                 "loc": {
-                    "firstLine": 8,
-                    "lastLine": 9,
-                    "firstCol": 18,
+                    "firstLine": 155,
+                    "lastLine": 156,
+                    "firstCol": 14,
                     "lastCol": 1,
                     "originContent": "/*comment3*/\n"
                 }
             },
             {
                 "type": "mComment",
-                "value": "/*adsddas*/\n",
-                "before": "\n\n    ",
+                "value": "/******************\\\n*                  *\n*  Comment Header  *\n*                  *\n\\******************/\n",
+                "before": "",
                 "after": "",
                 "loc": {
-                    "firstLine": 11,
-                    "lastLine": 12,
-                    "firstCol": 5,
+                    "firstLine": 160,
+                    "lastLine": 165,
+                    "firstCol": 1,
                     "lastCol": 1,
-                    "originContent": "/*adsddas*/\n"
+                    "originContent": "/******************\\\n*                  *\n*  Comment Header  *\n*                  *\n\\******************/\n"
+                }
+            },
+            {
+                "type": "mComment",
+                "value": "/*\n    Comment\n*/\n",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 166,
+                    "lastLine": 169,
+                    "firstCol": 1,
+                    "lastCol": 1,
+                    "originContent": "/*\n    Comment\n*/\n"
+                }
+            },
+            {
+                "type": "mComment",
+                "value": "/*\n * Comment Test\n *\n * - cloudhead (http://cloudhead.net)\n *\n */\n",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 170,
+                    "lastLine": 176,
+                    "firstCol": 1,
+                    "lastCol": 1,
+                    "originContent": "/*\n * Comment Test\n *\n * - cloudhead (http://cloudhead.net)\n *\n */\n"
+                }
+            },
+            {
+                "type": "mComment",
+                "value": "/* Colors\n * ------\n *   #EDF8FC (background blue)\n *   #166C89 (darkest blue)\n *\n * Text:\n *   #333 (standard text) // A comment within a comment!\n *   #1F9EC9 (standard link)\n *\n */\n",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 181,
+                    "lastLine": 191,
+                    "firstCol": 1,
+                    "lastCol": 1,
+                    "originContent": "/* Colors\n * ------\n *   #EDF8FC (background blue)\n *   #166C89 (darkest blue)\n *\n * Text:\n *   #333 (standard text) // A comment within a comment!\n *   #1F9EC9 (standard link)\n *\n */\n"
+                }
+            },
+            {
+                "type": "mComment",
+                "value": "/* @group Variables\n------------------- */\n",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 192,
+                    "lastLine": 194,
+                    "firstCol": 1,
+                    "lastCol": 1,
+                    "originContent": "/* @group Variables\n------------------- */\n"
+                }
+            },
+            {
+                "type": "mComment",
+                "value": "/* boo      */",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 197,
+                    "lastLine": 197,
+                    "firstCol": 1,
+                    "lastCol": 15,
+                    "originContent": "/* boo      */"
+                }
+            },
+            {
+                "type": "mComment",
+                "value": "/* boo again*/\n",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 197,
+                    "lastLine": 198,
+                    "firstCol": 15,
+                    "lastCol": 1,
+                    "originContent": "/* boo again*/\n"
+                }
+            },
+            {
+                "type": "mComment",
+                "value": "/**/ ",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 205,
+                    "lastLine": 205,
+                    "firstCol": 1,
+                    "lastCol": 6,
+                    "originContent": "/**/ "
+                }
+            },
+            {
+                "type": "mComment",
+                "value": "/* A C-style comment */ ",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 208,
+                    "lastLine": 208,
+                    "firstCol": 1,
+                    "lastCol": 25,
+                    "originContent": "/* A C-style comment */ "
+                }
+            },
+            {
+                "type": "mComment",
+                "value": "/* A C-style comment1 */\n",
+                "before": " ",
+                "after": "",
+                "loc": {
+                    "firstLine": 208,
+                    "lastLine": 209,
+                    "firstCol": 26,
+                    "lastCol": 1,
+                    "originContent": "/* A C-style comment1 */\n"
+                }
+            },
+            {
+                "type": "mComment",
+                "value": "/* commented out\n  #more-comments {\n    color: grey;\n  }\n*/\n",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 217,
+                    "lastLine": 222,
+                    "firstCol": 1,
+                    "lastCol": 1,
+                    "originContent": "/* commented out\n  #more-comments {\n    color: grey;\n  }\n*/\n"
+                }
+            },
+            {
+                "type": "mComment",
+                "value": "/*  */",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 231,
+                    "lastLine": 231,
+                    "firstCol": 1,
+                    "lastCol": 7,
+                    "originContent": "/*  */"
+                }
+            },
+            {
+                "type": "mComment",
+                "value": "/* { */",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 231,
+                    "lastLine": 231,
+                    "firstCol": 7,
+                    "lastCol": 14,
+                    "originContent": "/* { */"
+                }
+            },
+            {
+                "type": "mComment",
+                "value": "/*  */",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 231,
+                    "lastLine": 231,
+                    "firstCol": 14,
+                    "lastCol": 20,
+                    "originContent": "/*  */"
+                }
+            },
+            {
+                "type": "mComment",
+                "value": "/*  */",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 231,
+                    "lastLine": 231,
+                    "firstCol": 20,
+                    "lastCol": 26,
+                    "originContent": "/*  */"
+                }
+            },
+            {
+                "type": "mComment",
+                "value": "/*  */\n",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 231,
+                    "lastLine": 232,
+                    "firstCol": 26,
+                    "lastCol": 1,
+                    "originContent": "/*  */\n"
                 }
             }
         ]
