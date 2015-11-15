@@ -1,6 +1,6 @@
     @property:  co%-lo_r;
 
-        @a : 1 ;
+@a : 1 ;
 
     @fnord:  "I am fnord.";
 @var:    "fnord";
@@ -26,7 +26,7 @@
 @a: 2;
 @x: (@a * @a);
 @y: (@x + 1);
-@z: (@x * 2 + @y;
+@z: (@x * 2 + @y);
 @z: 1px + 2;
 @var: -1;
 
@@ -37,7 +37,6 @@
 
 @fonts:     "Trebuchet MS", Verdana,sans-serif,  ;
 @f: @c;
-
 @charset'utf-8';
 
     @charset wasdasd;
@@ -59,70 +58,75 @@
 
 // @charset zcxczcx;
 
-// @charset        asdasdassad;
+// @charset        asdasdassad/;
 
 @charset "ISO-8859-1";  @charset'//123';
-
 @import url("./variable.less");// import inline should not float above this #1954
 
     @import "./variable.less" screen and (max-width: 601px);
 
-@import () './variable';
+@import  './variable';
 
     @import    (  less  , inline  )    "./variable.less";
 
 
     @import './charset.less'  ;
-@import "import-@{in}@{terpolation}2.less";
+// @import "import-@{in}@{terpolation}2.less";
 
-    @import "import-@{in}@{terpolation}3.less";
+    // @import "import-@{in}@{terpolation}3.less";
 
 
 @import (inline) "./singlecomment.less";
-    @import (multiple,  ) "./dd.less";
+    // @import (multiple,  ) "./dd.less";
 
 
-@import url("test.css");
+// @import url("test.css");
 
 
-@import "../css/background.css";
-@import "import-test-d.css";
+// @import "../css/background.css";
+// @import "import-test-d.css";
 
-@import "imports/logo";
-@import "imports/font";
-
-
-@import (inline) "imports/logo.less";
-@import "import-@{in}@{terpolation}2.less";// asdas
-
-@import url("import/import-test-c.less");// import inline should not float above this #1954
-@import (inline) url("import/import-test-d.css") (min-width:600px);
-@import (inline, css) url('import/invalid-css.less');
-@import (inline, css) url(import/invalid-css1.less);
+// @import "imports/logo";
+// @import "imports/font";
 
 
-@import "import/import-once-test-c";
-@import "import/import-once-test-c";
-@import "import/import-once-test-c.less";
-@import "import/deeper/import-once-test-a";
-@import (multiple) "import/import-test-f.less";
-@import (multiple) "import/import-test-f.less";
+// @import (inline) "imports/logo.less";
+// @import "import-@{in}@{terpolation}2.less";// asdas
 
-@import (reference) url("import-once.less");
-@import (reference) url("css-3.less");
-@import (reference) url("media.less");
-@import (reference) url("import/import-reference.less");
-@import (reference) url("import/css-import.less");
+// @import url("import/import-test-c.less");// import inline should not float above this #1954
+// @import (inline) url("import/import-test-d.css") (min-width:600px);
+// @import (inline, css) url('import/invalid-css.less');
+// @import (inline, css) url(import/invalid-css1.less);
+
+
+// @import "import/import-once-test-c";
+// @import "import/import-once-test-c";
+// @import "import/import-once-test-c.less";
+// @import "import/deeper/import-once-test-a";
+// @import (multiple) "import/import-test-f.less";
+// @import (multiple) "import/import-test-f.less";
+
+// @import (reference) url("import-once.less");
+// @import (reference) url("css-3.less");
+// @import (reference) url("media.less");
+// @import (reference) url("import/import-reference.less");
+// @import (reference) url("import/css-import.less");
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
-@import url(/absolute/something.css) screen and (color) and (max-width: 600px);
+// @import url(/absolute/something.css) screen and (color) and (max-width: 600px);
 
 // @import (optional) "file-does-not-exist.does-not-exist";
 
-@import (less, multiple) "import/import-test-d.css" screen and (max-width: 601px);
+// @import (less, multiple) "import/import-test-d.css" screen and (max-width: 601px);
+    // 111
+// 2222
+    // 3333 // 333ccc
+    //
 
 
+
+    // 5555
 /*asdsd
 //sdsads
 //
@@ -229,11 +233,3 @@
 
 
 /*  *//* { *//*  *//*  *//*  */
-    // 111
-// 2222
-    // 3333 // 333ccc
-    //
-
-
-
-    // 5555
