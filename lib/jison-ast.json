@@ -31,6 +31,71 @@
                     "lastCol": 1,
                     "originContent": "/*bbbbb*/\n"
                 }
+            },
+            {
+                "type": "mComment",
+                "value": "/*comment*/",
+                "before": "\n\n",
+                "after": "",
+                "loc": {
+                    "firstLine": 7,
+                    "lastLine": 7,
+                    "firstCol": 1,
+                    "lastCol": 12,
+                    "originContent": "/*comment*/"
+                }
+            },
+            {
+                "type": "mComment",
+                "value": "/*comment1*/\n",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 7,
+                    "lastLine": 8,
+                    "firstCol": 12,
+                    "lastCol": 1,
+                    "originContent": "/*comment1*/\n"
+                }
+            },
+            {
+                "type": "mComment",
+                "value": "/*comment2*/ ",
+                "before": "    ",
+                "after": "",
+                "loc": {
+                    "firstLine": 8,
+                    "lastLine": 8,
+                    "firstCol": 5,
+                    "lastCol": 18,
+                    "originContent": "/*comment2*/ "
+                }
+            },
+            {
+                "type": "mComment",
+                "value": "/*comment3*/\n",
+                "before": "",
+                "after": "",
+                "loc": {
+                    "firstLine": 8,
+                    "lastLine": 9,
+                    "firstCol": 18,
+                    "lastCol": 1,
+                    "originContent": "/*comment3*/\n"
+                }
+            },
+            {
+                "type": "mComment",
+                "value": "/*adsddas*/\n",
+                "before": "\n\n    ",
+                "after": "",
+                "loc": {
+                    "firstLine": 11,
+                    "lastLine": 12,
+                    "firstCol": 5,
+                    "lastCol": 1,
+                    "originContent": "/*adsddas*/\n"
+                }
             }
         ]
     }

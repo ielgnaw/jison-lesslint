@@ -24,6 +24,66 @@
                 "entryPath": "",
                 "rootFilename": "input"
             }
+        },
+        {
+            "value": "/*comment*/",
+            "silent": false,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "/*comment1*/\n",
+            "silent": false,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "/*comment2*/",
+            "silent": false,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "/*comment3*/\n",
+            "silent": false,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
+        },
+        {
+            "value": "/*adsddas*/\n",
+            "silent": false,
+            "currentFileInfo": {
+                "filename": "input",
+                "relativeUrls": true,
+                "rootpath": "",
+                "currentDirectory": "",
+                "entryPath": "",
+                "rootFilename": "input"
+            }
         }
     ],
     "_lookups": {},
