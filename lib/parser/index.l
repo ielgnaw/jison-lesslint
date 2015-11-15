@@ -34,7 +34,7 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
 
 
 // %options flex case-insensitive
-%options backtrack_lexer
+// %options backtrack_lexer
 
 // 状态：
 // %s 指包容性的状态，%x 指非包容性的状态

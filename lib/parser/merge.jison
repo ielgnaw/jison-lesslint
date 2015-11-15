@@ -5,15 +5,12 @@ space                       [ \t\s]+
 semicolon                   \;+
 string1                     \"([^\n\r\f\\"])*\"
 /*"*/ // 这个注释是为了把 string1 的正则所带来的高亮影响给去掉
-
 string2                     \'([^\n\r\f\\'])*\'
 /*'*/ // 这个注释是为了把 string2 的正则所带来的高亮影响给去掉
-
 string                      {string1}|{string2}
-
 letter                      [\w-]+
+hexcolor                    '#'([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})
 
-import                      '@import'
 // importOpt                   ('less'|'css'|'multiple'|'once'|'inline'|'reference')
 importOpt                   \s*(''|'less'|'css'|'multiple'|'once'|'inline'|'reference')\s*(\,\s*(''|'less'|'css'|'multiple'|'once'|'inline'|'reference')*\s*)*
 
@@ -27,19 +24,18 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
 
 %{
     
-    yy.a = 'aaa';
     var s, s2, s3;
     var rv, rv2, e_offset, col, row, len, value;
     var match, match2;
 
     // console.log("lexer action: ", yy, yy_, this, yytext, YY_START, $avoiding_name_collisions);
-    var parser = yy.parser;
+    // var parser = yy.parser;
     
 %}
 
 
 // %options flex case-insensitive
-%options backtrack_lexer
+// %options backtrack_lexer
 
 // 状态：
 // %s 指包容性的状态，%x 指非包容性的状态
@@ -52,22 +48,22 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
 // ch 进入 @charset 语句后的状态
 // im_start 遇到 @ 且后面是 import 的状态
 // im 进入 @import 语句后的状态
-%x s sc mc ch_start ch im_start im
+// vari_start 遇到 @ 且后面是 variable 的状态
+// vari 进入 @variable 的状态
+// vari_colon_start @variable: 匹配冒号后面，分号前面的状态
+%x s sc mc ch_start ch im_start im vari_start vari vari_colon_start
 
 // b 进入选择器内部即块的状态
 // sb 进入选择器内部子选择器内部即子块的状态
 // p 进入属性的状态，这个状态用来帮助找到属性的值
-// im 进入 @import 语句后的状态
-// var 进入 变量定义 语句后的状态
-//b sb p im ch var
 
 %%
 
 /**
- * sc
+ * singlecomment
  */
-<s>\s+/{singlecomment} {
-    // this.begin('sc');
+<s>{space}/{singlecomment} {
+    yytext = yytext.replace(/^\n+/g, '');
     return 'S_SPACE';
 };
 
@@ -82,11 +78,13 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
     this.popState();
 };
 
+
+
 /**
- * mc
+ * multicomment
  */
-<s>\s+/{multicomment} {
-    // this.begin('mc');
+<s>{space}/{multicomment} {
+    yytext = yytext.replace(/^\n+/g, '');
     return 'M_SPACE';
 };
 
@@ -106,10 +104,55 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
     this.popState();
 };
 
+
+
+/**
+ * variable
+ * 变量定义的时候只能是 @name 而不能是 @{name}，@{name} 是在使用变量的时候使用的
+ */
+<s>{space}/('@'{letter}\s*\:+) {
+    yytext = yytext.replace(/^\n+/g, '');
+    return 'VARI_SPACE';
+};
+
+<s>'@'/({letter}\s*\:+) {
+    this.begin('vari_start');
+    return 'VARI_START';
+};
+
+<vari_start>{letter} {
+    this.popState();
+    this.begin('vari');
+    return 'VARI_NAME';
+};
+
+<vari>\:+ {
+    this.begin('vari_colon_start');
+    return 'VARI_COLON';
+};
+
+// <vari_colon_start>\s*('%'|'@'?[_A-Za-z0-9-]|{string}|{hexcolor})* {
+<vari_colon_start>\s*('%'|'@'?[_A-Za-z0-9-]|{string}|{hexcolor}|[\(\)\+\-\*\/\s]*|','\s*)* {
+    this.popState();
+    return 'VARI_VALUE';
+};
+
+<vari>{space} {
+    return 'VARI_SPACE';
+};
+
+<vari>{semicolon} {
+    this.popState();
+    return 'VARI_SEMICOLON';
+};
+
+
+
 /**
  * @charset
  */
-<s>\s+/'@charset' {
+<s>{space}/'@charset' {
+    yytext = yytext.replace(/^\n+/g, '');
     return 'CH_SPACE';
 };
 
@@ -141,12 +184,15 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
     return 'CH_SEMICOLON';
 };
 
+
+
 /**
  * @import
  * @import 语句必须有引号
  * @import importOptions 必须在小括号内
  */
-<s>\s+/'@import' {
+<s>{space}/'@import' {
+    yytext = yytext.replace(/^\n+/g, '');
     return 'IM_SPACE';
 };
 
@@ -174,7 +220,6 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
 };
 
 <im>'url('[^\)]+')' {
-    console.warn(yytext + '---');
     return 'IM_URL';
 };
 
@@ -244,7 +289,6 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
         mComments: []
     };
 
-
 %}
 
 // %nonassoc mulit_comment
@@ -287,6 +331,8 @@ rules
     | rules charset_stmt
     | import_stmt
     | rules import_stmt
+    | variable_stmt
+    | rules variable_stmt
 ;
 
 single_comment
@@ -294,7 +340,7 @@ single_comment
         ast.sComments.push({
             type: 'sComment',
             originContent: $1,
-            content: $1,
+            value: $1,
             before: '',
             after: '',
             loc: {
@@ -309,7 +355,7 @@ single_comment
         ast.sComments.push({
             type: 'sComment',
             originContent: $2,
-            content: $2,
+            value: $2,
             before: $1,
             after: '',
             loc: {
@@ -324,9 +370,10 @@ single_comment
 
 mulit_comment
     : MC MC_END {
+        // yy.test();
         ast.mComments.push({
             type: 'mComment',
-            content: $1 + $2,
+            value: $1 + $2,
             before: '',
             after: '',
             loc: {
@@ -341,7 +388,7 @@ mulit_comment
     | M_SPACE MC MC_END {
         ast.mComments.push({
             type: 'mComment',
-            content: $2 + $3,
+            value: $2 + $3,
             before: $1,
             after: '',
             loc: {
@@ -365,7 +412,7 @@ charset_stmt
         ast.charsets.push({
             type: 'charset',
             originContent: $1 + $2 + $3 + $4 + $5 + $6 + $7,
-            content: $3.join('') + $4 + $5.join(''),
+            value: $3.join('') + $4 + $5.join(''),
             quote: quote,
             before: '',
             after: '',
@@ -386,7 +433,7 @@ charset_stmt
         ast.charsets.push({
             type: 'charset',
             originContent: $1 + $2 + $3 + $4 + $5 + $6 + $7 + $8,
-            content: $4.join('') + $5 + $6.join(''),
+            value: $4.join('') + $5 + $6.join(''),
             quote: quote,
             before: $1,
             after: '',
@@ -479,152 +526,63 @@ import_stmt
     }
 ;
 
+variable_stmt
+    : VARI_SPACE VARI_START VARI_NAME VARI_SPACE* VARI_COLON VARI_VALUE VARI_SPACE* VARI_SEMICOLON SPACE* {
+        var valueBefore = '';
+        var match = /^(\s+)/.exec($6);
+        if (match) {
+            valueBefore = match[0];
+        }
 
-// blocks
-//     : charset_stmt
-//     | blocks charset_stm
-//     | import_stmt
-//     | blocks import_stmt
-//     | single_comment
-//     | blocks single_comment
-//     | mulit_comment
-//     | blocks mulit_comment
-// ;
+        var pureValue = $6.replace(/^(\s+)/, '');
 
-// mulit_comment
-//     : MC {
-//         ast.mComments.push({
-//             type: 'mComment',
-//             content: $1,
-//             before: '',
-//             after: '',
-//             loc: {
-//                 firstLine: @1.first_line,
-//                 lastLine: @1.last_line,
-//                 firstCol: @1.first_column + 1,
-//                 lastCol: @1.last_column + 1,
-//                 originContent: $1
-//             }
-//         });
-//     }
-//     | SPACE MC {
-//         ast.mComments.push({
-//             type: 'mComment',
-//             content: $2,
-//             before: $1,
-//             after: '',
-//             loc: {
-//                 firstLine: @1.first_line,
-//                 lastLine: @2.last_line,
-//                 firstCol: @1.first_column + 1 + $1.length,
-//                 lastCol: @2.last_column + 1,
-//                 originContent: $2
-//             }
-//         });
-//     }
-//     | mulit_comment (SPACE|N) {
-//         $$ = $1;
-//     }
-// ;
+        ast.variables.push({
+            type: 'variable',
+            originContent: $1 + $2 + $3 + $4 + $5 + $6 + $7 + $8 + $9,
+            variableName: $3,
+            variableNameBefore: $1,
+            variablenameAfter: $4.join(''),
+            variableValue: pureValue,
+            variableValueBefore: valueBefore,
+            variableValueAfter: $7.join(''),
+            value: pureValue,
+            before: $1,
+            after: $9.join(''),
+            loc: {
+                firstLine: @2.first_line,
+                lastLine: @8.last_line,
+                firstCol: @2.first_column + 1,
+                lastCol: @8.last_column + 1
+            }
+        });
+    }
+    | VARI_START VARI_NAME VARI_SPACE* VARI_COLON VARI_VALUE VARI_SPACE* VARI_SEMICOLON SPACE* {
+        var valueBefore = '';
+        var match = /^(\s+)/.exec($5);
+        if (match) {
+            valueBefore = match[0];
+        }
 
-// single_comment
-//     : SC {
-//         ast.sComments.push({
-//             type: 'sComment',
-//             content: $1,
-//             before: '',
-//             after: '',
-//             loc: {
-//                 firstLine: @1.first_line,
-//                 lastLine: @1.last_line,
-//                 firstCol: @1.first_column + 1,
-//                 lastCol: @1.last_column + 1,
-//                 originContent: $1
-//             }
-//         });
-//     }
-//     | SPACE SC {
-//         ast.sComments.push({
-//             type: 'sComment',
-//             content: $2,
-//             before: $1,
-//             after: '',
-//             loc: {
-//                 firstLine: @1.first_line,
-//                 lastLine: @2.last_line,
-//                 firstCol: @1.first_column + 1 + $1.length,
-//                 lastCol: @2.last_column= + 1,
-//                 originContent: $2
-//             }
-//         });
-//     }
-//     | single_comment (SPACE|N) {
-//         $$ = $1;
-//     }
-// ;
+        var pureValue = $5.replace(/^(\s+)/, '');
 
-// charset_stmt
-//     : charset_stmt_start CH_STRING CH_SEMICOLON {
-//         var quote = '';
-//         var match;
-//         if (match = $2.match(/^(['"]).*\1/)) {
-//             quote = match[1];
-//         }
-//         $$ = {
-//             type: 'charset',
-//             content: $2,
-//             quote: quote,
-//             before: $1.before,
-//             after: '',
-//             loc: {
-//                 firstLine: @1.first_line,
-//                 lastLine: @2.last_line,
-//                 firstCol: @1.first_column + 1 + $1.before.length,
-//                 lastCol: @3.last_column + 1,
-//                 originContent: $1.content + $2 + $3
-//             }
-//         };
-//         ast.charsets.push($$);
-//         // console.warn(yy.prepareProgram);
-//     }
-//     | charset_stmt (SPACE|N) {
-//         $1.after = $2 || '';
-//     }
-// ;
-
-// charset_stmt_start
-//     : CHARSET {
-//         $$ = {
-//             before: '',
-//             content: $1
-//         }
-//     }
-//     | CHARSET (SPACE|N) {
-//         $$ = {
-//             before: '',
-//             content: $1 + $2
-//         }
-//     }
-//     | (SPACE|N) charset_stmt_start {
-//         $$ = {
-//             before: $1,
-//             content: $2.content
-//         }
-//     }
-// ;
-
-// import_stmt
-//     : IMPORT (SPACE|N)* IM_OPT SPACE IM_STRING IM_SEMICOLON {
-//     }
-//     | SPACE IMPORT (SPACE|N)* IM_OPT SPACE IM_STRING IM_SEMICOLON {
-//         console.warn(13123);
-//     }
-//     | IMPORT (SPACE|N)* IM_OPT IM_STRING IM_SEMICOLON {
-//     }
-//     | SPACE IMPORT (SPACE|N)* IM_OPT IM_STRING IM_SEMICOLON {
-//         console.warn(13123);
-//     }
-//     | import_stmt (SPACE|N) {
-//         $1.after = $2 || '';
-//     }
-// ;
+        ast.variables.push({
+            type: 'variable',
+            originContent: $1 + $2 + $3 + $4 + $5 + $6 + $7 + $8,
+            variableName: $2,
+            variableNameBefore: '',
+            variablenameAfter: $3.join(''),
+            variableValue: pureValue,
+            variableValueBefore: valueBefore,
+            variableValueAfter: $6.join(''),
+            value: pureValue,
+            before: '',
+            after: $8.join(''),
+            loc: {
+                firstLine: @1.first_line,
+                lastLine: @7.last_line,
+                firstCol: @1.first_column + 1,
+                lastCol: @7.last_column + 1
+            }
+        });
+    }
+;
