@@ -232,6 +232,10 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
 };
 
 
+<s>{space}/<<EOF>> {
+    this.popState();
+    return 'EOF';
+};
 
 <s>{space} {
     return 'SPACE';
@@ -241,11 +245,17 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
     return 'N';
 };
 
+<s,sc,mc><<EOF>> {
+    this.popState();
+    return 'EOF';
+};
+
+<INITIAL><<EOF>> {
+    return 'EOF';
+};
+
 <INITIAL> {
     this.begin('s');
 };
 
-<INITIAL,s,sc,mc><<EOF>> {
-    this.popState();
-    return 'EOF';
-};
+

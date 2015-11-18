@@ -6,3 +6,5 @@ Thumbs.db
 *.swp
 .jshintrc
 *.bak
+jison-ast.json
+less-ast.json
