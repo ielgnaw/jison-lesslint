@@ -241,6 +241,10 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
     return 'SPACE';
 };
 
+<s>{n}/<<EOF>> {
+    return 'EOF';
+};
+
 <s>{n} {
     return 'N';
 };

@@ -4,9 +4,8 @@
   "description": "",
   "main": "lib/index.js",
   "scripts": {
-    "start": "jison lib/parser/index.y lib/parser/index.l -o lib/parser/index.js && node lib/index.js",
-    "debug": "jison lib/parser/index.y lib/parser/index.l -o lib/parser/index.js && DEBUG=jison-lesslint* node lib/index.js",
-    "debugger": "jison lib/parser/index.y lib/parser/index.l -o lib/parser/index.js && node --debug-brk lib/index.js",
+    "s": "jison lib/parser/index.y lib/parser/index.l -o lib/parser/index.js && DEBUG=jison-lesslint* node lib/index.js",
+    "d": "jison lib/parser/index.y lib/parser/index.l -o lib/parser/index.js && node --debug-brk lib/index.js",
     "merge": "node tool/merge.js"
   },
   "repository": {
