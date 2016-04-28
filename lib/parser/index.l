@@ -19,7 +19,14 @@ singlecomment               \/\/[^\n]*
 // multicomment                 \/\*[^*]*\*+([^][^*]*\*+)*\/
 // multicomment                 \/\*(?:[^*]|\*+[^\/*])*\*+\/\n?
 multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
+
 /* // 这个注释是为了把 multicomment 的正则所带来的高亮影响给去掉 */
+
+leftbrace                   \{
+rightbrace                  \}
+
+universalSelector           \*
+selector                    {universalSelector}
 
 %{
     var debug = require('debug')('jison-lesslint: lexer');
@@ -27,7 +34,7 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
     var rv, rv2, e_offset, col, row, len, value;
     var match, match2;
 
-    // console.log("lexer action: ", yy, yy_, this, yytext, YY_START, $avoiding_name_collisions);
+    // console.log('lexer action: ', yy, yy_, this, yytext, YY_START, $avoiding_name_collisions);
     // var parser = yy.parser;
     debug(YY_START);
 %}
@@ -50,7 +57,10 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
 // vari_start 遇到 @ 且后面是 variable 的状态
 // vari 进入 @variable 的状态
 // vari_colon_start @variable: 匹配冒号后面，分号前面的状态
-%x s sc mc ch_start ch im_start im vari_start vari vari_colon_start
+// sel_start 进入选择器的状态，进入选择器后，后面应该是 {
+// sel 选择器的状态，sel_start 之后，就开始 sel 的状态
+// block 进入块的状态，1. 选择器可以进入
+%x s sc mc ch_start ch im_start im vari_start vari vari_colon_start sel_start sel block
 
 // b 进入选择器内部即块的状态
 // sb 进入选择器内部子选择器内部即子块的状态
@@ -62,6 +72,7 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
  * singlecomment
  */
 <s>{space}/{singlecomment} {
+    /* // 这个注释是为了把上面一行的 / 所带来的高亮影响给去掉 */
     yytext = yytext.replace(/^\n+/g, '');
     return 'S_SPACE';
 };
@@ -83,6 +94,7 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
  * multicomment
  */
 <s>{space}/{multicomment} {
+    /* // 这个注释是为了把上面一行的 / 所带来的高亮影响给去掉 */
     yytext = yytext.replace(/^\n+/g, '');
     return 'M_SPACE';
 };
@@ -110,6 +122,7 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
  * 变量定义的时候只能是 @name 而不能是 @{name}，@{name} 是在使用变量的时候使用的
  */
 <s>{space}/('@'{letter}\s*\:+) {
+    /* // 这个注释是为了把上面一行的 / 所带来的高亮影响给去掉 */
     yytext = yytext.replace(/^\n+/g, '');
     return 'VARI_SPACE';
 };
@@ -151,6 +164,7 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
  * @charset
  */
 <s>{space}/'@charset' {
+    /* // 这个注释是为了把上面一行的 / 所带来的高亮影响给去掉 */
     yytext = yytext.replace(/^\n+/g, '');
     return 'CH_SPACE';
 };
@@ -191,6 +205,7 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
  * @import importOptions 必须在小括号内
  */
 <s>{space}/'@import' {
+    /* // 这个注释是为了把上面一行的 / 所带来的高亮影响给去掉 */
     yytext = yytext.replace(/^\n+/g, '');
     return 'IM_SPACE';
 };
@@ -232,7 +247,49 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
 };
 
 
+/**
+ * selector
+ */
+<s>{space}*/{selector} {
+    /* // 这个注释是为了把上面一行的 / 所带来的高亮影响给去掉 */
+    yytext = yytext.replace(/^\n+/g, '');
+    this.begin('sel_start');
+    return 'SEL_SPACE_BEFORE_SELECTOR';
+};
+
+<sel_start>{selector} {
+    this.begin('sel');
+    return 'SEL_SELECTOR';
+};
+
+<sel>{space} {
+    return 'SEL_SPACE';
+};
+
+<sel>{leftbrace} {
+    this.begin('block');
+    return 'LEFT_BRACE';
+};
+
+
+<block>{space} {
+    return 'BLOCK_SPACE';
+};
+
+<block>{semicolon} {
+    return 'BLOCK_SEMICOLON';
+};
+
+<block>{rightbrace} {
+    this.popState();
+    return 'RIGHT_BRACE';
+};
+
+
+
+
 <s>{space}/<<EOF>> {
+    /* // 这个注释是为了把上面一行的 / 所带来的高亮影响给去掉 */
     this.popState();
     return 'EOF';
 };
@@ -242,6 +299,7 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
 };
 
 <s>{n}/<<EOF>> {
+    /* // 这个注释是为了把上面一行的 / 所带来的高亮影响给去掉 */
     return 'EOF';
 };
 
@@ -249,7 +307,7 @@ multicomment                 \/\*(?:[^*]|\*+[^\/*])*\n?
     return 'N';
 };
 
-<s,sc,mc><<EOF>> {
+<s,sc,mc,sel><<EOF>> {
     this.popState();
     return 'EOF';
 };

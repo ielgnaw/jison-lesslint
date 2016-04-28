@@ -58,8 +58,10 @@ root
     // 1. 一个选择器块
     // 2. 一行单行注释
     // 3. 一个多行注释块
-    // 4. 一行 @charset 语句；一行 @import 语句；一行变量定义
-    // @charset, @import, 以及变量定义需要合在一起来做（词法中）
+    // 4. 一行 @charset 语句
+    // 5. 一行 @import 语句
+    // 6. 一行变量定义
+    // @charset、@import 以及变量定义需要合在一起来做（词法中）
     // 因为 @charset: 12px 和 @import: 30px 是一个合法的变量定义
     | rules EOF {
         return {
@@ -79,6 +81,8 @@ rules
     | rules import_stmt
     | variable_stmt
     | rules variable_stmt
+    | selector_stmt
+    | rules selector_stmt
 ;
 
 single_comment
@@ -330,5 +334,21 @@ variable_stmt
                 lastCol: @7.last_column + 1
             }
         });
+    }
+;
+
+selector_stmt
+    : SEL_SPACE_BEFORE_SELECTOR SEL_SELECTOR SEL_SPACE* LEFT_BRACE block_stmt RIGHT_BRACE SEL_SPACE* {
+        console.warn($1, $2);
+        console.warn(123123);
+    }
+;
+
+block_stmt
+    : BLOCK_SPACE* BLOCK_SEMICOLON BLOCK_SPACE* {
+        console.warn($1, 'sssss');
+    }
+    | block_stmt BLOCK_SEMICOLON {
+
     }
 ;
